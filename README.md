@@ -1,2 +1,2 @@
 # yegupov.github.io
-Root repository
+Frontend developer
