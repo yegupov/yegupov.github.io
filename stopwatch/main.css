@@ -8,7 +8,7 @@
 	border-bottom: 1px dotted #ccc;
 }
 
-.stopwatch-current {
+h2.stopwatch-current {
 	margin-top: 0;	
 }
 
