@@ -1,6 +1,7 @@
 .container {
 	width: 960px;
 	margin: 0 auto;
+	padding-top: 50px;
 }
 
 .row {
