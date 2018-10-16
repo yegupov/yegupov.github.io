@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 60px 0 0 0;
   font-family: 'Montserrat', sans-serif;
   color: #444;
 }
@@ -20,6 +20,7 @@ header, main {
 
 header img {
   float: left;
+  margin-right: 35px;
 }
 
 main {
@@ -29,10 +30,14 @@ main {
 }
 
 h1 {
-  text-indent: 25px;
+  font-weight: 600;
 }
 
 h2 {
-  text-indent: 25px;
+  font-weight: 600;
   margin-top: 40px;
+}
+
+.tasks-list li {
+   margin-bottom: 10px;
 }
