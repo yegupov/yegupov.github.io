@@ -8,6 +8,10 @@
 	border-bottom: 1px dotted #ccc;
 }
 
+.stopwatch-current {
+	margin-top: 0;	
+}
+
 .stopwatch-controls {
 	margin-top: 20px;
 }
