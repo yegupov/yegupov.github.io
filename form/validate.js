@@ -15,7 +15,7 @@ const validationList = [ // описание валидации
     name: 'emailValid',
     isValid: function(value) {
       if (value) {
-        return (/^\w+@[a-z]+\.[a-z]+$/i).test(value);
+        return (/^[-._a-z0-9]+@[a-z]+\.[a-z]+$/i).test(value);
       } else {
         return true;
       }
