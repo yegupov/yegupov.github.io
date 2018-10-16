@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 60px 0 0 0;
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   color: #444;
 }
 
@@ -30,14 +31,14 @@ main {
 }
 
 h1 {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 400;
   margin-top: 40px;
 }
 
 .tasks-list li {
-   margin-bottom: 10px;
+   margin-bottom: 20px;
 }
