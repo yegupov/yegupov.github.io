@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Форма с валидацией</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="https://yegupov.github.io/css/style.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<a href="https://yegupov.github.io/" class="main">На Главную</a>
+			<h1>Секундомеры</h1>
+			<div class="task-desc">
+				<h1>Релизовать валидацию формы</h1>
+				<p>Валидировать поля формы надо в процессе набора (но не показывать ошибки до того, как пользователь что-то ввел).</p>
+
+				<p>Форму нельзя мочь отправить, если есть ошибки.</p>
+
+				<p>Если показаны ошибки, кнопка отправки формы должна быть неактивной (код неактивной кнопки закомментирован).</p>
+
+				<p>Поля, обязательные к заполнению помечены звездочками.</p>
+
+				<p>Поля с ошибкой должны подсвечиваться должным образом (который можно увидеть, раскомментировав код на бутстрап странице).</p>
+
+				<p>Все регулярки должны быть написаны самостоятельно.</p>
+
+				<h4>Возможные ошибочные ситуации</h4>
+
+				<p>Для каждой придумать и выводить поясняющее сообщение.</p>
+
+				<p>Из сообщения должно быть ясно в чем проблема. Варианты (&quot;что-то не так&quot;) не использовать.</p>
+
+				<ol>
+					<li>Поле, обязательное к заполнению не заполнено</li>
+					<li>Ошибка в email-е</li>
+					<li>email уже занят (сверяться со статическим списком email-ов, который хоранится на глобальном уровне в переменной&nbsp;usedEmails)<br />
+					[author@mail.com, foo@mail.com, tester@mail.com]</li>
+					<li>Пароль слишком короток (до 5 символов)</li>
+					<li>Пароль содержит запрещенные символы (разрешенные - латинские буквы, цифры, подчеркивание, минус)</li>
+					<li>Международный формат записи телефона не выдержан</li>
+					<li>Галочка &quot;Согласен со всем&quot; не поставлена</li>
+				</ol>
+	    </div>
+		</div>
+
+		<div class="row">
+      <h2>Решение:</h2>
+			<form role="form" id="form" method="GET">
+				<div class="form-group required">
+					<label class="control-label" for="email">Почта (будет использована как логин)<sup>*</sup></label>
+					<input class="form-control" id="email" placeholder="Почта" type="text">
+				</div>
+
+				<div class="form-group required">
+					<label class="control-label" for="password">Пароль (постарайся придумать посложнее)<sup>*</sup></label>
+					<input class="form-control" id="password" placeholder="Пароль" type="password">
+				</div>
+
+				<div class="form-group">
+					<label for="city">Город проживания (указывать не обязательно)</label>
+					<input class="form-control" id="city" placeholder="Город" type="text">
+				</div>
+
+				<div class="form-group">
+					<label for="phone">Телефон (указывать не обязательно)</label>
+					<input class="form-control" id="phone" placeholder="Номер телефона в международном формате например +380509993322" type="text">
+				</div>
+
+				<div class="form-group required">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" id="check"> <span class="mark"></span>Согласен со <a href="/">всем</a><sup>*</sup>
+						</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Отправить данные</button>
+				</div>
+			</form>
+    </section>
+	</div>
+	<script src="js/validate.js"></script>
+</body>
+</html>
