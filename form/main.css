@@ -16,6 +16,6 @@ h4 {
 	margin: 20px 0;
 }
 
-.form-group .checkbox input {
-	border: 1px solid red;
+form {
+	margin-bottom: 60px;
 }
