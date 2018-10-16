@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Контекстное меню</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Контекстное меню</h1>
+    <section class="task-desc">
+      <p>Реализовать ContextMenu.</p>
+
+      <p>Первый аргумент - узел на котором будет работать контекстное меню.</p>
+
+      <p>Второй аргумент - описание структуры меню. Пример описания прикладывается. Структура может быть любой по вложенности и количеству элементов меню (рекурсивно генерировать DOM будет ок).</p>
+
+      <p>Подменю может содержать вложенные подменю.</p>
+
+      <p>При правом клике по узлу, для которого было создано ContextMenu показывать меню прямо под местом клика.</p>
+
+      <p>При клике по пункту меню должна выполняться соответствующая функция.</p>
+
+      <p>Каждый элемент, содержащий подменю, должен быть отмечен &quot;&gt;&quot; символом.</p>
+
+      <p>Подменю открывается при наведении на пункт подменю, и закрывается при уходе мышки с подменю или пункта подменю (смотри события mouseenter и mouseleave).</p>
+
+      <p>С позиционированием (чтобы все меню и подменю вмещались в видимую часть экрана) можно не заморачиваться.</p>
+
+      <p>Стилизовать меню можно на свой вкус (главное - видимые границы элементов)</p>
+
+      <p>Пример объекта-структуры меню:<br />
+      var menuExample = [{<br />
+      &nbsp;&nbsp; &nbsp;title: File,<br />
+      &nbsp;&nbsp; &nbsp;action: function () {console.log(open file)}<br />
+      }, {<br />
+      &nbsp;&nbsp; &nbsp;title: Edit,<br />
+      &nbsp;&nbsp; &nbsp;action: function () {console.log(edit content)}<br />
+      }, {<br />
+      &nbsp;&nbsp; &nbsp;title: More stuff,<br />
+      &nbsp;&nbsp; &nbsp;submenu: [{<br />
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;title: Send by email,<br />
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;action: function () {console.log(emailed)}<br />
+      &nbsp;&nbsp; &nbsp;}, {<br />
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;title: Send via skype,<br />
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;action: function () {console.log(skyped)}<br />
+      &nbsp;&nbsp; &nbsp;}]<br />
+      }]</p>
+    </section>
+
+    <section>
+      <h2>Решение:</h2>
+      <p>Кликни правой кнопкой на картинке!</p>
+      <div class="container-menu">
+    	    <img src="shirts-trends-2016.jpg" alt=""/>
+    	</div>
+      <p>Согласно традициям англичан, под узлом при желании можно оставить небольшую складку. Именно она считается проявлением мастерства в этой тонкой работе.</p>
+
+      <p>На сегодняшний день существует немалое количество методик завязывания галстука. И рано или поздно практически каждому мужчине придется столкнуться с ними. Чтобы данный процесс в будущем не превратился в проблему, рекомендуется заранее выучить основные из возможных способов.</p>
+    	
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
