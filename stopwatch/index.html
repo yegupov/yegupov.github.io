@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Секундомер</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="https://yegupov.github.io/css/style.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div class="container">
+		<a href="https://yegupov.github.io/" class="main">На Главную</a>
+		<h1>Секундомеры</h1>
+		<div class="task-desc">
+			<p>Реализовать виджет &quot;секундомер&quot;. Кнопки &quot;стоп&quot;, &quot;старт&quot; (одна и та же кнопка), &quot;сброс&quot;, &quot;круг&quot;. Секундомер работает с точностью до миллисекунд. Когда он запущен, показывается время в формате чч:мм:сс:мс. Нажатие на кнопку &quot;стоп&quot; останавливает ход секундомера.</p>
+
+			<p>Кнопка &quot;круг&quot; добавляет текущее значение секундомера в список результатов. Элементы из списка результатов можно удалять поштучно.</p>
+
+			<p>Кнопка &quot;сброс&quot; останавливает секундомер, если тот бежит, сбрасывает значение в нули, убирает все результаты, если такие есть. &quot;круг&quot; работает одинаково для остановленного и запущенного секундомеров.</p>
+		</div>
+		<div>
+			<h2>Решение:</h2>
+			<div class="stopwatch-first"></div>
+			<div class="stopwatch-second"></div>
+		</div>
+
+		<!-- <div class="row">
+			<div class="col-xs-4">
+				<h2 class="stopwatch-current">00:00:00:000</h2>
+				<div class="stopwatch-laps">
+					<div class="alert alert-info">
+						00:10:11:196
+						<span class="label label-danger">×</span>
+					</div>
+					<div class="alert alert-info">
+						00:00:10:001
+						<span class="label label-danger">×</span>
+					</div>
+					<div class="alert alert-info">
+						00:00:01:015
+						<span class="label label-danger">×</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-4 stopwatch-controls">
+				<div class="btn-group btn-group-lg">
+					<button class="btn btn-primary">Start</button>
+					<button class="btn btn-info">Lap</button>
+				</div>
+				<button class="btn btn-danger btn-sm">Reset</button>
+			</div>
+		</div> -->
+	</div>
+	<script src="script-timer.js"></script>
+</body>
+</html>
