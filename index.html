@@ -1,52 +1,26 @@
 <!doctype html>
-<html>
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Портфолио</title>
+	<title>Frontend Developer Portfolio</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<header>
+		<img src="img/photo.jpg" alt="">
+		<h1>Yegupov Gennady</h1>
+		<p>Frontend developer</p>
+		<p>E-mail: ludvig31@yandex.ru</p>
+	</header>
 	<main>
-		<section class="task-desc">
-			<h1>Портфолио</h1>
-			<p>Валидировать поля формы надо в процессе набора (но не показывать ошибки до того, как пользователь что-то ввел).</p>
-
-			<p>Форму нельзя мочь отправить, если есть ошибки.</p>
-
-			<p>Если показаны ошибки, кнопка отправки формы должна быть неактивной (код неактивной кнопки закомментирован).</p>
-
-			<p>Поля, обязательные к заполнению помечены звездочками.</p>
-
-			<p>Поля с ошибкой должны подсвечиваться должным образом (который можно увидеть, раскомментировав код на бутстрап странице).</p>
-
-			<p>Все регулярки должны быть написаны самостоятельно.</p>
-
-			<h4>Возможные ошибочные ситуации</h4>
-
-			<p>Для каждой придумать и выводить поясняющее сообщение.</p>
-
-			<p>Из сообщения должно быть ясно в чем проблема. Варианты (&quot;что-то не так&quot;) не использовать.</p>
-
-			<ol>
-				<li>Поле, обязательное к заполнению не заполнено</li>
-				<li>Ошибка в email-е</li>
-				<li>email уже занят (сверяться со статическим списком email-ов, который хоранится на глобальном уровне в переменной&nbsp;usedEmails)<br />
-				[author@mail.com, foo@mail.com, tester@mail.com]</li>
-				<li>Пароль слишком короток (до 5 символов)</li>
-				<li>Пароль содержит запрещенные символы (разрешенные - латинские буквы, цифры, подчеркивание, минус)</li>
-				<li>Международный формат записи телефона не выдержан</li>
-				<li>Галочка &quot;Согласен со всем&quot; не поставлена</li>
-			</ol>
-
-			<h4>Ajax</h4>
-
-			<p>Добавить к заданию с валидацией формы серверную валидацию email-а (использован ли он).</p>
-
-			<p>Запрос с валидацией емейла слать на сервер <a href="https://aqueous-reaches-8130.herokuapp.com" target="_blank">aqueous-reaches-8130.herokuapp.com</a> (разрешены кроссдоменные запросы для этого сервера).</p>
-
-			<p>jQuery использовать нельзя, синхронные запросы использовать нельзя.</p>
-    </section>
+		<h2>Learning tasks for JavaScript</h2>
+		<ul class="tasks-list">
+			<li><a href="https://yegupov.github.io/menu/">Context menu (javascript)</a></li>
+			<li><a href="https://yegupov.github.io/stopwatch/">Stopwatch Widget (javascript)</a></li>
+			<li><a href="https://yegupov.github.io/gallery/">Photo Gallery (jQuery)</a></li>
+			<li><a href="https://yegupov.github.io/endless-scrolling/">Dynamic image loading / endless scrolling (jQuery)</a></li>
+			<li><a href="https://yegupov.github.io/form/">Form validation</a></li>
+		</ul>
 	</main>
-	<script src="js/validate.js"></script>
 </body>
 </html>
