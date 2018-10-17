@@ -1,4 +1,3 @@
-// Модель (данные)
 const usedEmails = ['author@mail.com', 'foo@mail.com', 'tester@mail.com'];
 const validationList = [ // описание валидации
   {
@@ -107,7 +106,6 @@ const fieldList = [
   }
 ];
 
-// Контроллер :-)
 const validate = function(formDOMElement, fieldList, validationList) {
   const state = { // Состояние текущее формы со всеми полями
     formDOMElement: formDOMElement,
@@ -258,7 +256,7 @@ const validateForm = function(state) {
       }
     }
   });
-  //console.log (formValid);
+  
   if (formValid.indexOf(false) !== -1) {
     state.isFormValid = false;
     button.classList.add('disabled');
@@ -270,16 +268,11 @@ const validateForm = function(state) {
 
 // Заполнены ли обязательные поля
 const renderForm = function(state) {
-  // debugger;
-  console.log ('isFormValid= ', state.isFormValid);
-
   var fieldRequired = document.querySelectorAll('.form-group.required'),
       button = document.querySelector('.btn'),
       divErrorHas = button.previousElementSibling;
-  console.log ('Див с ошибкой: ', divErrorHas);
 
   if (!state.isFormValid) {
-    //clearErrorFrame(field);
     if (!divErrorHas) {
       var errorMsg = document.createElement('div');
       errorMsg.className = 'alert alert-danger';
@@ -306,5 +299,4 @@ const clearErrorFrame = function(field) {
   field.errorList = [];
 };
 
-// Вызываем функцию Контроллер, чтобы все работало
 validate(document.getElementById('form'), fieldList, validationList);
