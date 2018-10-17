@@ -27,6 +27,12 @@ header img {
   margin-bottom: 50px;
 }
 
+header:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 main {
   display: block;
   width: 80%;  
