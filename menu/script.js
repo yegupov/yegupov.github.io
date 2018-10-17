@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-	let menuExample = [{     // Массив из объектов [{...}, {...}, {...}]
+	let menuExample = [{
 		title: 'File',
 		action: function () {console.log('open file')}
 	}, {
@@ -39,9 +39,8 @@
 	// Создаем Класс-конструктор менюшек
 	class ContextMenu {
 	    constructor(node, menuStructure) {
-		    this.node = node;                     // <div class="container-menu"><img src="shirts-trends-2016.jpg" alt=""/></div>
-			// console.log('this.node', this.node);
-				this.menuStructure = menuStructure;   // [{...}, {...}, {.....[{...}, {.......[{...}, {...}]}]}, {...}]
+		    this.node = node;
+				this.menuStructure = menuStructure;
 				this.createContextMenu();
 				this.showOrHideSubmenu();
 				this.showOrHideMenu();
@@ -75,21 +74,13 @@
 						listBottomLevel = createList(listData[i].submenu);
 						// console.log('listBottomLevel', listBottomLevel);
 						itemTopLevel.innerHTML += listBottomLevel.outerHTML;
-					} /* else {
-					    itemTopLevel.addEventListener('click', function(event) {   // Тут почему-то не срабатывает обработчик :-(((
-							// listData[i].action();
-							alert ('listData[i].action');
-						}, false);
-						console.log('<li> - клик:', itemTopLevel);
-                    } */
+					} 
 				}
 				return containerItems;
 			}
 
 			blockMenu.innerHTML = createList(this.menuStructure).outerHTML;
 			console.log('blockMenu', blockMenu);
-
-			// blockMenu.innerHTML = 'Тут меню';
 
 			// Вставляем на страницу
 			this.node.appendChild(blockMenu);
@@ -107,7 +98,6 @@
 				itemsWithSubmenu[i].addEventListener('mouseleave', function(event) {
 				    subList.style.display = 'none';
 				}, false);
-				// console.log('subList[i]:', subList[i]);
 			}
 		}
 
@@ -144,7 +134,6 @@
 
 		// Выполнить действие при клике на пункт меню
 		performAction(menuList) {
-		    // Разворачивание массива массивов
 			let arrItems = [];
 			function expandArray(element) {
 				element.forEach(function(item) {
@@ -158,7 +147,6 @@
 			}
 
 			let arrItemsMenu = expandArray(menuList);
-			// console.log('flattened:', arrItemsMenu);
 
 			let itemsMenu = document.querySelectorAll('li');
 			for (let i = 0; i < itemsMenu.length; i++) {
@@ -171,7 +159,6 @@
 					});
 					itemsMenu[i].addEventListener('click', function(event) {
 						action();
-						// alert(action);
 					}, false);
 				}
 			}
