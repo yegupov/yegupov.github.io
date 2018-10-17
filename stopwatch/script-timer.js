@@ -6,8 +6,8 @@
 
 	// Содержит ли элемент givenEl в себе TargetElement
 	function isElementContainsTargetElement(givenEl, targetEl) {
-		let reachedEndOfDOMTree = targetEl === null;    // reache - достиг ли конца DOM дерева
-		if (reachedEndOfDOMTree) return false;     // Если достиг, то вернуть false
+		let reachedEndOfDOMTree = targetEl === null;
+		if (reachedEndOfDOMTree) return false;
 
 		let parentEl = targetEl.parentNode;
 		return parentEl === givenEl ? true : isElementContainsTargetElement(givenEl, parentEl);
@@ -16,7 +16,6 @@
 	class Stopwatch {
 	    constructor(node) {
 		    this.node = node;
-  			// console.log('this.node', this.node);
   			this.switchBtn;
   			this.timer;
   			this.infoBtn;
@@ -95,19 +94,17 @@
 
 			let end, timeInterval, balanceHour, balanceMin;
 
-			// console.log('Кнопка Старт', this.switchBtn);
-
 			this.switchBtn.innerText = 'Stop';
 
-			node.timer = setInterval(function () {    // Тут можно использовать рекурсивный setTimeout
+			node.timer = setInterval(function () {
 				end = new Date();
 				timeInterval = end.getTime() - start.getTime();  // замерить промежуток времени, произошедший между двумя этими вызовами
 
-				hour = Math.floor(timeInterval/3600000);   // Math.floor округляет число вниз
+				hour = Math.floor(timeInterval/3600000);
 				balanceHour = timeInterval % 3600000;
 
 				min = Math.floor(balanceHour/60000);
-				balanceMin = balanceHour % 60000;          // остаток от деления balanceHour на 1000
+				balanceMin = balanceHour % 60000;
 
 				sec = Math.floor(balanceMin/1000);
 				msec = balanceMin % 1000;
@@ -120,7 +117,6 @@
 				timer.innerText = hour + ':' + min + ':' + sec + ':' + msec;
 				_this.lastValueInterval = timeInterval;
 				console.log('lastValueInterval', this.lastValueInterval);
-				// console.log('this.lastValueInterval', this.lastValueInterval);
 			}, 1);
 		}
 
@@ -137,7 +133,7 @@
 			let stopwatchListItem = document.createElement('div');
 			stopwatchListItem.className = 'alert alert-info';
 			stopwatchListItem.innerHTML = this.timer.innerText;
-			stopwatchList.insertBefore(stopwatchListItem, stopwatchList.firstChild);  // вставить перед первым потомком
+			stopwatchList.insertBefore(stopwatchListItem, stopwatchList.firstChild);
 
 			let closeListItem = document.createElement('span');
 			closeListItem.className = 'label label-danger';
@@ -149,49 +145,7 @@
 
 			this.stopwatchListItems.push(stopwatchListItem);
       console.log('Добавили Lap', this.stopwatchListItems);
-		}
-
-		/*deleteTimer(index) {
-		    let stopwatchListItems = this.stopwatchListItems;
-        let stopwatchListItemsClose = this.stopwatchListItemsClose;
-
-        for(let i = 0; i < stopwatchListItems.length; i += 1) {
-  				if (i === index) {
-            stopwatchListItems.splice(i, 1);
-            stopwatchListItems[i].parentNode.removeChild(stopwatchListItems[i]);
-  				}
-  			}
-
-        stopwatchListItemsClose.splice(index, 1);
-
-        //stopwatchListItems.splice(index, 1);
-        //console.log('Удален из массива Lap элемент:', index);
-        //console.log('Теперь массив Lap:', stopwatchListItems);
-
-        let stopwatchListItem = document.querySelectorAll('.alert.alert-info');
-        for(let i = stopwatchListItem.length - 1; i >=0; i -= 1) {
-  				if (i === index) {
-            stopwatchListItem[i].parentNode.removeChild(stopwatchListItem[i]);
-  					//stopwatchListItem.removeChild(this.parentNode);
-  						// console.log('parentNode', this.parentNode);
-  				}
-  			}
-        console.log('Теперь массив Lap:', stopwatchListItems);
-			 let closeListItemButton = document.querySelector('.label.label-danger');
-
-			stopwatchList.removeChild(closeListItemButton.parentNode);
-			// console.log('parentNode', this.parentNode);
-
-
-			let closeListItemButtons = document.querySelectorAll('.label.label-danger');
-
-			for(let i = 0; i < closeListItemButtons.length; i += 1) {
-				if (isElementContainsTargetElement(node, closeListItemButtons[i])) {
-					stopwatchList.removeChild(this.parentNode);
-						// console.log('parentNode', this.parentNode);
-				}
-			}
-		}*/
+		}	
 
 		resetTimer() {
 		    let timer = this.timer;
@@ -203,8 +157,6 @@
 		}
 
 		onNodeClick(event) {
-      //let closeListItems = document.querySelectorAll('.label.label-danger');
-      //console.log('Массив закрыть Lap:', closeListItems);
       if (event.target === this.switchBtn) {
 				if (this.switchBtn.innerText === 'Start') {
 					console.log('Нажали Старт');
@@ -231,15 +183,8 @@
           _this.stopwatchListItems.splice(i, 1);
           _this.stopwatchListItemsClose.splice(i, 1);
           console.log('Теперь массив Lap:', _this.stopwatchListItems);
-          //_this.deleteTimer(i);
         }
-      }
-      /*this.stopwatchListItemsClose.forEach(function(item) {
-        if (event.target === item) {
-  				console.log('Надо удалить таймер в списке');
-  				_this.deleteTimer();
-  			}
-      });*/
+      }      
     }
 
 		onNodeKeyup(event) {
