@@ -21,10 +21,13 @@ header, main {
 
 header img {
   float: left;
+  width: 200px;
+  height: 200px;
   margin-right: 35px;
 }
 
 main {
+  display: block;
   width: 80%;  
   padding-bottom: 350px;
 }
@@ -45,4 +48,8 @@ h2 {
 
 .tasks-list li {
    margin-bottom: 20px;
+}
+
+a.main {
+ margin-right: 25px; 
 }
