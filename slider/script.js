@@ -1,7 +1,6 @@
 $(function () {
   'use strict';
 
-  // Данные
   const slideList = [
     {
       number: 1,
@@ -18,7 +17,6 @@ $(function () {
     }
   ];
 
-  // Контроллер
   const sliderJquery = function(sliderDOMElement, slideList) {
     const state = {
       sliderDOMElement: sliderDOMElement,
@@ -58,8 +56,6 @@ $(function () {
     state.buttonActive = $('.buttons > li').eq(state.activeSlide - 1);
     state.buttonActive.addClass('active');
 
-    // var slideShow = setInterval(changeSlide(state), 1000);
-
     // Запускаем слайдшоу
     var slideShow = setInterval( function(){
         changeSlide(state);
@@ -69,7 +65,6 @@ $(function () {
     $('.buttons > li').click(function(e) {
       clearInterval(slideShow);
 
-      // state.buttonActive = e.target;
       var indexActiveButton = $(this).index();
 
 
@@ -111,7 +106,6 @@ $(function () {
     state.slideList.forEach(function(slide) {
 
       if (slide.number === state.activeSlide) {
-        // console.log('DOM активного: ', slide.domElement);
 
         slide.domElement.animate({
             left: '-100%'
@@ -127,7 +121,6 @@ $(function () {
         state.buttonActive.addClass('active');
       }
       if (slide.number === slideAfterActive) {
-        // button.addClass('active');
         slide.domElement.animate({
             left: '0'
           }, 1000);
@@ -139,11 +132,9 @@ $(function () {
 
     state.slideList.forEach(function(slide) {
       if (slide.number === state.activeSlide) {
-        // console.log('Бывший активный: ', slide.number);
         slide.isActiv = false;
       }
       if (slide.number === slideAfterActive) {
-        // console.log('Новый активный: ', slide.number);
         slide.isActiv = true;
       }
     });
@@ -152,20 +143,16 @@ $(function () {
       state.activeSlide = 1;
     } else {
       state.activeSlide++;
-    }
-
-    // console.log('Активный слайд: ', state.activeSlide);
-    console.dir('Состояние после смены слайда:', state);
+    }    
   };
 
   const renderSlider = function (state, activeButton) {
     $('.buttons > li').removeClass('active');
     state.buttonActive = $('.buttons > li').eq(activeButton);
-    // console.log('state.buttonActive: ', state.buttonActive);
+    
     state.buttonActive.addClass('active');
 
-    state.activeSlide = activeButton + 1;
-    // console.log('Акт слайд теперь: ', state.activeSlide);
+    state.activeSlide = activeButton + 1;    
 
     state.slideList.forEach(function(slide) {
       if (slide.number === state.activeSlide) {
