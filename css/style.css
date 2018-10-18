@@ -60,6 +60,10 @@ h3, strong {
   margin-left: 235px;
 }
 
+.tasks h2 {
+  margin-top: 20px;
+}
+
 .tasks-list {
    margin-left: 0;
 } 
