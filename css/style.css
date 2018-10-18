@@ -52,6 +52,10 @@ h2 {
   margin-top: 90px;
 }
 
+h3, strong {
+  font-weight: 600;
+}
+
 .tasks, .resume {
   margin-left: 235px;
 }
@@ -60,8 +64,8 @@ h2 {
    margin-left: 0;
 } 
 
-.tasks-list li {
-   margin-bottom: 20px;
+ul li {
+   margin-bottom: 15px;
 }
 
 a.main {
