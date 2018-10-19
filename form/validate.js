@@ -149,7 +149,6 @@ const validate = function(formDOMElement, fieldList, validationList) {
       validateField(field, state.validationList);    // Приоизводим валидацию поля
       renderField(field);       // Отрисовываем внешний вид поля (добавляем ошибки, если есть)
       validateForm(state);
-      console.dir('Состояние после потери фокуса', state);
     });
 
     field.domElement.addEventListener('focus', function(e) {
@@ -165,13 +164,11 @@ const validate = function(formDOMElement, fieldList, validationList) {
           field.isFieldValid = false;
         }
         validateForm(state);
-        console.dir('Состояние после клика', state);
       });
     }
 
     field.domElement.addEventListener('input', function(e) {
       validateForm(state);
-      console.dir('Состояние после события input', state);
     });
 
   });
@@ -179,15 +176,14 @@ const validate = function(formDOMElement, fieldList, validationList) {
   // Обработчик события на всю форму
   state.formDOMElement.addEventListener('submit', function(e) {
 
-    console.log ('Нажали на кнопку');
-
     validateForm(state);
 
     if (!state.isFormValid) {
       e.preventDefault();
       renderForm(state);
     } else {
-      alert('Данные формы отправлены!');
+      e.preventDefault();
+      serverValidateEmail(state.fieldList);
     }
   });
 };
@@ -297,6 +293,42 @@ const clearErrorFrame = function(field) {
   });
 
   field.errorList = [];
+};
+
+// Серверная валидация email
+const serverValidateEmail = function(fieldList) {
+  var testEmail;
+  
+  fieldList.forEach(function(field) {
+    if (field.id === 'email') {
+       testEmail = field.input;
+    }
+  });
+
+    var xhr = new XMLHttpRequest();
+
+    var params = 'email=' + encodeURIComponent(testEmail);
+
+    xhr.open('GET', 'https://aqueous-reaches-8130.herokuapp.com/check-email/?' + params, true);
+    
+    xhr.send();    
+    
+    xhr.onreadystatechange = function() {
+      if (this.readyState != 4) return;
+    
+      if (this.status != 200) {
+        // обработать ошибку
+        alert( 'Ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
+        return;
+      } else {          
+          responseText = JSON.parse(xhr.responseText);
+          
+          if (responseText.used === false) {
+              alert('Email можно использовать! Такого в базе еще нет.');
+          }
+      }
+      
+    };
 };
 
 validate(document.getElementById('form'), fieldList, validationList);
