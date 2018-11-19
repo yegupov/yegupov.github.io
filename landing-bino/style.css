@@ -1,0 +1,12 @@
+section img {
+  max-width: 100%;
+  margin: 100px 0;
+}
+
+.result-desc {
+  line-height: 1.7;
+}
+
+.result-desc + p > img {
+  margin: 0 0 100px;
+}
