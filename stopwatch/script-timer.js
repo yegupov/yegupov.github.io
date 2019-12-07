@@ -6,8 +6,8 @@
 
 	// Содержит ли элемент givenEl в себе TargetElement
 	function isElementContainsTargetElement(givenEl, targetEl) {
-		let reachedEndOfDOMTree = targetEl === null;
-		if (reachedEndOfDOMTree) return false;
+		let reachedEndOfDOMTree = targetEl === null;    // reache - достиг ли конца DOM дерева
+		if (reachedEndOfDOMTree) return false;     // Если достиг, то вернуть false
 
 		let parentEl = targetEl.parentNode;
 		return parentEl === givenEl ? true : isElementContainsTargetElement(givenEl, parentEl);
@@ -15,20 +15,19 @@
 
 	class Stopwatch {
 	    constructor(node) {
-		    this.node = node;
-  			this.switchBtn;
-  			this.timer;
-  			this.infoBtn;
-  			this.stopwatchList;
-  			this.resetBtn;
-        this.stopwatchListItems = [];
-        this.stopwatchListItemsClose = [];
-  			this.lastValueInterval = 0;
-
-  			this.createStopwatchHtmlMarkup();
-  			this.node.addEventListener('click', this.onNodeClick.bind(this), false);
-  			this.node.addEventListener('keyup', this.onNodeKeyup.bind(this), false);
-  		}
+		this.node = node;
+  		this.switchBtn;
+  		this.timer;
+  		this.infoBtn;
+  		this.stopwatchList;
+  		this.resetBtn;
+        	this.stopwatchListItems = [];
+        	this.stopwatchListItemsClose = [];
+  		this.lastValueInterval = 0;
+  		this.createStopwatchHtmlMarkup();
+  		this.node.addEventListener('click', this.onNodeClick.bind(this), false);
+  		this.node.addEventListener('keyup', this.onNodeKeyup.bind(this), false);
+  	    }
 
 		  createStopwatchHtmlMarkup() {
 		    let blockTimer = document.createElement('div');
@@ -87,7 +86,6 @@
 			let sec = 0;
 			let msec = 0;
 			let lastValueInterval = this.lastValueInterval;
-			console.log('lastValue Интервал', lastValueInterval);
 
 			let start = new Date();
 			start.setTime(start.getTime() - _this.lastValueInterval); // Устанавливаем время Первого клика по Секундомеру
@@ -96,15 +94,15 @@
 
 			this.switchBtn.innerText = 'Stop';
 
-			node.timer = setInterval(function () {
+			node.timer = setInterval(function () {    // Тут можно использовать рекурсивный setTimeout
 				end = new Date();
 				timeInterval = end.getTime() - start.getTime();  // замерить промежуток времени, произошедший между двумя этими вызовами
 
-				hour = Math.floor(timeInterval/3600000);
+				hour = Math.floor(timeInterval/3600000);   // Math.floor округляет число вниз
 				balanceHour = timeInterval % 3600000;
 
 				min = Math.floor(balanceHour/60000);
-				balanceMin = balanceHour % 60000;
+				balanceMin = balanceHour % 60000;          // остаток от деления balanceHour на 1000
 
 				sec = Math.floor(balanceMin/1000);
 				msec = balanceMin % 1000;
@@ -116,7 +114,6 @@
 
 				timer.innerText = hour + ':' + min + ':' + sec + ':' + msec;
 				_this.lastValueInterval = timeInterval;
-				console.log('lastValueInterval', this.lastValueInterval);
 			}, 1);
 		}
 
@@ -133,7 +130,7 @@
 			let stopwatchListItem = document.createElement('div');
 			stopwatchListItem.className = 'alert alert-info';
 			stopwatchListItem.innerHTML = this.timer.innerText;
-			stopwatchList.insertBefore(stopwatchListItem, stopwatchList.firstChild);
+			stopwatchList.insertBefore(stopwatchListItem, stopwatchList.firstChild);  // вставить перед первым потомком
 
 			let closeListItem = document.createElement('span');
 			closeListItem.className = 'label label-danger';
@@ -141,15 +138,14 @@
 			stopwatchListItem.appendChild(closeListItem);
 
       this.stopwatchListItemsClose.push(closeListItem);
-      console.log('Массив Закрыть Lap:', this.stopwatchListItemsClose);
 
 			this.stopwatchListItems.push(stopwatchListItem);
-      console.log('Добавили Lap', this.stopwatchListItems);
-		}	
+		}		
 
 		resetTimer() {
-		    let timer = this.timer;
-			clearInterval(window.timer);
+		  let timer = this.timer,
+          node = this.node;
+			clearInterval(node.timer);
 			timer.innerText = '00:00:00:000';
 			this.switchBtn.innerText = 'Start';
 			this.stopwatchList.innerText = '';
@@ -159,15 +155,12 @@
 		onNodeClick(event) {
       if (event.target === this.switchBtn) {
 				if (this.switchBtn.innerText === 'Start') {
-					console.log('Нажали Старт');
 					this.startStopwatch();
 				} else {
-				    console.log('Нажали Стоп');
 				    this.stopStopwatch();
 				}
 			}
 			if (event.target === this.infoBtn) {
-				console.log('Добавили таймер в список');
 				this.addTimer();
 			}
 			if (event.target === this.resetBtn) {
@@ -177,14 +170,11 @@
       for(let i = 0; i < this.stopwatchListItemsClose.length; i += 1) {
         let lapElem = this.stopwatchListItemsClose[i].parentNode;
         if (event.target === this.stopwatchListItemsClose[i]) {
-          console.log('Надо удалить таймер в списке');
-          console.log('Клик по кнопке с индексом', i);
           lapElem.parentNode.removeChild(lapElem);
           _this.stopwatchListItems.splice(i, 1);
           _this.stopwatchListItemsClose.splice(i, 1);
-          console.log('Теперь массив Lap:', _this.stopwatchListItems);
         }
-      }      
+      }
     }
 
 		onNodeKeyup(event) {
@@ -193,7 +183,6 @@
 			const r_keycode = 82;
 
 			if (event.keyCode === s_keycode) {
-        console.log('Нажали кнопку S');
 				this.toSwitchTimer();
 			}
 			if (event.keyCode === l_keycode) {
