@@ -234,11 +234,33 @@
     <section id="study">
         <h2>Case study</h2>
         <p class="decor-dot-line">A brief story about how this process works, keep an eye till the end.<span class="dot"></span></p>
-        <div class="study-content">
-            <div class="study-desc">
-                <div class="icon-study"><span><img src="img/icon-study.png" alt="Icon study"></span></div>
-                <h3>Accumulate creative ideas</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p><a class="btn" href="#">Read more</a>
+        <div class="js-study-slider">
+            <div>
+              <div class="study-content" style="background-image: url(img/bg_study_1.jpg);">
+                  <div class="study-desc">
+                      <div class="icon-study"><span><img src="img/icon-study-1.png" alt="Icon study"></span></div>
+                      <h3>Accumulate creative ideas</h3>
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.</p><a class="btn" href="#">Read more</a>
+                  </div>
+              </div>
+            </div>
+            <div>
+              <div class="study-content" style="background-image: url(img/bg_study_2.jpg);">
+                  <div class="study-desc">
+                      <div class="icon-study"><span><img src="img/icon-study-2.png" alt="Icon study"></span></div>
+                      <h3>Prototype creation</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, architecto, atque. In quasi sint dicta obcaecati nam ratione aliquam dolorem accusantium excepturi doloribus at, eius, iusto dolores velit, reprehenderit et, accusamus laudantium quidem voluptatem sapiente!</p><a class="btn" href="#">Read more</a>
+                  </div>
+              </div>
+            </div>
+            <div>
+              <div class="study-content" style="background-image: url(img/bg_study_3.jpg);">
+                  <div class="study-desc">
+                      <div class="icon-study"><span><img src="img/icon-study-3.png" alt="Icon study"></span></div>
+                      <h3>Full development process</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, perspiciatis ipsum quibusdam, sequi libero, beatae blanditiis dicta ex, consequuntur quis soluta iusto. Nemo quo, aliquid rem, pariatur quas repellat nobis assumenda, a dolorem in dolor!</p><a class="btn" href="#">Read more</a>
+                  </div>
+              </div>
             </div>
         </div>
     </section>
@@ -426,8 +448,20 @@
             </div>
             <div>
                 <form action="" method="post">
-                    <fieldset><input type="text" id="name" name="name" placeholder="Name" required><input type="email" id="email" name="email" placeholder="Email" required><input type="text" id="subject" name="subject" placeholder="Subject"><textarea name="message" rows="5" placeholder="Message"></textarea></fieldset>
-                    <div><input class="btn" type="submit" value="Send message"></div>
+                  <div class="form-field">
+                    <label class="passp-form-field__label" for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-field">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                  </div>
+                  <div class="form-field">
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+                  </div>
+                  <div class="form-field">
+                    <textarea name="message" rows="5" placeholder="Message"></textarea>
+                  </div>
+                  <div><input class="btn" type="submit" value="Send message"></div>
                 </form>
             </div>
         </div>
