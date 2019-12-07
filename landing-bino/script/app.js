@@ -51,9 +51,26 @@ const getHeightServicesSlide = () => {
   };
 }
 
+const initStudySlider = () => {
+
+  const $sliderStudy = $('.js-study-slider');
+
+  $sliderStudy.slick({
+    arrows: false,
+    dots: true,
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    easing: 'linear',
+    speed: 1000,
+    zIndex: 1
+  });
+}
+
 $(document).ready(()=> {
   initMainSlider();
   initServicesSlider();
+  initStudySlider();
 
   // Smooth scroll
   var $page = $('html, body');
@@ -109,8 +126,8 @@ $(document).ready(()=> {
   if(window.matchMedia('(max-width: 768px)').matches) {
     var heightSlider = getHeightServicesSlide();
     var currentHeightSlide = heightSlider() + 25;
-    $('.slick-slide').height(currentHeightSlide);
-    $('.slick-slide').css('background-color', '#202020');
+    $('.js-services-slider .slick-slide').height(currentHeightSlide);
+    $('.js-services-slider .slick-slide').css('background-color', '#202020');
     //console.log('maxHeight ', heightSlider());
     $('#services').height(currentHeightSlide);
   }
