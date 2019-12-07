@@ -73,10 +73,23 @@ strong {
    margin-left: 0;
 } 
 
+ol li,
 ul li {
    margin-bottom: 15px;
 }
 
 a.main {
- margin-right: 25px; 
+ margin-right: 25px;
+}
+
+.tags {
+  max-width: 80%;
+}
+
+.tags li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #f7f7f7;
+  border-radius: 15px;
 }
