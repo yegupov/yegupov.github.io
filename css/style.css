@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -34,7 +38,7 @@ header:after {
 
 main {
   display: block;
-  width: 80%;  
+  width: 80%;
   padding-bottom: 250px;
 }
 
@@ -42,14 +46,30 @@ h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1 {
-  font-size: 30px;
+h1, .h1 {
+  font-size: 34px;
   font-weight: 400;
 }
 
+h1::after, .h1::after {
+  height: 0;
+}
+
 h2 {
+  position: relative;
   font-weight: 400;
-  margin-top: 90px;
+  margin: 70px 0 30px;
+  padding-top: 20px;
+}
+
+h2::after {
+  position: absolute;
+  content: '';
+  left: 3px;
+  bottom: -15px;
+  width: 65px;
+  height: 4px;
+  background-color: #aeaeae;
 }
 
 h3 {
@@ -69,21 +89,53 @@ strong {
   margin-left: 235px;
 }
 
-.tasks h2 {
-  margin-top: 20px;
-}
-
 .tasks-list {
    margin-left: 0;
-} 
+}
 
 ol li,
 ul li {
    margin-bottom: 15px;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #7c7cd1;
+}
+
 a.main {
  margin-right: 25px;
+}
+
+.portfolio-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-nav li {
+  display: inline-block;
+  margin: 0 20px 15px 0;
+}
+
+.portfolio-nav li::before {
+  display: inline-block;
+  content: '|';
+  font-size: 1em;
+  color: #dedede;
+  margin-right: 20px;
+}
+
+.portfolio-nav li:first-child::before {
+  content: '';
+  margin-right: 0;
 }
 
 .list-img-text {
@@ -109,6 +161,8 @@ a.main {
   padding: 5px 15px;
   background-color: #f7f7f7;
   border-radius: 15px;
+  font-weight: 600;
+  color: #7e7e7e;
 }
 
 .img-zoom {
