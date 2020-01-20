@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Frontend developer Portfolio Gennady Yegupov</title>
-	<meta name="description" content="Sites and Applications, Javascript Tasks and Developer Resume." />
+	<title>Портфолио Frontend разработчика Геннадия Егупова</title>
+	<meta name="description" content="Сайты под ключ, верстка, Javascript виджеты и приложения, а также резюме разработчика." />
 	<link rel="shortcut icon" href="favicon.png" sizes="16x16 32x32" type="image/png">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header>
 		<img src="img/for-resume.jpg" alt="">
-		<h1>Gennady Yegupov</h1>
-		<p>Frontend developer</p>
+		<h1>Геннадий Егупов</h1>
+		<p>Frontend разработчик</p>
 		<p>E-mail: <a href="mailto:ludvig31@yandex.ru">ludvig31@yandex.ru</a></p>
 		<ul class="tags">
 			<li>HTML5</li>
@@ -29,85 +29,105 @@
 	</header>
 	<main>
 		<section class="tasks">
-			<h2>Works</h2>
-			<h3>Landing page Mountains (SPA / Vue.js)</h3>
-			<p>Project of training course at Loftschool.com</p>
-			<ul class="tasks-list">
-				<li><a href="https://yegupov.github.io/mountains/">Description of the project, screenshots and video</a></li>
-				<li><a href="https://yegupov.github.io/ls-portfolio-Mountains/">Landing page</a></li>
-				<li><a href="https://github.com/yegupov/ls-portfolio-Mountains">Repository</a></li>
+			<h2 class="h1">Портфолио</h2>
+			<nav>
+			  <ul class="portfolio-nav">
+			    <li><a href="#website">Сайт «под ключ»</a></li>
+			    <li><a href="#layout">Верстка сайтов</a></li>
+			    <li><a href="#javascript">JavaScript</a></li>
+					<li><a href="#vue">Vue.js</a></li>
+			  </ul>
+			</nav>
+
+			<h2 id="website">Сайт «под ключ»</h2>
+			<ul>
+				<li><a href="https://mens-look.ru/" target="_blank">mens-look.ru</a> (дизайн, верстка, MODx)</li>
+				<li><a href="https://luma-light.ru/" target="_blank">luma-light.ru</a> (дизайн, верстка, PrestaShop)</li>
+				<li><a href="https://make-website.ru/" target="_blank">make-website.ru</a> (MODx)</li>
+				<li><a href="http://laseroconcept.ru/" target="_blank">laseroconcept.ru</a> (1C-Bitrix)</li>
+				<li><a href="https://cosmetolog-dronov.ru/" target="_blank">cosmetolog-dronov.ru</a> (дизайн, верстка, html, css, jquery)</li>
+				<li><a href="http://www.ginza.ee/" target="_blank">www.ginza.ee</a> (дизайн, верстка)</li>
 			</ul>
-			<h3>Learning tasks for JavaScript</h3>
+
+			<h2 id="layout">Верстка сайтов</h2>
+			<h3>Интернет-магазин Smartech.ee (Html, Css, jQuery)</h3>
+			<ul class="tasks-list">
+				<!-- <li><a href="#">Описание и скриншоты</a></li> -->
+				<li><a href="https://www.smartech.ee/" target="_blank">www.smartech.ee</a></li>
+			</ul>
+			<h3>Лендинг Bino (Pug, Scss, jQuery)</h3>
+			<ul class="tasks-list">
+				<li><a href="https://yegupov.github.io/landing-bino/">Описание проекта и скриншоты</a></li>
+				<li><a href="https://yegupov.github.io/landing-bino/bino.html">Landing page Bino</a></li>
+			</ul>
+			<h3>Лендинг Secret Santa (Pug, Scss, jQuery)</h3>
+			<ul class="tasks-list">
+				<li><a href="https://yegupov.github.io/secret-santa/">Описание проекта и скриншоты</a></li>
+				<li><a href="https://yegupov.github.io/secret-santa-landing-page/">Landing page Secret Santa</a></li>
+			</ul>
+
+			<h2 id="javascript">JavaScript</h2>
+			<h3>Учебные задачи по JavaScript</h3>
 			<ul class="tasks-list">
 				<li><a href="https://yegupov.github.io/menu/">Context menu</a></li>
 				<li><a href="https://yegupov.github.io/stopwatch/">Stopwatch Widget</a></li>
 				<li><a href="https://yegupov.github.io/form/">Form validation</a></li>
 				<li><a href="https://yegupov.github.io/budget-calculation/">Budget calculator</a></li>
 			</ul>
-			<h3>Landing page layout (Pug, Sass)</h3>
+
+			<h2 id="vue">Vue.js</h2>
+			<h3>Лендинг Mountains (SPA / Vue.js)</h3>
+			<p>Проект учебного курса в Loftschool.com</p>
 			<ul class="tasks-list">
-				<li><a href="https://yegupov.github.io/landing-bino/">Description of the project and screenshots</a></li>
-				<li><a href="https://yegupov.github.io/landing-bino/bino.html">Landing page Bino</a></li>
+				<li><a href="https://yegupov.github.io/mountains/">Описание проекта, скриншоты и видео</a></li>
+				<li><a href="https://github.com/yegupov/ls-portfolio-Mountains">Репозиторий</a></li>
+				<li><a href="https://yegupov.github.io/ls-portfolio-Mountains/">Landing page Mountains</a></li>
+			</ul>
+			<h3>Депозитный калькулятор (Vue.js)</h3>
+			<ul class="tasks-list">
+				<li><a href="https://yegupov.github.io/deposit-calculator/">Описание проекта и скриншоты</a></li>
+				<li><a href="https://github.com/yegupov/deposit-profit-calculator">Репозиторий</a></li>
+				<li><a href="https://yegupov.github.io/deposit-profit-calculator/">Депозитный калькулятор</a></li>
 			</ul>
 		</section>
+
 		<section class="resume">
-			<h2>Resume</h2>
-			<h3>Skills</h3>
+			<h2 class="h1">Резюме</h2>
+			<h3>Навыки</h3>
 			<ul>
 				<li>HTML5 (Pug), CSS3 (Sass / Scss / Pcss).</li>
-				<li>JavaScript, jQuery (basic knowledge).</li>
-				<li>Vue.js (elementary knowledge).</li>
-				<li>I have an understanding of web technologies: html5, css3, animations, ajax, php.</li>
-				<li>Excellent Photoshop and CorelDraw.</li>
-				<li>Worked with CMS: Modx, PrestaShop, Joomla, 1C-Bitrix.</li>
-				<li>Engaged in the creation of designs, layout layouts.</li>
+				<li>JavaScript, jQuery (базовые знания).</li>
+				<li>Vue.js (начальные знания).</li>
+				<li>Отлично владею Photoshop и CorelDraw.</li>
+				<li>Работаю с CMS: Modx Revo, PrestaShop, Joomla, 1С-Битрикс.</li>
+				<li>Занимаюсь созданием дизайнов, версткой макетов.</li>
 			</ul>
 
-			<h3>Experience</h3>
-			<p><strong>Freelance</strong> (November 2013 – Until now)</p>
-			<p>Website development:</p>
-			<ul>
-				<li><a href="https://mens-look.ru/" target="_blank">mens-look.ru</a> (design, layout, MODx)</li>
-				<li><a href="https://luma-light.ru/" target="_blank">luma-light.ru</a> (PrestaShop, design, layout)</li>
-				<li><a href="https://make-website.ru/" target="_blank">make-website.ru</a> (MODx)</li>
-				<li><a href="http://laseroconcept.ru/" target="_blank">laseroconcept.ru</a> (1C-Bitrix)</li>
-				<li><a href="https://cosmetolog-dronov.ru/" target="_blank">cosmetolog-dronov.ru</a> (design, layout, html, css, jquery)</li>
-			</ul>
+			<h3>Опыт работы</h3>
+			<p><strong>Freelance</strong> (Ноябрь 2013 – Настоящее время)</p>
 
-			<p>Website conversion:</p>
-			<ul>
-				<li><a href="http://www.ginza.ee/" target="_blank">www.ginza.ee</a> (creation of design and layout)</li>
-				<li><a href="https://www.smartech.ee/" target="_blank">www.smartech.ee</a> (layout of various blocks)</li>
-			</ul>
 
-			<h3>Courses</h3>
+			<h3>Курсы</h3>
 			<ol class="list-img-text">
 				<li>
 					<img src="img/certificate-ls-small.jpg" title="Сертификат Loftschool.com" alt="Сертификат Loftschool.com" class="img-zoom">
 					<p><strong>Loftschool.com</strong> (7.10.2019 – 14.11.2019)</p>
-					<p>«Advanced Web Development Course», <a href="https://loftschool.com/course/web-development/" target="_blank">Course program</a>.</p>
+					<p>«Advanced Web Development Course», <a href="https://loftschool.com/course/web-development/" target="_blank">Программа курса</a>.</p>
 				</li>
 				<li>
 					<img src="img/certificate-lj-small.jpg" title="Сертификат Learn.javascript.ru" alt="Сертификат Learn.javascript.ru" class="img-zoom">
 					<p><strong>Learn.javascript.ru</strong> (6.12.2018 – 11.02.2019)</p>
-					<p>«JavaScript/DOM/Interfaces», <a href="https://learn.javascript.ru/courses/js" target="_blank">Course program</a>.</p>
+					<p>«JavaScript/DOM/Interfaces», <a href="https://learn.javascript.ru/courses/js" target="_blank">Программа курса</a>.</p>
 				</li>
 				<li>
-					<p><strong>Maxymiser Academy</strong> (May – October 2018)</p>
+					<p><strong>Maxymiser Academy</strong> (Май – Октябрь 2018)</p>
 					<p>«JavaScript basics», <a href="https://vk.com/mmacademy" target="_blank">vk.com/mmacademy</a>.</p>
 				</li>
 			</ol>
 
-			<h3>Education</h3>
-			<p>Dnieper State Academy of Civil Engineering and Architecture, 1997</p>
-			<p>Specialty: automation of building production.</p>
-
-			<h3>Additional Information</h3>
-			<ul>
-				<li>English level: initial.</li>
-				<li>I am engaged in every project with fanatical passion.</li>
-				<li>Continue to improve the knowledge of JavaScript.</li>
-			</ul>
+			<h3>Образование</h3>
+			<p>Приднепровская государственная академия строительства и архитектуры (ПГАСА), 1997 г.</p>
+			<p>Специальность: автоматизация строительного производства.</p>
 		</section>
 	</main>
 	<script src="https://yegupov.github.io/js/script.js"></script>
