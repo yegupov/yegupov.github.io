@@ -51,6 +51,10 @@ h1, .h1 {
   font-weight: 400;
 }
 
+h1 span {
+  color: #aeaeae;
+}
+
 h1::after, .h1::after {
   height: 0;
 }
@@ -85,6 +89,10 @@ strong {
   font-weight: 600;
 }
 
+.center {
+  text-align: center;
+}
+
 .tasks, .resume {
   margin-left: 235px;
 }
@@ -112,6 +120,15 @@ a:visited {
 
 a.main {
  margin-right: 25px;
+}
+
+section img {
+  max-width: 100%;
+  margin: 100px 0;
+}
+
+video {
+  margin-top: 25px;
 }
 
 .portfolio-nav {
