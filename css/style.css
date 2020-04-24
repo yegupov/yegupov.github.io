@@ -93,6 +93,26 @@ strong {
   text-align: center;
 }
 
+.bg-y {
+  padding: 1px 4px;
+  background-color: rgba(234,227,111,0.4);
+}
+
+.bg-p {
+  padding: 1px 4px;
+  background-color: rgba(185,89,209,0.3);
+}
+
+.bg-g {
+  padding: 1px 4px;
+  background-color: rgba(97,209,89,0.3);
+}
+
+.bg-r {
+  padding: 1px 4px;
+  background-color: rgba(224,106,70,0.3);
+}
+
 .tasks, .resume {
   margin-left: 235px;
 }
