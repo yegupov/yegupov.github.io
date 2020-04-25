@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Создание REST API на PHP для Админки сайта</title>
+  <link rel="stylesheet" href="https://yegupov.github.io/css/style.css">
+</head>
+<body>
+  <main>
+    <section class="task-desc">
+      <a href="https://yegupov.github.io/" class="main">На Главную</a>
+      <a href="https://cosmetolog-dronov.ru" target="_blank">Посмотреть сайт COSMETOLOG-DRONOV.ru</a>
+      <h1>Создание <span>REST API</span> на PHP для Админки сайта</h1>
+      <p>Проект разработан для взаимодействия с приложением Админ-панели персонального сайта врача COSMETOLOG-DRONOV.ru.</p>
+      <p>REST API создан на языке <span class="bg-g">PHP</span>. Приложение Админ-панели &mdash; на <span class="bg-y">Vue.js</span>.</p>
+
+      <h2>Как происходит взаимодействие API с Админ-панелью:</h2>
+      <ol>
+      	<li>Во время Авторизации введенные данные в Login-форме с приложения уходят на this-api.ru/login.php</li>
+      	<li>Сервер проверяет введенные данные (логин и пароль), генерирует JWT токен и отправляет его клиенту.</li>
+      	<li>Клиент теперь при передаче любых запросов вслед должен сбрасывать свой токен.</li>
+      	<li>Сервер принимая запрос на получение данных валидирует полученный токен и разрешает либо запрещает доступ.</li>
+      </ol>
+
+      <h2>Основные моменты и что разработано:</h2>
+      <ul>
+      	<li>Подключение к базе данных и операции с ней происходят с помощью <span class="bg-g">PDO</span> технологии.</li>
+      	<li>Создание, кодирование и декодирование <span class="bg-p">JWT</span> (JSON Web Token) осуществляется с помощью библиотеки PHP-JWT.</li>
+      	<li>В проекте реализованы операции создания, чтения, обновления и удаления (<span class="bg-r">CRUD</span>) пользователей и комментариев. Для контентных блоков Обо мне и Контакты предусмотрено только чтение и обновление.</li>
+      	<li>Для Пользователей добавлена возможность загружать изображения (аватарки) на сервер, валидировать (размер и формат) и удалять прежние при смене аватарки.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Скриншоты</h2>
+      <p class="center">Структура папки API:<br/><img src="img/api-cosmetology-1" alt="Создание REST API на PHP"></p>
+			<p class="center">Таблица базы данных content:<br/><img src="img/api-cosmetology-2" alt="Таблица базы данных MySQL"></p>
+    </section>
+  </main>
+</body>
+</html>
