@@ -19,17 +19,21 @@ body {
 
 header, main {
   width: 80%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 50px auto 0;
 }
 
+header {
+  padding-top: 30px;
+}
+
 header img {
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
 }
 
 header h1 {
-  margin: -7px 0 0;  
+  margin: -7px 0 0;
 }
 
 header:after {
@@ -42,6 +46,30 @@ main {
   display: block;
   width: 80%;
   padding-bottom: 250px;
+}
+
+.content {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 80%;
+  margin: 50px auto 0;
+}
+
+.sidebar {
+  width: 20%;
+  position: relative;
+}
+
+main.page-content {
+  margin: 0;
+}
+
+.page-content .h1 {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 h1, h2, h3, h4 {
@@ -59,6 +87,7 @@ h1 span {
 
 h1::after, .h1::after {
   height: 0;
+  background-color: transparent;
 }
 
 h2 {
@@ -115,7 +144,7 @@ strong {
   background-color: rgba(224,106,70,0.3);
 }
 
-.tasks, .resume {
+.tasks {
   margin-left: 235px;
 }
 
@@ -145,6 +174,18 @@ a.main {
  margin-right: 25px;
 }
 
+pre {
+  width: 100%;
+  overflow: auto;
+  margin: 2rem 0;
+  padding: 1rem 0.8rem 1rem 1.2rem;
+  color: #3f3b36;
+  border: 1px solid #ebebeb !important;
+  font: lighter 1rem/1.8rem Monaco,'MonacoRegular',monospace;
+  background: url('../img/pre.png') repeat 0 -0.9rem;
+  background-size: 1px 3.53rem;
+}
+
 section img {
   max-width: 100%;
   margin: 100px 0;
@@ -156,7 +197,14 @@ video {
 
 iframe {
   display: block;
-  margin: 25px 0 35px;
+  margin: 25px auto 50px;
+}
+
+.sidebar-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px;
+  margin: 135px 0;
 }
 
 .portfolio-nav {
@@ -166,21 +214,123 @@ iframe {
 }
 
 .portfolio-nav li {
-  display: inline-block;
-  margin: 0 20px 15px 0;
+  display: block;
+  margin: 0 0 25px 0;
 }
 
-.portfolio-nav li::before {
-  display: inline-block;
-  content: '|';
-  font-size: 1em;
-  color: #dedede;
-  margin-right: 20px;
+.portfolio-nav li a {
+  position: relative;
+  display: block;
+  padding-left: 25px;
 }
 
-.portfolio-nav li:first-child::before {
+.portfolio-nav li a::before {
+  position: absolute;
+  top: 4px;
+  left: 0;
   content: '';
-  margin-right: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.portfolio-nav li a[href="#website"]::before {
+  background: url('../img/logo-mws.png') no-repeat;
+  -webkit-background-size: 18px 18px;
+  background-size: 18px 18px;
+}
+.portfolio-nav li a[href="#layout"]::before {
+  background: url('../img/logo-layout.png') no-repeat;
+  -webkit-background-size: 18px 18px;
+  background-size: 18px 18px;
+}
+.portfolio-nav li a[href="#javascript"]::before {
+  background: url('../img/logo-js.png') no-repeat;
+  -webkit-background-size: 18px 18px;
+  background-size: 18px 18px;
+}
+.portfolio-nav li a[href="#vue"]::before {
+  background: url('../img/logo-vue.png') no-repeat;
+  -webkit-background-size: 18px 18px;
+  background-size: 18px 18px;
+}
+.portfolio-nav li a[href="#jquery"]::before {
+  background: url('../img/logo-jquery.png') no-repeat;
+  -webkit-background-size: 18px 20px;
+  background-size: 18px 20px;
+}
+.portfolio-nav li a[href="#php"]::before {
+  background: url('../img/logo-php.png') no-repeat;
+  -webkit-background-size: 20px 14px;
+  background-size: 20px 14px;
+}
+.portfolio-nav li a[href="#resume"] {
+  margin-top: 80px;
+}
+.portfolio-nav li a[href="#resume"]::before {
+  background: url('../img/icon-resume.png') no-repeat;
+  -webkit-background-size: 18px 20px;
+  background-size: 18px 20px;
+  top: 3px;
+}
+
+#website {
+  background: url('../img/logo-mws.png') left 0 top 23px no-repeat;
+  -webkit-background-size: 25px 25px;
+  background-size: 25px 25px;
+  padding-left: 30px;
+}
+#layout {
+  background: url('../img/logo-layout.png') left 0 top 23px no-repeat;
+  -webkit-background-size: 25px 25px;
+  background-size: 25px 25px;
+  padding-left: 30px;
+}
+#javascript {
+  background: url('../img/logo-js.png') left 0 top 23px no-repeat;
+  -webkit-background-size: 25px 25px;
+  background-size: 25px 25px;
+  padding-left: 30px;
+}
+#vue {
+  background: url('../img/logo-vue.png') left 0 top 23px no-repeat;
+  -webkit-background-size: 25px 25px;
+  background-size: 25px 25px;
+  padding-left: 30px;
+}
+#jquery {
+  background: url('../img/logo-jquery.png') left 0 top 22px no-repeat;
+  -webkit-background-size: 24px 27px;
+  background-size: 24px 27px;
+  padding-left: 30px;
+}
+#php {
+  background: url('../img/logo-php.png') left 0 top 24px no-repeat;
+  -webkit-background-size: 30px 20px;
+  background-size: 30px 20px;
+  padding-left: 33px;
+}
+#resume {
+  background: url('../img/icon-resume.png') left 0 top 2px no-repeat;
+  -webkit-background-size: 30px 41px;
+  background-size: 30px 41px;
+  padding-left: 45px;
+}
+#website::after, #layout::after, #javascript::after, #vue::after, #jquery::after, #php::after {
+  position: absolute;
+  z-index: -1;
+  left: -4px;
+  bottom: -24px;
+  width: 86px;
+  height: 66px;
+  background-color: transparent;
+  background: url('../img/bg-bean.png') no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  opacity: 0.3
+}
+
+.resume {
+  padding-top: 200px;
 }
 
 .list-img-text {

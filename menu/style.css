@@ -1,6 +1,6 @@
 .container-menu {
   width: 610px;
-  height: 233px;
+  min-height: 233px;
   margin: 0 auto;
 }
 

@@ -1,2 +1,2 @@
 # yegupov.github.io
-Frontend developer
+Frontend developer Portfolio Gennady Yegupov

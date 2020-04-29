@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Контекстное меню</title>
-  <link rel="stylesheet" href="https://yegupov.github.io/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>    
+  <main>
     <section class="task-desc">
       <a href="https://yegupov.github.io/" class="main">На Главную</a>
       <a href="https://github.com/yegupov/yegupov.github.io/tree/master/menu" target="_blank">Посмотреть код</a>
@@ -32,23 +32,27 @@
 
       <p>Стилизовать меню можно на свой вкус (главное - видимые границы элементов)</p>
 
-      <p>Пример объекта-структуры меню:<br />
-      var menuExample = [{<br />
-      &nbsp;&nbsp; &nbsp;title: File,<br />
-      &nbsp;&nbsp; &nbsp;action: function () {console.log(open file)}<br />
-      }, {<br />
-      &nbsp;&nbsp; &nbsp;title: Edit,<br />
-      &nbsp;&nbsp; &nbsp;action: function () {console.log(edit content)}<br />
-      }, {<br />
-      &nbsp;&nbsp; &nbsp;title: More stuff,<br />
-      &nbsp;&nbsp; &nbsp;submenu: [{<br />
-      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;title: Send by email,<br />
-      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;action: function () {console.log(emailed)}<br />
-      &nbsp;&nbsp; &nbsp;}, {<br />
-      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;title: Send via skype,<br />
-      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;action: function () {console.log(skyped)}<br />
-      &nbsp;&nbsp; &nbsp;}]<br />
-      }]</p>
+      <p>Пример объекта-структуры меню:</p>
+      <pre>
+        <code>
+  var menuExample = [{
+  &nbsp;&nbsp; &nbsp;title: File,
+  &nbsp;&nbsp; &nbsp;action: function () {console.log(open file)}
+  }, {
+  &nbsp;&nbsp; &nbsp;title: Edit,
+  &nbsp;&nbsp; &nbsp;action: function () {console.log(edit content)}
+  }, {
+  &nbsp;&nbsp; &nbsp;title: More stuff,
+  &nbsp;&nbsp; &nbsp;submenu: [{
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;title: Send by email,
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;action: function () {console.log(emailed)}
+  &nbsp;&nbsp; &nbsp;}, {
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;title: Send via skype,
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;action: function () {console.log(skyped)}
+  &nbsp;&nbsp; &nbsp;}]
+  }]
+        </code>
+      </pre>
     </section>
 
     <section>
@@ -60,7 +64,7 @@
       <p>Согласно традициям англичан, под узлом при желании можно оставить небольшую складку. Именно она считается проявлением мастерства в этой тонкой работе.</p>
 
       <p>На сегодняшний день существует немалое количество методик завязывания галстука. И рано или поздно практически каждому мужчине придется столкнуться с ними. Чтобы данный процесс в будущем не превратился в проблему, рекомендуется заранее выучить основные из возможных способов.</p>
-    	
+
     </section>
   </main>
   <script src="script.js"></script>
