@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Админ-панель интернет-магазина на Vue.js</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main>
+    <section class="task-desc">
+      <a href="https://yegupov.github.io/" class="main">На Главную</a>
+      <a href="http://yg-garments.ru/admin738149/" target="_blank">Посмотреть страницу авторизации</a>
+      <h1>Админ-панель интернет-магазина на <span>Vue.js</span></h1>
+      <p>Приложение (SPA) создано для PHP магазина <a href="http://yg-garments.ru/" target="_blank">YG-GARMENTS.ru</a>. В нем присутствуют следующие страницы: Пульт (Главная), Товары, Категории, Коллекции, Блог и Пользователи.</p>
+      <p>Для осуществления операций создания, чтения, обновления и удаления данных (<span class="bg-r">CRUD</span>) разработано REST API (PHP).</p>
+      <p>С целью создания SVG спрайта был заменен базовый загрузчик <span class="bg-g">Vue CLI</span> на svg-sprite-loader путем настройки файла vue.config.js.</p>
+      <p>Посмотреть <a href="http://yg-garments.ru/admin738149/" target="_blank">страницу авторизации</a> приложения.</p>
+
+      <h2>Функционал, реализованный в приложении:</h2>
+      <ol>
+      	<li>Авторизация и выход из Админ-панели.</li>
+      	<li>Валидация полей форм при помощи плагина Simple-Vue-Validator и отображение подсказок.</li>
+      	<li>Создание, чтение, обновление и удаление (CRUD) товаров, категорий, коллекций, постов блога и пользователей.</li>
+      	<li>Чтение сделанных в магазине заказов и отбражение их в виде графиков и диаграмм (<span class="bg-p">Highcharts</span>) с фильтрацией по количеству, общей сумме и годам (страница Пульт).</li>
+      	<li>Загрузка изображений на сервер и удаление прежнего при смене или удалении администратором.</li>
+      	<li>Пагинация в разделах Товары и Блог.</li>
+        <li>Выбор количества позиций для показа на одной странице.</li>
+        <li>Фильтрация товаров по разделам каталога, категориям и коллекциям. Фильтрация постов блога по годам.</li>
+      	<li>Сортировки товаров по id и цене.</li>
+        <li>Поиск по названию товаров и постов.</li>
+      	<li>Сообщения-подсказки для администратора в виде всплывающих внизу модальных окон.</li>
+      	<li>Для главной страницы Пульт разработано отображение статистики из Яндекс Метрики. Использованы <span class="bg-y">API Яндекс Метрики</span> и библиотека <span class="bg-p">Highcharts</span> для построения графиков.
+        Также на странице выводятся актуальные курсы валют и имеется калькулятор.</li>
+      </ol>
+
+      <h2>Использованные инструменты и пакеты:</h2>
+      <ul>
+        <li>Vue CLI — система для быстрой разработки на Vue.js.</li>
+        <li>Шаблонизатор Pug.</li>
+        <li>Препроцессор Sass.</li>
+        <li>Для Svg спрайта использованы пакеты: svg-sprite-loader, svgo и svgo-loader.</li>
+      	<li>Axios — для получения и отображения данных из API.</li>
+      	<li>Vuex — для работы с данными (управление состоянием).</li>
+      	<li>Highcharts и highcharts-vue — для построения диаграмм и графиков.</li>
+        <li>Vue2-editor — текстовый редактор.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Скриншоты и видео</h2>
+      <h3>Домашняя страница Пульт</h3>
+      <p class="center"><img src="img/home.png" alt="Домашняя страница админки онлайн магазина"></p>
+			<p class="center"> Вход в Админку и обзор главной страницы:
+        <iframe width="700" height="394" src="https://www.youtube.com/embed/3Kr4uwyOwpY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+
+      <h3>Товары</h3>
+      <p class="center"><img src="img/products.jpg" alt="Список товаров в адинке интернет магазина"></p>
+      <p class="center"><img src="img/product-edit-1.jpg" alt="Редактирование товара в админке"></p>
+      <p class="center"><img src="img/product-edit-2.jpg" alt="Форма редактирования товара"></p>
+      <p class="center"><b>Вкладки формы редактирования товара:</b><br/><img src="img/product-banner-900х473.gif" alt="Вкладки в форме редактирования товара"></p>
+      <p class="center"><b>Страница товаров:</b><br/>Пагинация, Фильтрация по разделам каталога, категориям и коллекциям, Сортировки по id и цене,	Поиск по названию товаров:
+        <iframe width="700" height="394" src="https://www.youtube.com/embed/03BoJaTu2Gw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+      <p class="center"><b>Создание товара:</b><br/>Вкладки,	Добавление / удаление изображений, Текстовые блоки: Vue2-editor,	Компонент «Рекомендуемые товары»,	SEO поля:
+        <iframe width="700" height="394" src="https://www.youtube.com/embed/CDzoEUeVx-M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+      <p class="center"><b>Редактирование товара:</b>
+        <iframe width="700" height="394" src="https://www.youtube.com/embed/onouKeG3Ta8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+
+      <h3>Категории</h3>
+      <p class="center"><img src="img/categories.png" alt="Страница Категории каталога"></p>
+
+      <h3>Коллекции</h3>
+      <p class="center">Список коллекций:<br/><img src="img/collections.jpg" alt="Страница Коллекции"></p>
+      <p class="center">Редактирование коллекции:<br/><img src="img/collections-edit.jpg" alt="Форма редактирования коллекции"></p>
+
+      <h3>Блог</h3>
+      <p class="center"><img src="img/blog.jpg" alt="Страница Блога"></p>
+      <p class="center"><b>Создание и редактирование поста Блога:</b><br/>Вкладки,	Теги: ввод и выбор из имеющихся, Добавление / удаление изображений: фото-обложка и сдайдшоу, Текстовые блоки с изображениями: Vue2-editor, SEO поля:
+        <iframe width="700" height="394" src="https://www.youtube.com/embed/W8fNOzgx0JY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+
+      <h3>Пользователи</h3>
+      <p class="center"><img src="img/users.png" alt="Страница Пользователи"></p>
+      <p class="center"><img src="img/users-create.png" alt="Форма создания пользователя"></p>
+
+    </section>
+  </main>
+</body>
+</html>
