@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js виджет «Видео-приветствие»</title>
+  <link rel="stylesheet" href="https://yegupov.github.io/css/style.css">
+</head>
+<body>
+  <main>
+    <section class="task-desc">
+      <a href="https://yegupov.github.io/" class="main">На Главную</a>
+      <a href="https://make-website.ru/portfolio/services-and-applications/vstraivaemyij-video-vidzhet-dlya-lyubogo-sajta" target="_blank">На страницу Конфигуратора</a>
+      <h1>Встраиваемый Vue.js виджет «Видео-приветствие»</h1>
+
+      <p>Этот виджет можно использовать как дополнительный маркетинговый инструмент на любом сайте.
+        Чтобы посмотреть ролики просто кликните на окно-превью (справа внизу экрана).</p>
+      <p>Устанавливается виджет посредством вставки кода на страницу. Для формирования кода понадобится предварительная настройка виджета.
+      В <a href="https://make-website.ru/portfolio/services-and-applications/vstraivaemyij-video-vidzhet-dlya-lyubogo-sajta" target="_blank">конфигураторе</a> можно добавить свои видеоролики (до 8 клипов), выполнить настройку внешнего вида виджета: форма (круг/квадрат), позиция (слева/спрва), размер превью-окна, цвет рамки, шрифт, его размер, насыщенность и цвет.</p>
+      <p>К каждому видео есть возможность добавить кнопки-ссылки на целевые веб-страницы и страницы соцсетей.</p>
+      <p>Основное (первое) видео рекомендуется сделать вертикального формата для оптимального отображения виджета и на компьютерах, и на смартфонах.
+        Последующие ролики будут адаптированы по ширине основного. В демо примере ролики сняты на телефоне Самсунг.</p>
+      <p>В настройках есть возможность отпозиционировать и изменить масштаб основного видео в превью-окне виджета, а также наложить надпись-заголовок и определить его местоположение в пределах превью-блока.</p>
+      <p>Окно просмотра видеороликов открывается по клику на превью на высоту экрана с отступами на компьютере и без отступов на телефоне. Оно снабжено прогресс-баром и кнопками: Закрыть, Воспроизведение/Пауза, Отключение звука, навигационные кнопки (если роликов больше 1), а также Поделиться в соцсетях или мессенджерах.</p>
+
+      <h2>Пример конечного кода</h2>
+      <pre>
+&lt;vue-widget src="https://make-website.ru/video-widget/video-widjet-4.mp4" mainvideo="18,14,0.6" shape="circle,200" position="right" colors="#696E7D,#D27804" caption="Узнай, как получить скидку! &amp;#128293;" captionpos="0,65" captionfont="Arial,18,normal,#D27804" linksname="Friday discount" linksurl="http://yg-garments.ru/models/majka-toledo.html"&gt;&lt;/vue-widget&gt;<br>&lt;script src="https://make-website.ru/video-widget/app.js"&gt;&lt;/script&gt;  
+      </pre>
+      <p>Вы можете протестировать этот демо-пример прямо сейчас, вставив код на страницу своего сайта.</p>
+
+      <h2>Использованные технологии и плагины:</h2>
+      <ul>
+      	<li>Html5 Video (работа с событиями в медиа объектах video)</li>
+      	<li>Canvas (получение скриншота видео для вставки на фон)</li>
+      	<li>Web Share API (для возможности поделиться страницей на смартфонах)</li>
+      	<li>Vue-custom-element (обертка компонентов Vue для использования в HTML)</li>
+      	<li>Goodshare.js (кнопки Поделиться)</li>
+      </ul>
+
+      <h2>Ссылки</h2>
+      <p>Адрес проекта: <a href="https://make-website.ru/portfolio/services-and-applications/vstraivaemyij-video-vidzhet-dlya-lyubogo-sajta" target="_blank" title="Vue.js widget">Видео-виджет и Конфигуратор</a></p>
+
+      <h2>Скриншоты и видео-обзор</h2>
+      <p class="center"><img src="video-widget-1.jpg" alt="Виджет на Vue.js"></p>
+      <p class="center"><img src="video-widget-2.jpg" alt="Настройка виджета на вью джеэс"></p>
+      <p class="center"><img src="video-widget-3.jpg" alt="Виджет на Vue.js"></p>
+      <p class="center"><img src="video-widget-4.jpg" alt="Настройка виджета на вью джеэс"></p>
+
+      <h3>Видео-обзор</h3>
+      <p class="center">
+        <iframe width="700" height="394" src="https://www.youtube.com/embed/ooyxG0UIlcs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+    </section>
+    <vue-widget src="https://yegupov.github.io/video-widget/video-widjet-4.mp4,https://yegupov.github.io/video-widget/video-clip-6.mp4,https://yegupov.github.io/video-widget/video-widjet-5.mp4" mainvideo="18,14,0.6" shape="circle,190" position="right" colors="#696E7D,#D27804" caption="Получить скидку! &#128293;" captionpos="2,65" captionfont="Arial,18,normal,#D27804" linksname="Catalog,Instagram;null;Мужская одежда,Женская одежда,Скидки" linksurl="http://yg-garments.ru/menswear.html,https://www.instagram.com/tseh_yg/;null;http://yg-garments.ru/menswear.html,http://yg-garments.ru/womenswear.html,http://yg-garments.ru/discount_menswear.html"></vue-widget>
+    <script src="https://make-website.ru/video-widget/app.js"></script>
+
+  </main>
+</body>
+</html>
