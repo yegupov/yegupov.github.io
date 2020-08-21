@@ -1,0 +1,181 @@
+.search {
+  position: relative;
+}
+
+.search__button {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  width: 85px;
+  height: 22px;
+  background: url('../img/icons/search.svg') left 0 top 1px no-repeat;
+  -webkit-background-size: 21px 21px;
+  background-size: 21px 21px;
+  cursor: pointer;
+}
+
+.header__address .search__button {
+  width: 168px;
+  height: 30px;
+  top: 6px;
+  background: url('../img/icons/location.svg') left 0 top -1px no-repeat;
+  -webkit-background-size: 30px 30px;
+  background-size: 30px 30px;
+}
+
+.search__button::after {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  content: 'Поиск';
+  font-family: 'proxima_novasemibold';
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.header__address .search__button::after {
+  content: 'Адрес доставки';
+}
+
+.search__button.active {
+  width: 35px;
+  top: 3px;
+  background: url('../img/icons/close.svg') center center no-repeat;
+  -webkit-background-size: 16px 16px;
+  background-size: 16px 16px;
+  border-left: 1px solid #C4C4C4;
+}
+
+.search__button.active::after {
+  content: '';
+}
+
+.header__address .search__button.active {
+  margin-left: 404px;
+  top: 6px;
+}
+
+.search__toggle {
+  display: none;
+  position: absolute;
+  background: #fff;
+  z-index: 9;
+  width: 350px;
+  height: 40px;
+  top: -6px;
+  right: 0;
+}
+
+.header__address .search__toggle {
+  right: auto;
+  left: -10px;
+  top: 0;
+  width: 450px;
+}
+
+.search__submit {
+  position: absolute;
+  left: 15px;
+  top: 7px;
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  background: url('../img/icons/search.svg') center center no-repeat;
+  -webkit-background-size: 21px 21px;
+  background-size: 21px 21px;
+  border: none;
+}
+
+.header__address .search__submit {
+  left: 10px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  background: url('../img/icons/location.svg') center center no-repeat;
+  -webkit-background-size: 30px 30px;
+  background-size: 30px 30px;
+}
+
+.input {
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  background: #F5F5F5 !important;
+}
+
+.address__input {
+  width: 450px;
+  padding-left: 45px;
+}
+
+.search__input {
+  width: 350px;
+  padding-left: 45px;
+}
+
+.address__list,
+.search__phrases,
+.menu__sublist,
+.header__account {
+  position: absolute;
+  z-index: 1000;
+  background: #FFFFFF;
+  -webkit-box-shadow: 2px 6px 20px rgba(119, 119, 119, 0.18);
+  -moz-box-shadow: 2px 6px 20px rgba(119, 119, 119, 0.18);
+  box-shadow: 2px 6px 20px rgba(119, 119, 119, 0.18);
+  border-radius: 5px;
+  transition: all .2s;
+}
+
+.address__list,
+.search__phrases {
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+.address__item,
+.search__phrase {
+  position: relative;
+  padding: 8px 8px 8px 40px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  color: #979797;
+  cursor: pointer;
+}
+
+.address__item {
+  padding: 8px 8px 8px 50px;
+}
+
+.address__item:hover,
+.search__phrase:hover {
+  color: #000;
+}
+
+.address__item:before,
+.search__phrase:before {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  width: 24px;
+  height: 24px;
+  content: '';
+  background: #EEEEEE url('../img/icons/search.svg') center center no-repeat;
+  -webkit-background-size: 14px 14px;
+  background-size: 14px 14px;
+  border-radius: 50%;
+}
+
+.address__item:before {
+  top: 5px;
+  left: 14px;
+  width: 28px;
+  height: 28px;
+  content: '';
+  background: #EEEEEE url('../img/icons/location.svg') center center no-repeat;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
+}

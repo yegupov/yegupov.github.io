@@ -1,0 +1,211 @@
+.bestsellers .title {
+  margin: 20px 0 10px;
+}
+
+.offer-list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.offer-list__item {
+  width: calc(50% - 12px);
+  margin-bottom: 24px;
+  border-radius: 10px;
+}
+
+.offer-list__item:nth-child(2n + 1) {
+  margin-right: 24px;
+}
+
+.place-card {
+  display: block;
+  margin: 0;
+  -webkit-box-shadow: 2px 6px 20px rgba(119, 119, 119, 0.3);
+  -moz-box-shadow: 2px 6px 20px rgba(119, 119, 119, 0.3);
+  box-shadow: 2px 6px 20px rgba(119, 119, 119, 0.3);
+  background: #EEEEEE;
+  padding-bottom: 7px;
+  border-radius: 10px;
+}
+
+.place-card__img {
+  position: relative;
+}
+
+.place-card__img img {
+  width: 100%;
+  max-width: none;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.place-card__like {
+  position: absolute;
+  z-index: 5;
+  right: 24px;
+  bottom: 15px;
+  width: 25px;
+  height: 23px;
+  background: url('../img/icons/heart.svg') no-repeat;
+  -webkit-background-size: 25px 23px;
+  background-size: 25px 23px;
+  transition: all .2s;
+}
+
+.place-card__like:hover {
+  -webkit-transform: scale(1.15, 1.15);
+  -ms-transform: scale(1.15, 1.15);
+  transform: scale(1.15, 1.15);
+}
+
+.place-card__rating {
+  float: right;
+  margin: 12px 12px 0 0;
+  width: 50px;
+  height: 50px;
+  background-color: #069852;
+  border-radius: 50%;
+  font-family: 'proxima_novasemibold';
+  font-size: 24px;
+  line-height: 49px;
+  color: #fff;
+  text-align: center;
+}
+
+.place-card__title {
+  padding: 10px 20px;
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.place-card__info {
+  padding: 0 20px;
+}
+
+.place-card__info:after { content: ''; display: table; clear: both; }
+
+.place-card__info > div {
+  float: left;
+  margin-right: 25px;
+  font-size: 14px;
+  letter-spacing: 0.06rem;
+}
+
+.place-card__delivery {
+  background: url('../img/icons/car.svg') left 0 top 5px no-repeat;
+  -webkit-background-size: 16px 12px;
+  background-size: 16px 12px;
+  padding-left: 24px;
+}
+
+.place-card__time {
+  background: url('../img/icons/clock.svg') left 0 top 5px no-repeat;
+  -webkit-background-size: 12px 12px;
+  background-size: 12px 12px;
+  padding-left: 20px;
+}
+
+.place-card__price {
+  background: url('../img/icons/money.svg') left 0 top 4px no-repeat;
+  -webkit-background-size: 14px 14px;
+  background-size: 14px 14px;
+  padding-left: 22px;
+  margin-right: 0 !important;
+}
+
+.offer-list__item a:hover {
+  opacity: 0.7;
+}
+
+.week-offers {
+  padding-left: 3%;
+  padding-bottom: 22px;
+}
+
+.week-offers__slider {
+  width: 100%;
+}
+
+.week-offers__slider .slick-slide {
+  margin-right: 25px;
+}
+
+.week-offers__slide .place-card {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slick-active .week-offers__slide .place-card,
+.slick-active + .slick-slide .week-offers__slide .place-card,
+.slick-active + .slick-slide + .slick-slide .week-offers__slide .place-card {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.week-offers__proffer {
+  position: relative;
+  display: block;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin-top: 40px;
+  padding: 20px 20px 25px;
+  border-radius: 10px;
+  font-family: 'SF Pro Display';
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.week-offers__sticker {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.week-offers__text {
+  min-height: 50px;
+  color: #fff;
+}
+
+.week-offers__text_dark {
+  color: #000;
+}
+
+.week-offers__text span {
+  display: block;
+}
+
+.places-around .offer-list__item {
+  width: calc(25% - 15px);
+  margin-bottom: 20px;
+  margin-right: 20px;
+  display: none;
+}
+
+.places-around .offer-list__item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.places-around .place-card__info > div {
+  margin-right: 20px;
+}
+
+.places-around .place-card__rating {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  background-color: #9CCB3B;
+  margin-top: 17px;
+}
+
+.places-around .text-btn {
+  margin-top: 35px;
+}

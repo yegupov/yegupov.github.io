@@ -1,0 +1,232 @@
+.header {
+  width: 100%;
+  height: 90px;
+}
+
+.header__left, .header__right {
+  height: 90px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__left {
+  float: left;
+}
+
+.header__right {
+  float: right;
+}
+
+.header__logo {
+  margin: auto;
+  width: 153px;
+  height: 40px;
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.header__address {
+  position: relative;
+  width: 450px;
+  height: 40px;
+  margin-left: 40px;
+}
+
+.header__cart {
+  display: inline-block;
+  margin: auto;
+  width: 28px;
+  height: 24px;
+  overflow: hidden;
+  text-indent: -300px;
+  background: url('../img/icons/cart.svg') center center no-repeat;
+  -webkit-background-size: 28px 24px;
+  background-size: 28px 24px;
+}
+
+.header__search {
+  margin: auto;
+  width: 85px;
+  margin-right: 40px;
+  text-align: right;
+}
+
+.logged .header__search {
+  margin-right: 0;
+}
+
+.header__login {
+  position: relative;
+  display: inline-block;
+  margin: auto;
+  width: 85px;
+  margin-right: 30px;
+  background: url('../img/icons/login.svg') left 0 top 7px no-repeat;
+  -webkit-background-size: 20px 16px;
+  background-size: 20px 16px;
+  padding-left: 30px;
+  color: #000;
+  font-size: 18px;
+}
+
+.header__login-link {
+  font-family: 'proxima_novasemibold';
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.logged .header__login {
+  width: 45px;
+  height: 100%;
+  margin: 0 45px;
+  background: url('../img/icons/user.svg') center center no-repeat;
+  -webkit-background-size: 23px 25px;
+  background-size: 23px 25px;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.logged .header__login-link {
+  display: none;
+}
+
+.header__account {
+  left: 50%;
+  top: 100%;
+  width: auto;
+  height: 200px;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  border-radius: 0 0 5px 5px;
+  display: none;
+}
+
+.logged .header__login:hover .header__account {
+  display: block;
+}
+
+.header__account-link {
+  display: block;
+  white-space: nowrap;
+  padding: 15px;
+  padding-left: 50px;
+  font-family: 'proxima_novasemibold';
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.personal {
+  background: url('../img/icons/user.svg') left 15px center no-repeat;
+  -webkit-background-size: 23px 25px;
+  background-size: 23px 25px;
+}
+
+.addresses {
+  background: url('../img/icons/locations.svg') left 15px center no-repeat;
+  -webkit-background-size: 23px 25px;
+  background-size: 23px 25px;
+}
+
+.orders {
+  background: url('../img/icons/orders.svg') left 15px center no-repeat;
+  -webkit-background-size: 23px 25px;
+  background-size: 23px 25px;
+}
+
+.logout {
+  background: url('../img/icons/logout.svg') left 15px center no-repeat;
+  -webkit-background-size: 20px 16px;
+  background-size: 20px 16px;
+  border-top: 1px solid #C4C4C4;
+}
+
+.menu {
+  clear: both;
+}
+
+.menu__list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 74px;
+  background: #A1D13F;
+}
+
+.menu__item {
+  position: relative;
+}
+
+.menu__item a {
+  display: inline-block;
+  padding: 4px 13px;
+  border-radius: 5px;
+  font-family: 'proxima_novabold';
+  font-size: 18px;
+  color: #fff;
+}
+
+.menu__item:hover a {
+  background-color: #fff;
+  color: #000;
+  opacity: 1;
+}
+
+.menu__item:last-child {
+  border-bottom: 10px;
+}
+
+.menu__item:last-child a {
+  padding-right: 35px !important;
+}
+
+.menu__item:last-child::after {
+  position: absolute;
+  content: '';
+  right: 10px;
+  bottom: 14px;
+  width: 14px;
+  height: 7px;
+  background: url('../img/icons/arrow-d-w.svg') no-repeat;
+  -webkit-background-size: 14px 7px;
+  background-size: 14px 7px;
+}
+
+.menu__item:last-child:hover::after {
+  background: url('../img/icons/arrow-d-b.svg') no-repeat;
+}
+
+.menu__sublist {
+  right: 0;
+  top: 102%;
+  width: auto;
+  display: none;
+}
+
+.menu__item:last-child:hover .menu__sublist {
+  display: block;
+}
+
+.menu__subitem a {
+  min-width: 83px;
+  padding: 8px 12px;
+  font-family: 'proxima_novasemibold';
+  font-size: 14px;
+  color: #000;
+}
+
+.menu__subitem a:hover {
+  opacity: .7;
+}
+
+.menu__item:last-child .menu__subitem a {
+  padding-right: 12px !important;
+}
