@@ -49,13 +49,14 @@
   const languageSwitcher = document.querySelector('#languageswitcher');
 
   languageSwitcher.addEventListener('change', function () {
-    let relativeUrlAddress = window.location.href.replace('http://' + window.location.host, '');
+    let urlAddress = window.location.href,
+        relativeUrlAddress = urlAddress.replace('https://' + window.location.host, '');
     relativeUrlAddress = relativeUrlAddress.replace('/en/', '/');
 
     if (languageSwitcher.checked == true) {
-      window.location = '/en' + relativeUrlAddress;
+      window.location = 'https://yegupov.github.io/en' + relativeUrlAddress;
     } else {
-      window.location = relativeUrlAddress;
+      window.location = 'https://yegupov.github.io' + relativeUrlAddress;
     }
   });
 
