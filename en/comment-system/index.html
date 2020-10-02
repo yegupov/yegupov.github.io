@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Система комментариев на PHP, MySQL, jQuery и AJAX</title>
+  <meta name="description" content="Development of a system of nested comments for the site COSMETOLOG-DRONOV.ru.">
+  <link rel="canonical" href="https://yegupov.github.io/en/comment-system/" />
+  <link rel="alternate" href="https://yegupov.github.io/comment-system/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/comment-system/" hreflang="en" />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main>
+    <section class="task-desc">
+      <label class="language-switcher">
+				<input id="languageswitcher" type="checkbox" checked>
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+      <a href="/en/" class="main">To Home</a>
+      <a href="https://cosmetolog-dronov.ru/reviews.html" target="_blank">View reviews page</a>
+
+      <h1>Commenting system in <span>PHP, MySQL, jQuery и AJAX</span></h1>
+
+      <p>Reviews on the doctor&#39;s personal website COSMETOLOG-DRONOV.ru.</p>
+
+      <h3>The project has implemented:</h3>
+
+      <ol>
+      	<li>Nesting comments with the ability to respond to reviews.</li>
+      	<li>Validate form fields on both the client and server side.</li>
+      	<li>Checking the comment text for links and &quot;http&quot;.</li>
+      	<li>Inserting messages into <span class="bg-y">MySQL</span> database.</li>
+      	<li>Pagination: <span class="bg-p">ajax</span> comment loading.</li>
+      	<li>Zoom images.</li>
+      	<li>Image validation (&lt;input type = &quot;file&quot;&gt;) on upload and on server: size and format.</li>
+      	<li>Show a preview of the image when loading (<span class="bg-g">FileReader</span>) in the form of adding a comment.</li>
+      	<li>Rating by star rating type.</li>
+      	<li>Styling the Administrator record.</li>
+      	<li>Displaying the form immediately below the Reply button and fixing the view at the same level after adding a comment.</li>
+      	<li>A notification letter to the Administrator about a new review.</li>
+      	<li>Spam protection with an additional field.</li>
+      </ol>
+
+      <h2>Screenshots</h2>
+      <p class="center"><img class="box-shadow" src="/comment-system/img/reviews-1.png" alt="Система комментирования на сайте"></p>
+			<p class="center"><img class="box-shadow" src="/comment-system/img/reviews-2.png" alt="Форма добавления отзыва"></p>
+			<p class="center"><img class="box-shadow" src="/comment-system/img/reviews-3.jpg" alt="Zoom картинки"></p>
+
+    </section>
+  </main>
+  <script src="/js/script.js"></script>
+</body>
+</html>

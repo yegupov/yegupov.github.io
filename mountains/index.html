@@ -2,14 +2,25 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Landing page Mountains</title>
-  <link rel="stylesheet" href="https://yegupov.github.io/css/style.css">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Лендинг-визитка Mountains</title>
+  <meta name="description" content="Vue.js проект учебного курса на Loftschool.com.">
+  <link rel="canonical" href="https://yegupov.github.io/mountains/" />
+  <link rel="alternate" href="https://yegupov.github.io/mountains/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/mountains/" hreflang="en" />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <main>
     <section class="task-desc">
-      <a href="https://yegupov.github.io/" class="main">На Главную</a>
+      <label class="language-switcher">
+				<input id="languageswitcher" type="checkbox">
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+      <a href="/" class="main">На Главную</a>
       <a href="https://yegupov.github.io/ls-portfolio-Mountains/" target="_blank">Посмотреть лендинг</a>
       <h1>Проект учебного курса на Loftschool.com <span>(07.10.2019 – 13.11.2019)</span></h1>
       <p>В проекте разработаны одностраничный сайт по дизайн-макету и админпанель (SPA).</p>
@@ -63,14 +74,15 @@
 			<p class="center"><img src="img/mountains-5.jpg" alt="Админпанель: скилы "></p>
       <p class="center"><img src="img/mountains-6.jpg" alt="Приложение: добавление элементов"></p>
 			<p class="center"><img src="img/mountains-7.jpg" alt="SPA админпанель"></p>
-      <p>Добавление и редактирование скилов в разделе «Обо мне»:
+      <p class="center">Добавление и редактирование скилов в разделе «Обо мне»:
         <video controls width="960" height="462" poster="img/mountains-video-1.jpg" preload="none">
           <source src="video/mountains-skills.mp4" type="video/mp4">
           <source src="video/mountains-skills.webm" type="video/webm">
           <source src="video/mountains-skills.ogv" type="video/ogg">
         </video>
       </p>
-      <p>Добавление и удаление отзыва в разделе «Отзывы»:
+      <p>&nbsp;</p>
+      <p class="center">Добавление и удаление отзыва в разделе «Отзывы»:
         <video controls width="960" height="462" poster="img/mountains-video-2.jpg" preload="none">
           <source src="video/mountains-reviews.mp4" type="video/mp4">
           <source src="video/mountains-reviews.webm" type="video/webm">
@@ -80,5 +92,6 @@
 
     </section>
   </main>
+  <script src="/js/script.js"></script>
 </body>
 </html>

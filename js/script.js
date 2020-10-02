@@ -44,4 +44,51 @@
   imgsZoomable.forEach(function (img) {
     scaleImage(img);
   });
+
+  // Language selection
+  const languageSwitcher = document.querySelector('#languageswitcher');
+
+  languageSwitcher.addEventListener('change', function () {
+    let relativeUrlAddress = window.location.href.replace('http://' + window.location.host, '');
+    relativeUrlAddress = relativeUrlAddress.replace('/en/', '/');
+
+    if (languageSwitcher.checked == true) {
+      window.location = '/en' + relativeUrlAddress;
+    } else {
+      window.location = relativeUrlAddress;
+    }
+  });
+
+  // Mobile Portfolio Menu
+  function togglePortfolioMenu(menuCheckbox, sidebarNav) {
+    let widthWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    if (widthWindow <= 600 && menuCheckbox) {
+      menuCheckbox.addEventListener('change', function () {
+        if (menuCheckbox.checked == true) {
+          sidebarNav.classList.add('active');
+        } else {
+          sidebarNav.classList.remove('active');
+        }
+      });
+    }
+  }
+
+  const portfolioMenuCheckbox = document.querySelector('#portfoliomenu'),
+        sidebarNav = document.querySelector('.sidebar-nav'),
+        portfolioNavLinks = document.querySelectorAll('.portfolio-nav a');
+
+  togglePortfolioMenu(portfolioMenuCheckbox, sidebarNav)
+
+  window.addEventListener('resize', function() {
+    togglePortfolioMenu(portfolioMenuCheckbox, sidebarNav)
+  });
+
+  portfolioNavLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      sidebarNav.classList.remove('active');
+      portfolioMenuCheckbox.checked = false;
+    });
+  });
+
 })();

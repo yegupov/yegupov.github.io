@@ -2,13 +2,25 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Админ-панель на Vue.js для PHP сайта</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="Разработка админ-панели для сайта-визитки, а также REST API на PHP.">
+  <link rel="canonical" href="https://yegupov.github.io/admin-panel-cosmetology/" />
+  <link rel="alternate" href="https://yegupov.github.io/admin-panel-cosmetology/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/admin-panel-cosmetology/" hreflang="en" />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <main>
     <section class="task-desc">
-      <a href="https://yegupov.github.io/" class="main">На Главную</a>
+      <label class="language-switcher">
+				<input id="languageswitcher" type="checkbox">
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+      <a href="/" class="main">На Главную</a>
       <a href="https://cosmetolog-dronov.ru/admin84295/" target="_blank">Посмотреть страницу авторизации</a>
       <h1>Админ-панель на <span>Vue.js</span> для статического сайта</h1>
       <p>Админ-панель (SPA) создана для персонального сайта врача COSMETOLOG-DRONOV.ru.</p>
@@ -63,5 +75,6 @@
       </p>
     </section>
   </main>
+  <script src="/js/script.js"></script>
 </body>
 </html>

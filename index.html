@@ -2,15 +2,25 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<title>Портфолио Frontend разработчика Геннадия Егупова</title>
-	<meta name="description" content="Сайты под ключ, верстка, Javascript виджеты и приложения, а также резюме разработчика." />
+	<meta name="description" content="Сайты под ключ, верстка, Javascript виджеты и приложения, а также резюме фронтенд разработчика." />
+	<link rel="canonical" href="https://yegupov.github.io/" />
+  <link rel="alternate" href="https://yegupov.github.io/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/" hreflang="en" />
 	<link rel="shortcut icon" href="favicon.png" sizes="16x16 32x32" type="image/png">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="wrapper">
 		<header>
-			<div class="box">
+			<label class="language-switcher">
+				<input id="languageswitcher" type="checkbox">
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+			<div class="box about">
 				<div class="box_aside">
 				    <img src="img/for-resume.jpg" alt="">
 				</div>
@@ -38,23 +48,34 @@
 				</div>
 			</div>
 		</header>
-		<div class="content">
-			<aside class="sidebar">
-				<nav class="sidebar-nav">
-					<ul class="portfolio-nav">
-						<li><a href="#website">Сайт «под ключ»</a></li>
-						<li><a href="#layout">Верстка сайтов</a></li>
-						<li><a href="#javascript">JavaScript</a></li>
-						<li><a href="#vue">Vue.js</a></li>
-						<li><a href="#jquery">jQuery</a></li>
-						<li><a href="#php">PHP</a></li>
-						<li><a href="#resume">Resume</a></li>
-					</ul>
-				</nav>
-			</aside>
-			<main class="page-content">
-					<h2 class="h1">Портфолио</h2>
 
+		<section>
+			<div class="content">
+				<aside class="sidebar">
+					<nav class="sidebar-nav">
+						<input type="checkbox" id="portfoliomenu" class="visuallyHidden">
+		        <label for="portfoliomenu" class="portfolio-nav-link">
+	            <div class="hamburger">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+                <span class="bar bar4"></span>
+                <span class="bar bar5"></span>
+	            </div>
+		        </label>
+						<ul class="portfolio-nav">
+							<li><a href="#website">Сайт «под ключ»</a></li>
+							<li><a href="#layout">Верстка</a></li>
+							<li><a href="#vue">Vue.js</a></li>
+							<li><a href="#javascript">JavaScript</a></li>
+							<li><a href="#jquery">jQuery</a></li>
+							<li><a href="#php">PHP</a></li>
+							<li><a href="#resume">Резюме</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<main class="page-content">
+					<h2 class="h1">Портфолио</h2>
 					<h2 id="website">Сайт «под ключ»</h2>
 					<ul>
 						<li><a href="https://unidermix.com/" target="_blank">unidermix.com</a> (дизайн, верстка, PrestaShop, разработка модулей)</li>
@@ -62,14 +83,14 @@
 						<li><a href="https://mens-look.ru/" target="_blank">mens-look.ru</a> (дизайн, верстка, MODx)</li>
 						<li><a href="https://luma-light.ru/" target="_blank">luma-light.ru</a> (дизайн, верстка, PrestaShop)</li>
 						<li><a href="https://make-website.ru/" target="_blank">make-website.ru</a> (MODx)</li>
-						<!-- <li><a href="http://laseroconcept.ru/" target="_blank">laseroconcept.ru</a> (1C-Bitrix)</li> -->
 						<li><a href="https://cosmetolog-dronov.ru/" target="_blank">cosmetolog-dronov.ru</a> (дизайн, верстка, html, css, jquery)</li>
-						<li><a href="http://www.ginza.ee/" target="_blank">www.ginza.ee</a> (дизайн, верстка)</li>
+						<li><a href="http://www.ginza.ee/" target="_blank">www.ginza.ee</a> (дизайн, верстка, html, css, jquery)</li>
 					</ul>
 
 					<h2 id="layout">Верстка сайтов</h2>
-					<h3>Сервис доставки еды Vsem EDA (Html, Scss, jQuery)</h3>
+					<h3>Сервис доставки еды Vsem EDA (Html, Css, jQuery)</h3>
 					<ul class="tasks-list">
+						<li><a href="./vsem-eda/description/">Описание проекта и скриншоты</a></li>
 						<li><a href="./vsem-eda/">Vsem EDA</a></li>
 					</ul>
 					<h3>Интернет-магазин Smartech.ee (Html, Css, jQuery)</h3>
@@ -86,15 +107,6 @@
 					<ul class="tasks-list">
 						<li><a href="./secret-santa/">Описание проекта и скриншоты</a></li>
 						<li><a href="https://yegupov.github.io/secret-santa-landing-page/">Landing page Secret Santa</a></li>
-					</ul>
-
-					<h2 id="javascript">JavaScript</h2>
-					<h3>Учебные задачи по JavaScript</h3>
-					<ul class="tasks-list">
-						<li><a href="./menu/">Context menu</a></li>
-						<li><a href="./stopwatch/">Stopwatch Widget</a></li>
-						<li><a href="./form/">Form validation</a></li>
-						<li><a href="./budget-calculation/">Budget calculator</a></li>
 					</ul>
 
 					<h2 id="vue">Vue.js</h2>
@@ -165,6 +177,15 @@
 						</li>
 					</ol>
 
+					<h2 id="javascript">JavaScript</h2>
+					<h3>Учебные задачи по JavaScript</h3>
+					<ul class="tasks-list">
+						<li><a href="./menu/">Context menu</a></li>
+						<li><a href="./stopwatch/">Stopwatch Widget</a></li>
+						<li><a href="./form/">Form validation</a></li>
+						<li><a href="./budget-calculation/">Budget calculator</a></li>
+					</ul>
+
 					<h2 id="jquery">jQuery</h2>
 					<h3>Система вложенных комментариев на jQuery + PHP и MySQL</h3>
 					<ul class="tasks-list">
@@ -182,48 +203,54 @@
 						<li><a href="./comment-system/">Описание проекта и скриншоты</a></li>
 						<li><a href="https://cosmetolog-dronov.ru/reviews.html" target="_blank">Посмотреть страницу отзывов</a></li>
 					</ul>
-				</section>
 
-				<section class="resume">
-					<h2 id="resume" class="h1">Резюме</h2>
-					<h3>Навыки</h3>
-					<ul>
-						<li>HTML5 (Pug), CSS3 (Sass / Scss / Pcss).</li>
-						<li>JavaScript, Vue.js, jQuery (базовые знания).</li>
-						<li>Отлично владею Photoshop и CorelDraw.</li>
-						<li>Работаю с CMS: Modx, PrestaShop, Joomla, 1С-Битрикс.</li>
-						<li>Занимаюсь созданием дизайнов, версткой макетов.</li>
-					</ul>
+					<div class="resume">
+						<h2 id="resume" class="h1">Резюме</h2>
+						<h3>Навыки</h3>
+						<ul>
+							<li>HTML5 (Pug), CSS3 (Sass / Scss / Pcss).</li>
+							<li>JavaScript, Vue.js, jQuery (базовые знания).</li>
+							<li>Отлично владею Photoshop и CorelDraw.</li>
+							<li>Работаю с CMS: Modx, PrestaShop.</li>
+							<li>Занимаюсь созданием дизайнов, версткой макетов.</li>
+						</ul>
 
-					<h3>Опыт работы</h3>
-					<p><strong>Freelance</strong> (Ноябрь 2013 – Настоящее время)</p>
+						<h3>Опыт работы</h3>
+						<p><strong>Freelance</strong> (Ноябрь 2013 – Настоящее время)</p>
 
 
-					<h3>Курсы</h3>
-					<ol class="list-img-text">
-						<li>
-							<img src="img/certificate-ls-small.jpg" title="Сертификат Loftschool.com" alt="Сертификат Loftschool.com" class="img-zoom">
-							<p><strong>Loftschool.com</strong> (7.10.2019 – 14.11.2019)</p>
-							<p>«Advanced Web Development Course», <a href="https://loftschool.com/course/web-development/" target="_blank">Программа курса</a>.</p>
-						</li>
-						<li>
-							<img src="img/certificate-lj-small.jpg" title="Сертификат Learn.javascript.ru" alt="Сертификат Learn.javascript.ru" class="img-zoom">
-							<p><strong>Learn.javascript.ru</strong> (6.12.2018 – 11.02.2019)</p>
-							<p>«JavaScript/DOM/Interfaces», <a href="https://learn.javascript.ru/courses/js" target="_blank">Программа курса</a>.</p>
-						</li>
-						<li>
-							<p><strong>Maxymiser Academy</strong> (Май – Октябрь 2018)</p>
-							<p>«JavaScript basics», <a href="https://vk.com/mmacademy" target="_blank">vk.com/mmacademy</a>.</p>
-						</li>
-					</ol>
+						<h3>Курсы</h3>
+						<ol class="list-img-text">
+							<li>
+								<img src="img/certificate-ls-small.jpg" title="Сертификат Loftschool.com" alt="Сертификат Loftschool.com" class="img-zoom">
+								<p><strong>Loftschool.com</strong> (7.10.2019 – 14.11.2019)</p>
+								<p>«Advanced Web Development Course», <a href="https://loftschool.com/course/web-development/" target="_blank">Программа курса</a>.</p>
+							</li>
+							<li>
+								<img src="img/certificate-lj-small.jpg" title="Сертификат Learn.javascript.ru" alt="Сертификат Learn.javascript.ru" class="img-zoom">
+								<p><strong>Learn.javascript.ru</strong> (6.12.2018 – 11.02.2019)</p>
+								<p>«JavaScript/DOM/Interfaces», <a href="https://learn.javascript.ru/courses/js" target="_blank">Программа курса</a>.</p>
+							</li>
+							<li>
+								<p><strong>Maxymiser Academy</strong> (Май – Октябрь 2018)</p>
+								<p>«JavaScript basics», <a href="https://vk.com/mmacademy" target="_blank">vk.com/mmacademy</a>.</p>
+							</li>
+						</ol>
 
-					<h3>Образование</h3>
-					<p>Приднепровская государственная академия строительства и архитектуры (ПГАСА), 1997 г.</p>
-					<p>Специальность: автоматизация строительного производства.</p>
-			</main>
+						<h3>Образование</h3>
+						<p>Приднепровская государственная академия строительства и архитектуры (ПГАСА), 1997 г.</p>
+						<p>Специальность: автоматизация строительного производства.</p>
+
+						<h3>Дополнительная информация</h3>
+						<ul>
+							<li>Английский язык: Beginner (A1).</li>
+						</ul>
+					</div>
+				</main>
+			</section>
 		</div>
 	</div>
 
-	<script src="https://yegupov.github.io/js/script.js"></script>
+	<script src="/js/script.js"></script>
 </body>
 </html>

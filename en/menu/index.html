@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Context menu</title>
+  <meta name="description" content="Development of a context menu in JavaScript.">
+  <link rel="canonical" href="https://yegupov.github.io/en/menu/" />
+  <link rel="alternate" href="https://yegupov.github.io/menu/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/menu/" hreflang="en" />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .container-menu {
+      width: 610px;
+      min-height: 233px;
+      margin: 0 auto;
+    }
+
+    .context-menu {
+      position: absolute;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+
+    .context-menu li {
+      cursor: pointer;
+      width: 150px;
+      padding: 7px 0;
+    }
+
+    .context-menu li ul {
+      position: absolute;
+      margin: -20px 0 0 150px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="task-desc">
+      <label class="language-switcher">
+				<input id="languageswitcher" type="checkbox" checked>
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+      <a href="/en/" class="main">To Home</a>
+      <a href="https://github.com/yegupov/yegupov.github.io/tree/master/menu" target="_blank">View code</a>
+      <h1>Context menu</h1>
+
+      <h2>Task:</h2>
+
+      <p>Implement ContextMenu.</p>
+
+      <p>The first argument is the node on which the context menu will run.</p>
+
+      <p>The second argument is a description of the menu structure. An example description is attached. The structure can be any in terms of nesting and the number of menu items (recursively generating the DOM will be ok).</p>
+
+      <p>A submenu can contain nested submenus.</p>
+
+      <p>When right-clicking on the node for which the ContextMenu was created, show the menu right below the clicked point.</p>
+
+      <p>When clicking on a menu item, the corresponding function should be performed.</p>
+
+      <p>Each item containing a submenu must be marked with a &quot;&gt;&quot; symbol.</p>
+
+      <p>The submenu opens when you hover over a submenu item, and closes when the mouse leaves the submenu or submenu item (see mouseenter and mouseleave events).</p>
+
+      <p>You don&#39;t have to bother with positioning (so that all menus and submenus fit into the visible part of the screen).</p>
+
+      <p>You can style the menu to your liking (the main thing is the visible borders of the elements)</p>
+
+      <p>An example of a menu structure object:</p>
+
+      <pre>
+        <code>
+  var menuExample = [{
+  &nbsp;&nbsp; &nbsp;title: File,
+  &nbsp;&nbsp; &nbsp;action: function () {console.log(open file)}
+  }, {
+  &nbsp;&nbsp; &nbsp;title: Edit,
+  &nbsp;&nbsp; &nbsp;action: function () {console.log(edit content)}
+  }, {
+  &nbsp;&nbsp; &nbsp;title: More stuff,
+  &nbsp;&nbsp; &nbsp;submenu: [{
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;title: Send by email,
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;action: function () {console.log(emailed)}
+  &nbsp;&nbsp; &nbsp;}, {
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;title: Send via skype,
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;action: function () {console.log(skyped)}
+  &nbsp;&nbsp; &nbsp;}]
+  }]
+        </code>
+      </pre>
+    </section>
+
+    <section>
+      <h2>Decision:</h2>
+
+      <p>Right click on the picture!</p>
+      <div class="container-menu">
+    	    <img src="/menu/shirts-trends-2016.jpg" alt=""/>
+    	</div>
+      <p>According to the traditions of the British, a small fold can be left under the knot if desired. It is she who is considered a manifestation of skill in this delicate work.</p>
+
+      <p>Today there are a considerable number of tie-tying techniques. And sooner or later, almost every man will have to face them. To prevent this process from becoming a problem in the future, it is recommended that you learn the main possible methods in advance.</p>
+
+    </section>
+  </main>
+  <script src="/js/script.js"></script>
+  <script src="/menu/script.js"></script>
+</body>
+</html>

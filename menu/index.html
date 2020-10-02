@@ -2,16 +2,54 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Контекстное меню</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Разработка контекстного меню на JavaScript.">
+  <link rel="canonical" href="https://yegupov.github.io/menu/" />
+  <link rel="alternate" href="https://yegupov.github.io/menu/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/menu/" hreflang="en" />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .container-menu {
+      width: 610px;
+      min-height: 233px;
+      margin: 0 auto;
+    }
+
+    .context-menu {
+      position: absolute;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+
+    .context-menu li {
+      cursor: pointer;
+      width: 150px;
+      padding: 7px 0;
+    }
+
+    .context-menu li ul {
+      position: absolute;
+      margin: -20px 0 0 150px;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+  </style>
 </head>
 <body>
   <main>
     <section class="task-desc">
-      <a href="https://yegupov.github.io/" class="main">На Главную</a>
+      <label class="language-switcher">
+				<input id="languageswitcher" type="checkbox">
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+      <a href="/" class="main">На Главную</a>
       <a href="https://github.com/yegupov/yegupov.github.io/tree/master/menu" target="_blank">Посмотреть код</a>
       <h1>Контекстное меню</h1>
+      <h2>Задача:</h2>
       <p>Реализовать ContextMenu.</p>
 
       <p>Первый аргумент - узел на котором будет работать контекстное меню.</p>
@@ -67,6 +105,7 @@
 
     </section>
   </main>
+  <script src="/js/script.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

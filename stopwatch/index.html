@@ -1,19 +1,34 @@
 <!doctype html>
+<html lang="ru">
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Секундомер</title>
-	<link rel="stylesheet" href="bootstrap.min.css">
-	<link rel="stylesheet" href="https://yegupov.github.io/css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>JavaScript секундомер</title>
+	<meta name="description" content="Разработка секундомера на JavaScript.">
+  <link rel="canonical" href="https://yegupov.github.io/stopwatch/" />
+  <link rel="alternate" href="https://yegupov.github.io/stopwatch/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/stopwatch/" hreflang="en" />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+  <link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<a href="https://yegupov.github.io/" class="main">На Главную</a>
+			<label class="language-switcher">
+				<input id="languageswitcher" type="checkbox">
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+      <a href="/" class="main">На Главную</a>
 			<a href="https://github.com/yegupov/yegupov.github.io/tree/master/stopwatch" target="_blank">Посмотреть код</a>
+
 			<h1>Секундомеры</h1>
 			<div class="task-desc">
+      	<h2>Задача:</h2>
 				<p>Реализовать виджет &quot;секундомер&quot;. Кнопки &quot;стоп&quot;, &quot;старт&quot; (одна и та же кнопка), &quot;сброс&quot;, &quot;круг&quot;. Секундомер работает с точностью до миллисекунд. Когда он запущен, показывается время в формате чч:мм:сс:мс. Нажатие на кнопку &quot;стоп&quot; останавливает ход секундомера.</p>
 
 				<p>Кнопка &quot;круг&quot; добавляет текущее значение секундомера в список результатов. Элементы из списка результатов можно удалять поштучно.</p>
@@ -52,6 +67,7 @@
 			</div>
 		</div> -->
 	</div>
+  <script src="/js/script.js"></script>
 	<script src="script-timer.js"></script>
 </body>
 </html>

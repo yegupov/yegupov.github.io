@@ -1,22 +1,58 @@
 <!doctype html>
+<html lang="ru">
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Форма с валидацией</title>
-	<link rel="stylesheet" href="bootstrap.min.css">
-	<link rel="stylesheet" href="https://yegupov.github.io/css/style.css">
-	<link rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>JavaScript валидация Html формы</title>
+	<meta name="description" content="Релизовать валидацию формы с помощью JavaScript.">
+  <link rel="canonical" href="https://yegupov.github.io/form/" />
+  <link rel="alternate" href="https://yegupov.github.io/form/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/form/" hreflang="en" />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+  <link rel="stylesheet" href="/form/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<style>
+		.container {
+			padding-top: 50px;
+		}
+
+		h4 {
+			margin-top: 40px;
+		}
+
+		.alert {
+			margin-top: 5px;
+		}
+
+		#error {
+			font-size: 20px;
+			color: red;
+			margin: 20px 0;
+		}
+
+		form {
+			margin: 60px 0 150px;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<a href="https://yegupov.github.io/" class="main">На Главную</a>
+			<label class="language-switcher">
+				<input id="languageswitcher" type="checkbox">
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+      <a href="/" class="main">На Главную</a>
 			<a href="https://github.com/yegupov/yegupov.github.io/tree/master/form" target="_blank">Посмотреть код</a>
 			<div class="task-desc">
-				<h1>Релизовать валидацию формы</h1>
-				<p>Валидировать поля формы надо в процессе набора (но не показывать ошибки до того, как пользователь что-то ввел).</p>
+				<h1>JavaScript валидация Html формы</h1>
+				<h2>Задача:</h2>
+				<p>Релизовать валидацию формы. Валидировать поля формы надо в процессе набора (но не показывать ошибки до того, как пользователь что-то ввел).</p>
 
-				<p>Форму нельзя мочь отправить, если есть ошибки.</p>
+				<p>Форму невозможно отправить, если есть ошибки.</p>
 
 				<p>Если показаны ошибки, кнопка отправки формы должна быть неактивной (код неактивной кнопки закомментирован).</p>
 
@@ -26,7 +62,7 @@
 
 				<p>Все регулярки должны быть написаны самостоятельно.</p>
 
-				<h4>Возможные ошибочные ситуации</h4>
+				<h3>Возможные ошибочные ситуации</h3>
 
 				<p>Для каждой придумать и выводить поясняющее сообщение.</p>
 
@@ -42,7 +78,8 @@
 					<li>Международный формат записи телефона не выдержан</li>
 					<li>Галочка &quot;Согласен со всем&quot; не поставлена</li>
 				</ol>
-				<h4>Ajax</h4>
+
+				<h3>Ajax</h3>
 
 				<p>Добавить к заданию с валидацией формы серверную валидацию email-а (использован ли он). Уже имеющиеся email-ы: author@mail.com, foo@mail.com, tester@mail.com.</p>
 
@@ -53,7 +90,7 @@
 		</div>
 
 		<div class="row">
-                        <h2>Решение:</h2>
+      <h2>Решение:</h2>
 			<form role="form" id="form" method="GET">
 				<div class="form-group required">
 					<label class="control-label" for="email">Почта (будет использована как логин)<sup>*</sup></label>
@@ -72,13 +109,13 @@
 
 				<div class="form-group">
 					<label for="phone">Телефон (указывать не обязательно)</label>
-					<input class="form-control" id="phone" placeholder="Номер телефона в международном формате например +380509993322" type="text">
+					<input class="form-control" id="phone" placeholder="Номер телефона в международном формате, например +380509993322" type="text">
 				</div>
 
 				<div class="form-group required">
 					<div class="checkbox">
 						<label>
-							<input type="checkbox" id="check"> <span class="mark"></span>Согласен со <a href="/">всем</a><sup>*</sup>
+							<input type="checkbox" id="check"> <span class="mark"></span>Согласен со <a href="#">всем</a><sup>*</sup>
 						</label>
 					</div>
 				</div>
@@ -89,6 +126,7 @@
 			</form>
     </div>
 	</div>
+  <script src="/js/script.js"></script>
 	<script src="validate.js"></script>
 </body>
 </html>

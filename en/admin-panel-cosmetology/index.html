@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Vue.js admin panel for PHP site</title>
+  <meta name="description" content="Development of an admin panel for a business card site, as well as REST API in PHP.">
+  <link rel="canonical" href="https://yegupov.github.io/en/admin-panel-cosmetology/" />
+  <link rel="alternate" href="https://yegupov.github.io/admin-panel-cosmetology/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/admin-panel-cosmetology/" hreflang="en" />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main>
+    <section class="task-desc">
+      <label class="language-switcher">
+				<input id="languageswitcher" type="checkbox" checked>
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+      <a href="/en/" class="main">To Home</a>
+      <a href="https://cosmetolog-dronov.ru/admin84295/" target="_blank">View login page</a>
+
+      <h1><span>Vue.js</span> admin panel for a static site</h1>
+
+      <p>The admin panel (SPA) was created for the doctor&#39;s personal website COSMETOLOG-DRONOV.ru.</p>
+
+      <p>The Admin panel contains the following pages: Console (Home), About me, Reviews, Contacts and Users.</p>
+
+      <p>The <a href="https://yegupov.github.io/en/rest-api-cosmetology/">REST API developed in PHP</a> is used to perform operations of creating, reading, updating and deleting information (<span class="bg-r">CRUD</span>).</p>
+
+      <p>In order to create the SVG sprite, the base <span class="bg-g">Vue CLI</span> loader has been replaced with svg-sprite-loader by customizing the vue.config.js file.</p>
+
+      <p>View the app <a href="https://cosmetolog-dronov.ru/admin84295/login" target="_blank">authorization page</a>.</p>
+
+      <h2>Functionality implemented in the application:</h2>
+
+      <ol>
+      	<li>Authorization and exit from the Admin panel.</li>
+      	<li>Validating form fields using the Simple-Vue-Validator plugin and displaying prompts.</li>
+      	<li>Create, read, update and delete Users and Comments.</li>
+      	<li>Reading and editing content blocks About me and Contacts.</li>
+      	<li>For Users - uploading an image (avatar) to the server and deleting the old one when changing the avatar.</li>
+      	<li>Pagination in the Reviews section.</li>
+      	<li>Selecting the number of Comments to show on one page.</li>
+      	<li>Sort in Reviews section: all / patients only / administrator.</li>
+      	<li>Messages for the administrator in the form of a modal window.</li>
+      	<li>For the main page of the Console, the display of statistics from Yandex Metrica has been developed. The <span class="bg-y">Yandex Metrics API</span> and the <span class="bg-p">Highcharts</span> library for charting are used.</li>
+      </ol>
+
+      <h2>Used tools and packages:</h2>
+
+      <ul>
+      	<li>Vue CLI is a system for rapid development in Vue.js.</li>
+      	<li>The Pug template engine.</li>
+      	<li>Sass preprocessor.</li>
+      	<li>For Svg sprite the following packages are used: svg-sprite-loader, svgo and svgo-loader.</li>
+      	<li>Axios — for getting and displaying data from the API.</li>
+      	<li>Vuex — for working with data (state management).</li>
+      	<li>Highcharts and highcharts-vue — for building charts based on Yandex Metrica API data.</li>
+      	<li>Vue2-editor is a text editor.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Screenshots and video</h2>
+      <p class="center"><img src="/admin-panel-cosmetology/img/login-1.png" alt="Login page"></p>
+			<p class="center">Dashboard<br/><img src="/admin-panel-cosmetology/img/home-2.png" alt="Home page of Admin panel"></p>
+      <p class="center"><img src="/admin-panel-cosmetology/img/home-1.png" alt="Application: adding items"></p>
+
+      <p class="center">Editing the «About Me» content block:
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mETJhBXn0zA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+      <p class="center">Adding, editing and deleting comments in the «Reviews» section:
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oHc8Rx8HUJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+      <p class="center">Contacts<br/><img src="/admin-panel-cosmetology/img/contacts-1.png" alt="Contact page"></p>
+      <p class="center"><img src="/admin-panel-cosmetology/img/contacts-2.png" alt="Contacts in the Admin"></p>
+      <p class="center">Adding, editing and deleting users in the «Users» section:
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0qKW_69n6Ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+    </section>
+  </main>
+  <script src="/js/script.js"></script>
+</body>
+</html>
