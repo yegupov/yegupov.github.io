@@ -723,10 +723,3 @@ input:checked + .slider:before {
   }
   h1, h2, h3, h4, p, a, li {word-wrap: break-word;}
 }
-
-
-@media screen and (max-width: 480px) {
-  h1, .h1, h2, .h2, h3, .h3 {
-    word-wrap: break-word;
-  }
-}
