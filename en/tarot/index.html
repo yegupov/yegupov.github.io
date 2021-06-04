@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Landing Page Divination by Tarot Cards</title>
+  <meta name="description" content ="Personal tarot reader website developed with JavaScript."/>
+  <link rel="canonical" href="https://yegupov.github.io/en/tarot/" />
+  <link rel="alternate" href="https://yegupov.github.io/tarot/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/tarot/" hreflang="en" />
+	<link rel="shortcut icon" href="../../favicon.png" sizes="16x16 32x32" type="image/png">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <main>
+    <section class="task-desc">
+      <label class="language-switcher">
+				<input id="languageswitcher" type="checkbox">
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+      <a href="/" class="main">На Главную</a>
+      <a href="https://daria-bloom.ru/" target="_blank" title="Лендинг Гадание на картах Таро">Daria-bloom.ru</a>
+
+      <h1>Landing Page Divination by Tarot Cards <span>(Pug, Scss, JavaScript, MODx)</span></h1>
+
+      <h3>Page sections:</h3>
+      <ul>
+        <li><strong>Intro</strong>: short description of the service.</li>
+        <li><strong>About</strong>: text and certificate.</li>
+        <li><strong>Service</strong>: detailed description of the service.</li>
+        <li><strong>Reviews</strong>: carousel.</li>
+        <li><strong>FAQ</strong>: accordion with input type radio.</li>
+        <li><strong>Card of the day</strong>: withdrawal of a random tarot card by clicking on the Select card button with the ability to do this only once a day (<span class="bg-p">localStorage</span>).</li>
+        <li><strong>Gallery</strong> of images.</li>
+        <li><strong>Contact</strong> with feedback form (<span class="bg-r">PHP + JavaScript</span>).</li>
+      </ul>
+
+      <h3>Completed work:</h3>
+      <ol>
+      <li><strong>Design</strong>: creation in Photoshop, drawing graphics, backgrounds and favicons.</li>
+      <li>
+        The <strong>Layout</strong> was carried out using the Pug and SASS template engines. The project was built using the <span class="bg-y">Webpack</span> bundler. Implemented: preloader, mobile menu, different images for different screens (&lt;picture&gt;), slider, accordion, gallery, modal windows.
+      </li>
+      <li><strong>Integration with cms <span class="bg-g">MODx</span></strong>. Using MIGX for FAQ, Testimonials and Photo Gallery blocks.</li>
+      </ol>
+
+      <h2>JS libraries used:</h2>
+      <ul>
+        <li>Slider <a href="https://github.com/Splidejs/splide" target="_blank">Splide</a> for reviews.</li>
+      	<li><a href="https://sachinchoolur.github.io/lightgallery.js/" target="_blank">Lightgallery</a> for images gallery.</li>
+      </ul>
+
+      <h2>Links</h2>
+      <p>Project: <a href="https://daria-bloom.ru/" target="_blank">Daria-bloom.ru</a></p>
+
+      <h2>Screenshots</h2>
+      <p class="center"><img src="/tarot/tarot-1.jpg" class="box-shadow" alt="Лендинг на Javascript"></p>
+      <p class="center"><img src="/tarot/tarot-4.jpg" alt="Адаптивная верстка лендинга"></p>
+      <p class="center">Section Card of the day after clicking the Select card button:<br/><img src="/tarot/tarot-2.jpg" alt="Персональный сайт таролога"></p>
+      <p class="center">Screenshot of MODx admin panel:<br/><img src="/tarot/tarot-3.jpg" alt="Админка MODx"></p>
+    </section>
+
+  </main>
+  <script src="../../js/script.js"></script>
+</body>
+</html>

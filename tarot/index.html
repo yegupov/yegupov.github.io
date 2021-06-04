@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Лендинг Гадание на картах Таро</title>
+  <meta name="description" content ="Персональный сайт таролога, разработанный с помощью JavaScript."/>
+  <link rel="canonical" href="https://yegupov.github.io/tarot/" />
+  <link rel="alternate" href="https://yegupov.github.io/tarot/" hreflang="ru" />
+  <link rel="alternate" href="https://yegupov.github.io/en/tarot/" hreflang="en" />
+	<link rel="shortcut icon" href="../favicon.png" sizes="16x16 32x32" type="image/png">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main>
+    <section class="task-desc">
+      <label class="language-switcher">
+				<input id="languageswitcher" type="checkbox">
+				<span class="slider round"></span>
+				<span class="select-ru">RU</span>
+				<span class="select-en">EN</span>
+			</label>
+      <a href="/" class="main">На Главную</a>
+      <a href="https://daria-bloom.ru/" target="_blank" title="Лендинг Гадание на картах Таро">Daria-bloom.ru</a>
+
+      <h1>Лендинг: Гадание на картах Таро <span>(Pug, Scss, JavaScript, MODx)</span></h1>
+
+      <h3>Секции страницы:</h3>
+      <ul>
+        <li><strong>Интро</strong>: краткое описание услуги.</li>
+        <li><strong>Обо мне</strong>: текст и сертификат.</li>
+        <li><strong>Услуга</strong>: подробное описание услуги.</li>
+        <li><strong>Отзывы</strong>: карусель.</li>
+        <li><strong>FAQ</strong>: аккордеон с input type radio.</li>
+        <li><strong>Карта дня</strong>: вывод рандомной карты таро при нажатии на кнопку Выбрать карту
+          с возможностью сделать это только 1 раз в день (<span class="bg-p">localStorage</span>).</li>
+        <li><strong>Галерея</strong> изображений.</li>
+        <li><strong>Контакты</strong> с формой обратной связи (<span class="bg-r">PHP + JavaScript</span>).</li>
+      </ul>
+
+      <h3>Проделанные работы:</h3>
+      <ol>
+      <li><strong>Дизайн</strong>: создание в Photoshop, отрисовка графики, фонов и фавиконки.</li>
+      <li>
+        <strong>Верстка</strong> осуществлялась с использованием шаблонизаторов Pug и SASS.
+        Сборка проекта выполнялась с помощью бандлера <span class="bg-y">Webpack</span>. Реализованы: прелоадер, мобильное меню,
+        разные изображения для разных экранов (&lt;picture&gt;), слайдер, аккордеон, галерея, модальные окна.
+      </li>
+      <li><strong>Интеграция с cms <span class="bg-g">MODx</span></strong>. Использование MIGX для блоков FAQ, Отзывы и Фотогалерея.</li>
+      </ol>
+
+      <h2>Использованные JS библиотеки:</h2>
+      <ul>
+        <li>Слайдер <a href="https://github.com/Splidejs/splide" target="_blank">Splide</a> для отзывов.</li>
+      	<li><a href="https://sachinchoolur.github.io/lightgallery.js/" target="_blank">Lightgallery</a> для фотогалереи.</li>
+      </ul>
+
+      <h2>Ссылки</h2>
+      <p>Адрес проекта: <a href="https://daria-bloom.ru/" target="_blank">Daria-bloom.ru</a></p>
+
+      <h2>Скриншоты</h2>
+      <p class="center"><img src="tarot-1.jpg" class="box-shadow" alt="Лендинг на Javascript"></p>
+      <p class="center"><img src="tarot-4.jpg" alt="Адаптивная верстка лендинга"></p>
+      <p class="center">Секция Карта дня после нажатия на кнопку Выбрать карту:<br/><img src="tarot-2.jpg" alt="Персональный сайт таролога"></p>
+      <p class="center">Скриншот админки MODx:<br/><img src="tarot-3.jpg" alt="Админка MODx"></p>
+    </section>
+
+  </main>
+  <script src="../js/script.js"></script>
+</body>
+</html>
