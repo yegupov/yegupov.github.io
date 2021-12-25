@@ -205,10 +205,10 @@ pre {
   width: 100%;
   overflow: auto;
   margin: 2rem 0;
-  padding: 1rem 0.8rem 1rem 1.2rem;
+  padding: 1rem 0.8rem 0.32rem 1.2rem;
   color: #3f3b36;
   border: 1px solid #ebebeb !important;
-  font: lighter 1rem/1.8rem Monaco,'MonacoRegular',monospace;
+  font: lighter 1rem/1.755rem Monaco,'MonacoRegular',monospace;
   background: url('../img/pre.png') repeat 0 -0.9rem;
   background-size: 1px 3.53rem;
 }
@@ -220,6 +220,7 @@ section img {
 
 .task-desc video {
   margin-top: 25px;
+  max-width: 100%;
 }
 
 iframe {

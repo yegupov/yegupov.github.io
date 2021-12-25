@@ -92,4 +92,21 @@
     });
   });
 
+  // <video> size correction
+  function correctVideoSizes () {
+    const videoOnThePage = document.querySelectorAll('video');
+    if (videoOnThePage !== null) {
+      videoOnThePage.forEach(function (video, index) {
+        let widthVideoContainer = video.parentNode.offsetWidth,
+            videoWidth = video.getAttribute('width');
+
+        if (videoWidth > widthVideoContainer) {
+          video.setAttribute('width', widthVideoContainer);
+          video.setAttribute('height', widthVideoContainer * video.getAttribute('height') / videoWidth);
+        }
+      });
+    }
+  }
+  correctVideoSizes();
+
 })();
