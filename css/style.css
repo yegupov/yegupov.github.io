@@ -171,6 +171,12 @@ strong, b {
   box-shadow: 0 3px 60px rgba(0, 0, 0, .05);
 }
 
+ol li,
+ul li {
+   margin-bottom: 15px;
+   line-height: 1.6;
+}
+
 .tasks {
   margin-left: 235px;
 }
@@ -179,10 +185,12 @@ strong, b {
    margin-left: 0;
 }
 
-ol li,
-ul li {
-   margin-bottom: 15px;
-   line-height: 1.6;
+li .tasks-list {
+  margin-top: 10px;
+}
+
+li .tasks-list li {
+  margin-bottom: 5px;
 }
 
 a {
