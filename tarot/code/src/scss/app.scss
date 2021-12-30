@@ -1,0 +1,966 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=PT+Sans:wght@400;700&display=swap');
+@import 'variable';
+@import 'mixin';
+@import 'placeholder';
+@import 'font';
+@import 'base';
+@import 'helper';
+@import 'module';
+@import 'vendor';
+@import 'animation';
+@import 'media';
+
+.site-navbar {
+  @extend %flexbox;
+  padding-top: 25px;
+}
+
+.site-logo {
+  filter: grayscale(1) brightness(0.6);
+
+  img {
+    width: 235px;
+    height: auto;
+  }
+
+  &:hover {
+    filter: grayscale(0) brightness(1);
+  }
+}
+
+.site-logo-tagline {
+  margin: -22px 0 0 59px;
+  font-family: $font_primary;
+  font-family: Georgia, serif;
+  font-style: italic;
+  // font-size: 1.08rem;
+  font-size: 13px;
+  font-weight: 400;
+  // font-size: 0.9rem;
+  line-height: 1.2;
+  // color: #765295;
+  color: rgba(118, 82, 149, 0.85);
+  text-rendering: optimizeLegibility;
+
+  @include respondTo(smartphone, max) {
+    padding-right: 20px;
+    font-size: 12px;
+  }
+
+  span {
+    display: block;
+    @include respondTo(smartphone, max) {
+      display: inline;
+      margin-left: 4px;
+    }
+  }
+}
+
+.navbar-list {
+  margin: 0;
+  padding: 0 0 15px 0;
+  list-style: none;
+  width: 190px;
+  @extend %flexbox;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+
+  li {
+    width: 75px;
+    margin-right: 40px;
+
+    &:first-child {
+      display: none;
+    }
+
+    &:nth-child(2n + 1) {
+      margin-right: 0;
+    }
+
+    a {
+      padding: 3px 0;
+      display: block;
+      font-size: 1.05rem;
+      color: #000;
+      letter-spacing: 0.05rem;
+
+      &:hover {
+        color: $color_primary;
+      }
+    }
+  }
+}
+
+/* nav-toggler css start */
+.nav-toggler {
+  margin-top: 11px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #555;
+  display: block;
+  transition: .3s;
+}
+.nav-toggler span:before {
+  content: '';
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: '';
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+.intro-area {
+  @extend %flexbox;
+  align-items: center;
+  @include respondTo(netbook, max) {
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .subtitle {
+    font-size: 38px;
+    margin: 0 0 30px 0;
+  }
+
+  h1 {
+    margin: 0 0 30px;
+  }
+
+  p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .half-row:first-child {
+    @include respondTo(netbook, max) {
+  		padding-left: 5%;
+  	}
+  }
+
+  .half-row:last-child {
+    @include respondTo(netbook, max) {
+  		margin-top: -25px;
+  	}
+  }
+
+  .btns-block {
+    @include respondTo(smartphone, max) {
+      text-align: center;
+    }
+  }
+}
+
+.about-area {
+  margin-top: -60px;
+
+  .row {
+    min-height: 630px;
+
+    @include respondTo(notebook, max) {
+      min-height: 500px;
+    }
+  }
+}
+
+#certificate {
+  @include respondTo(netbook, max) {
+    text-align: center;
+  }
+
+  a {
+    @include respondTo(netbook, max) {
+      display: block;
+      height: auto;
+    }
+
+    picture {
+      display: block;
+      width: 100%;
+      height: auto;
+      line-height: 0;
+
+      @include respondTo(netbook, max) {
+        opacity: 0.75;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.service-area {
+  margin: 15px 0 90px;
+  @include respondTo(notebook, max) {
+		margin: 60px 0 90px;
+	}
+  @include respondTo(netbook, max) {
+    margin: 10px 0 120px;
+  }
+
+  .row {
+    min-height: 480px;
+  }
+
+  .subtitle {
+    margin-left: 65px;
+
+    @include respondTo(notebook, max) {
+  		margin-left: 55px;
+  	}
+    @include respondTo(netbook, max) {
+  		margin-left: 0;
+  	}
+    @include respondTo(tablet, max) {
+      // margin-left: 0;
+    }
+  }
+
+  .btns-block {
+    @include respondTo(smartphone, max) {
+      text-align: center;
+    }
+
+    & + p {
+      margin: 20px 0 0 10px;
+      font-size: 1.3rem;
+    }
+  }
+
+  .wrapper-aside {
+    @include respondTo(netbook, max) {
+      display: none;
+    }
+  }
+}
+
+.intro-area .btn, .service-area .btn {
+  margin-right: 20px;
+
+  @include respondTo(tablet, max) {
+    margin-right: 15px;
+  }
+  @include respondTo(smartphone, max) {
+    margin-right: 0;
+    min-width: 234px;
+  }
+
+  & + .btn {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+}
+
+.reviews-area {
+  margin-top: -80px;
+  padding-bottom: 50px;
+
+  .btns-block {
+    padding: 0 15%;
+    @include respondTo(netbook, max) {
+      padding: 0 5%;
+    }
+    @include respondTo(tablet, max) {
+      margin-top: 25px;
+    }
+
+    p {
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 225px);
+      margin: 0;
+      padding-right: 40px;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+#reviews {
+
+  .review {
+    margin: 0 10px;
+    min-height: 420px;
+    padding: 35px 12%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.08);
+    @include respondTo(notebook, max) {
+      min-height: 350px;
+    }
+    @include respondTo(netbook, max) {
+      min-height: 270px;
+    }
+
+    .review-author {
+      display: inline-block;
+      @include respondTo(tablet, max) {
+        font-size: 0.9rem;
+      }
+
+      &:before {
+        display: inline-block;
+        content: '\2711';
+        font-size: 2rem;
+        transform: rotate(35deg) translate(0, 2px);
+      }
+
+      span {
+        font-family: $font_primary;
+        font-size: 1.9rem;
+        font-weight: 600;
+        margin-right: 4px;
+      }
+
+      &:after {
+        display: inline-block;
+        content: '';
+        width: 65px;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin-left: 6px;
+        @include respondTo(notebook, max) {
+          width: 55px;
+        }
+        @include respondTo(tablet, max) {
+          width: 30px;
+        }
+      }
+    }
+
+    .review-date {
+      display: inline-block;
+      @include respondTo(tablet, max) {
+        font-size: 0.9rem;
+      }
+    }
+
+    p {
+      margin: 25px 0 20px;
+    }
+  }
+}
+
+.faq-area {
+  margin: 25px 0 0;
+  @include respondTo(netbook, max) {
+    margin: 0;
+  }
+
+  .faq-block {
+    padding: 60px 10%;
+    border-radius: 14px;
+    background: #f2e1d2 url('../img/bg-faq.png') no-repeat;
+    background-size: cover;
+    @include respondTo(netbook, max) {
+      padding: 60px 13%;
+    }
+
+    & > div {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .question {
+    position: relative;
+    margin: 0;
+    padding: 24px 70px 24px 0;
+    display: block;
+    width:100%;
+    // height: 70px;
+    overflow: hidden;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.3;
+    cursor: pointer;
+
+    @include respondTo(tablet, max) {
+      padding: 24px 35px 24px 0;
+      font-size: 1.1rem;
+    }
+
+    .plus {
+      position: absolute;
+      top: calc(50% - 14px);
+      margin-left: calc(100% - 50px);
+      z-index: 5;
+      font-family: 'Times New Roman';
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 100%;
+      user-select: none;
+      transition: .3s ease;
+
+      @include respondTo(tablet, max) {
+        margin-left: calc(100% - 20px);
+      }
+    }
+  }
+
+  .answer {
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .4s;
+
+    p {
+      position: relative;
+      margin-bottom: 15px;
+      padding: 32px 55px 0;
+
+      @include respondTo(tablet, max) {
+        padding: 32px 25px 15px;
+      }
+      @include respondTo(smartphone, max) {
+        padding: 32px 15px 15px 0;
+      }
+
+      &:before {
+        position: absolute;
+        top: -10px;
+        left: 90px;
+        content: '';
+        width: 1px;
+        height: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: .5s ease;
+
+        @include respondTo(smartphone, max) {
+          left: 40px;
+        }
+      }
+    }
+  }
+
+  input:checked {
+    & ~ .answer {
+      opacity: 1;
+      max-height: 400px;
+
+      p:before {
+        height: 40px;
+      }
+    }
+
+    & ~ .question {
+
+      .plus {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.card-ofday-area {
+  margin-top: -70px;
+  @include respondTo(netbook, max) {
+    margin-top: 25px;
+  }
+
+  .area-header {
+    margin: 0;
+    transform: translate(0, 130px);
+    @include respondTo(netbook, max) {
+      transform: translate(0, 0);
+    }
+  }
+
+  .title {
+    @include respondTo(tablet, max) {
+      padding-left: 10px;
+    }
+  }
+
+  h1::first-letter, h2::first-letter {
+
+    @include respondTo(tablet, max) {
+      margin: -15px 0 0 -0.1em;
+    }
+  }
+
+  .card-ofday-mess {
+    color: gray;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .card-ofday-content {
+    display: none;
+
+    i {
+      font-family: Georgia, serif;
+      font-style: italic;
+    }
+  }
+
+  .half-row:first-child {
+    padding-top: 150px;
+    @include respondTo(netbook, max) {
+      order: 1;
+      padding: 35px 0;
+    }
+  }
+
+  .half-row.content {
+
+    .card-ofday-intro, .btns-block {
+      display: none;
+    }
+
+    .card-ofday-content {
+      display: block;
+      @include respondTo(netbook, max) {
+        padding: 0 6%;
+      }
+
+      h3 {
+        color: #c49a68;
+      }
+
+      p {
+
+        &:before {
+          content: '';
+          display: inline-block;
+          vertical-align: top;
+          margin: 12px 7px 0 0;
+          width: 50px;
+          height: 1px;
+          background-color: rgba(196, 154, 104, 0.4);
+        }
+      }
+
+      p:first-letter {
+        font-size: 1.1rem;
+        color: #c49a68;
+      }
+    }
+  }
+
+  .half-row.animation {
+    min-height: 600px;
+    background: url('../img/card-ofday/bg-card-ofday-anima.gif') left 260px top 150px no-repeat;
+    background-size: content;
+
+    @include respondTo(smartphone, max) {
+      background: url('../img/card-ofday/bg-card-ofday-anima.gif') left 50px top 160px no-repeat;
+      background-size: content;
+    }
+  }
+
+  .card-ofday-image {
+    position: relative;
+    min-height: 509px;
+    background: url('../img/card-ofday/bg-card-ofday.jpg') left 68px top no-repeat;
+    background-size: 481px 509px;
+    @include respondTo(notebook, max) {
+      background-size: 40.067vw 42.399vw;
+    }
+    @include respondTo(netbook, max) {
+      width: 100%;
+      background: url('../img/card-ofday/bg-card-ofday.jpg') left 25vw top no-repeat;
+      background-size: 481px 509px;
+    }
+    @include respondTo(tablet, max) {
+      width: 100%;
+      min-height: 77vw;
+      background: url('../img/card-ofday/bg-card-ofday.jpg') left 15vw top no-repeat;
+      background-size: 75vw auto;
+    }
+
+    .flip-container {
+      position: absolute;
+      top: 54px;
+      left: 80px;
+      @include respondTo(notebook, max) {
+        top: 4.498vw;
+        left: 79px;
+      }
+      @include respondTo(netbook, max) {
+        top: 54px;
+        left: calc(25vw + 13px);
+      }
+      @include respondTo(tablet, max) {
+        top: 8.55vw;
+        left: calc(15vw + 13px);
+      }
+      @include respondTo(smartphone, max) {
+        top: 8.41vw;
+        left: 16.8vw;
+      }
+    }
+
+    .card-ofday-quote {
+      position: relative;
+      margin: 600px 10% 0;
+      padding: 55px 40px 40px;
+      border: 1px solid rgba(196, 154, 104, 0.4);
+      font-family: $font_primary;
+      font-size: 1.7rem;
+      font-style: italic;
+      line-height: 1.3;
+
+      @include respondTo(tablet, max) {
+        margin-top: 88vw;
+      }
+      @include respondTo(smartphone, max) {
+        padding: 45px 25px 35px;
+        font-size: 1.4rem;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -30px;
+        left: calc(50% - 45px);
+        width: 90px;
+        height: 65px;
+        background: #fff url('../img/quote.svg') left 9px top 0 no-repeat;
+        background-size: 70px 65px;
+        transform: rotate(180deg);
+
+        @include respondTo(smartphone, max) {
+          top: -23px;
+          width: 70px;
+          height: 51px;
+          background-size: 50px auto;
+        }
+      }
+    }
+  }
+}
+
+.gallery-area {
+
+  .title {
+    @include respondTo(tablet, max) {
+      padding-left: 10px;
+    }
+  }
+
+  h1::first-letter, h2::first-letter {
+
+    @include respondTo(tablet, max) {
+      margin: -15px 0 0 -0.1em;
+    }
+  }
+}
+
+#lightgallery {
+
+  a {
+    float: left;
+    width: calc(33.33% - 2vw);
+    margin: 0 3vw 3vw 0;
+    border-radius: 12px;
+    overflow: hidden;
+
+    &.right {
+      float: right;
+      margin-right: 0;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(118, 82, 149, 0.15);
+    }
+
+    &:hover:before {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      opacity: 0.9;
+    }
+  }
+
+  a:nth-child(5n + 4), a:nth-child(5n) {
+    margin-top: calc(-33.33% - 0.95vw);
+  }
+}
+
+.contacts-area {
+  align-items: stretch;
+  clear: both;
+
+  .title {
+    @include respondTo(tablet, max) {
+      padding-left: 10px;
+    }
+  }
+
+  h1::first-letter, h2::first-letter {
+
+    @include respondTo(tablet, max) {
+      margin: -15px 0 0 -0.1em;
+    }
+  }
+
+  .contacts-area-phone {
+    min-height: 580px;
+    padding: 70px 30px 20px;
+    text-align: center;
+    border-radius: 14px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+
+    @include respondTo(netbook, max) {
+      min-height: 230px;
+      padding: 50px 0;
+    }
+
+    .phone-number {
+      font-family: $font_primary;
+      font-size: 1.7rem;
+
+      .stroke {
+        display: block;
+        font-family: 'Times New Roman';
+        font-size: 3.8rem;
+        color: #fff;
+        letter-spacing: -1px;
+        line-height: 1;
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.7);
+        text-stroke: 1px rgba(0, 0, 0, 0.7);
+
+        span {
+          display: inline-block;
+          margin: 0 -5px 0 -4px;
+        }
+      }
+    }
+
+    .btns-block {
+      margin: 15px 0 0 0;
+
+      &:before {
+        display: block;
+        margin: 0 0 5px 0;
+        margin-left: 50%;
+        content: '';
+        width: 1px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      a {
+        display: inline-block;
+        width: auto;
+        margin-bottom: 20px;
+        padding-left: 40px;
+        font-size: 1.45rem;
+        transition: all 0.2s ease-out;
+        @include respondTo(notebook, max) {
+          min-height: 35px;
+          font-size: 1.1em;
+        }
+
+        &.tel {
+          padding-left: 46px;
+          @include respondTo(netbook, max) {
+            margin-left: 30px;
+          }
+        }
+
+        &:hover {
+          filter: grayscale(1);
+        }
+      }
+    }
+
+    p {
+      margin-top: 50px;
+    }
+  }
+}
+
+#contactForm {
+  display: block;
+  width: 100%;
+  min-height: 580px;
+  padding: 40px 100px 0;
+  border-radius: 14px;
+  background-color: rgba(0, 0, 0, 0.05);
+
+  @include respondTo(netbook, max) {
+    margin-bottom: 30px;
+    padding: 40px 100px 65px;
+    min-height: 280px;
+  }
+  @include respondTo(tablet, max) {
+    padding: 40px 12% 65px;
+  }
+}
+
+.contacts-messages {
+  margin-top: 15px;
+}
+
+.footer-area {
+  margin-top: 80px;
+  padding: 80px 8%;
+  color: #fff;
+  background-color: #363636;
+  @include respondTo(notebook, max) {
+		padding: 60px 5%;
+	}
+  @include respondTo(netbook, max) {
+    padding: 60px 4.4%;
+  }
+  @include respondTo(tablet, max) {
+    padding: 60px 8% 100px;
+  }
+
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @extend %flexbox;
+    align-items: center;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+
+    @include respondTo(netbook, max) {
+      flex-wrap: wrap;
+    }
+
+    li {
+      @include respondTo(smartphone, max) {
+        width: 100%;
+        text-align: center;
+      }
+
+      &:first-child {
+        @include respondTo(netbook, max) {
+          width: 100%;
+          margin-bottom: 35px;
+          text-align: center;
+        }
+      }
+
+      &:nth-child(2) {
+        @include respondTo(netbook, max) {
+          display: none;
+        }
+      }
+
+      &:nth-child(3) {
+        @include respondTo(smartphone, max) {
+          margin-bottom: 25px;
+        }
+      }
+
+      &:nth-child(4) {
+        @include respondTo(smartphone, max) {
+          display: none;
+        }
+      }
+
+      &:nth-child(6) {
+        @include respondTo(tablet, max) {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        height: 38px;
+        line-height: 38px;
+        @include respondTo(tablet, max) {
+          width: 100%;
+          padding: 30px 0 15px;
+          text-align: center;
+          opacity: 0.5;
+        }
+
+        .limit-icon {
+          display: inline-block;
+          vertical-align: middle;
+          width: 34px;
+          height: 34px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  a {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+
+    &:hover {
+      color: #765295;
+    }
+  }
+
+  .footer-logo {
+    margin-top: -4px;
+    filter: brightness(4);
+
+    img {
+      width: 190px;
+    }
+
+    .site-logo-tagline {
+      margin: -18px 0 0 47px;
+      @include respondTo(netbook, max) {
+        margin: -18px 0 0 54px;
+      }
+      @include respondTo(smartphone, max) {
+        margin: -16px 0 0 64px;
+      }
+    }
+
+    &:hover {
+      filter: brightness(1);
+    }
+  }
+
+  .copyright {
+    display: inline-block;
+    vertical-align: top;
+    margin: -1px 4px 0 0;
+    // transform: translate(0, -1px);
+  }
+
+  .phone {
+    font-family: 'Times New Roman';
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 0.95;
+  }
+}

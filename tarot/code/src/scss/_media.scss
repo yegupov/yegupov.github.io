@@ -1,0 +1,274 @@
+@media (max-width: 1600px) {
+  .contacts-area .contacts-area-phone .phone-number .stroke {
+    font-size: 3.6rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contacts-area .contacts-area-phone .phone-number .stroke {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .contacts-area .contacts-area-phone .phone-number .stroke {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Mobile navbar */
+  .nav-toggler{
+    display: block;
+  }
+
+  .navbar-list {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+    top: 110px;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    background-color: #fff;
+    transition: height .5s ease;
+    overflow: hidden;
+    display: none;
+
+    li {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+
+      &:first-child {
+        display: block;
+      }
+
+      &:nth-child(2) {
+        order: 1;
+      }
+
+      &:nth-child(3) {
+        order: 4;
+      }
+
+      &:nth-child(4) {
+        order: 2;
+      }
+
+      &:nth-child(5) {
+        order: 5;
+      }
+
+      &:nth-child(6) {
+        order: 3;
+      }
+
+      &:nth-child(7) {
+        order: 6;
+      }
+
+      a {
+        padding: 18px;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: rgba(0,0,0,0.08);
+        }
+      }
+    }
+
+    &.open {
+      display: block;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      align-items: center;
+      // height: calc(100vh - 110px);
+      box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.1);
+    }
+  }
+
+  .intro-area .half-row:first-child {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1, h2 {
+    font-size: 48px;
+  }
+
+  @-moz-document url-prefix() {
+    h1::first-letter, h2::first-letter {
+      margin-top: -6px;
+    }
+  }
+
+  p:before, #reviewsList:before, .area-header:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .btn {
+    padding: 15px 27px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .intro-area .subtitle {
+    font-size: 34px;
+  }
+
+  .card-ofday-area {
+
+    .card-ofday-image .card-ofday-quote {
+      margin-left: 6%;
+      margin-right: 6%;
+    }
+
+    .btns-block {
+      text-align: center;
+    }
+  }
+
+  .reviews-area .btns-block {
+    padding: 0 4%;
+    text-align: center;
+
+    p {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      padding-right: 0;
+      text-align: left;
+    }
+  }
+
+  #lightgallery a {
+    width: calc(50% - 2vw);
+    margin: 0 4vw 4vw 0;
+
+    &:nth-child(5n + 4), &:nth-child(5n) {
+      margin-top: 0;
+    }
+
+    &:nth-child(5n + 2), &:nth-child(5n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(5n + 3) {
+      margin-top: calc(-50% - 2vw);
+    }
+  }
+
+  .contacts-area .contacts-area-phone .btns-block a.tel {
+    display: block;
+    width: 205px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 44px;
+  }
+
+  .btn {
+    padding: 16px 36px;
+    font-size: 16px;
+  }
+
+  .navbar-list {
+    top: 120px;
+
+    // .open {
+    //   height: calc(100vh - 120px);
+    // }
+  }
+
+  .contacts-area .contacts-area-phone .phone-number .stroke {
+    font-size: 2.8rem;
+  }
+
+  .faq-area {
+
+    .question {
+      padding-right: 40px;
+      font-size: 1rem;
+    }
+
+    .plus {
+      top: -4px;
+      margin-left: calc(100% - 20px);
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  h1, h2 {
+    font-size: 40px;
+  }
+
+  .site-logo img {
+    width: 200px;
+  }
+
+  .site-logo-tagline {
+    margin: -19px 0 0 51px;
+  }
+
+  .nav-toggler {
+    margin-top: 7px;
+  }
+
+  .faq-area .faq-block {
+    padding: 35px 9% 60px;
+  }
+
+  #reviews .review .review-author:after {
+    display: none;
+  }
+
+  #reviews .review .review-date {
+    display: block;
+    margin-left: 35px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar-list {
+    li a {
+      padding: 14px;
+      font-size: 1rem;
+    }
+  }
+
+  .site-logo-tagline {
+    font-size: 11px;
+  }
+
+  .contacts-area .contacts-area-phone .btns-block a {
+    padding-left: 35px;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .wa {
+    background: url(../img/whatsapp.svg) left top 1px no-repeat;
+    background-size: 26px auto;
+  }
+
+  .tel {
+    background: url(../img/telegram.svg) left top 2px no-repeat;
+    background-size: 28px auto;
+  }
+
+  .contacts-area .contacts-area-phone .btns-block a.tel {
+    width: 185px;
+    padding-left: 32px;
+  }
+}
