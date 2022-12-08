@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>AdminHelper – assistant application for site administrator</title>
+	<meta name="description" content="JavaScript application that automates the process of creating new material for the site." />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+	<link rel="stylesheet" href="../../css/splide.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+		<aside class="aside"></aside>
+
+		<section class="sheet single-work">
+
+			<div class="row single-work__desc">
+				<div class="col-6">
+					<h1>AdminHelper – assistant application for site administrator&nbsp;
+						<a rel="nofollow" class="btn btn-tertiary" href="https://make-website.ru/adminhelper/" target="_blank" title="Visit site"><i data-feather="corner-up-right"></i><span>Visit site</span></a></h1>
+					<ul class="list-framed">
+						<li>PUG</li>
+						<li>SCSS</li>
+						<li>JavaScript</li>
+						<li>PHP</li>
+					</ul>
+					<p>An application that automates the process of creating new material for the site. With its help, the administrator receives the finished HTML code of the article in a short period of time.</p>
+				</div>
+
+				<div class="col-6 flexbox">
+					<img class="lazy" src="../works-ahelper-gif-th.gif" alt="Javascript assistant application for site administrator">
+				</div>
+			</div>
+
+      <div class="smarttabs">
+				<div class="row single-work__menu">
+					<div class="col-6">
+						<div class="smarttabs__nav">
+		          <a class="smarttabs__navlink active" href="#tabdesc">Description</a>
+		          <a class="smarttabs__navlink" href="#tabmedia">Screenshots<span>&nbsp;& Video</span></a>
+		          <a class="smarttabs__navlink" href="#tabcode">Code</a>
+		        </div>
+					</div>
+					<div class="col-6">
+						<a class="icon-link" href="/works/"><i data-feather="arrow-left"></i>Back to the works list</a>
+					</div>
+				</div>
+
+        <div class="smarttabs__content">
+          <div class="smarttabs__tabcontent active" id="tabdesc">
+
+						<div class="container">
+							<p>The application generates a ready-made HTML code for the <a class="show-image" href="./ahelper-11.jpg">article</a> from the materials of the task (<a class="show-image" href="./ahelper-2.jpg">images and a Word file</a>), and also saves cropped images to the /images/ folder.</p>
+							<p>This service, developed for process automation of creating a new page code, helps the site administrator quickly compose an article that includes text, photo and video carousels, link buttons, review sliders and price tables. Then the administrator can paste this code into the admin panel of the site during the creation of a new material.</p>
+							<p>Application functions are implemented on a bunch of <b>JavaScript + Php</b>. It is possible to create articles for 3 different sites. <b>Layout</b> was carried out using <a href="https://github.com/liutkin/crystalball" target="_blank">Crystalball</a> (It is a web app project scaffolding tool powered with <strong>GULP</strong> for frontend development. Out-of-the box it has: <strong>PUG</strong> templating, <strong>SASS</strong> styling, <strong>WEBPACK</strong> bundler).</p>
+
+							<p><img src="./ahelper.jpg" alt="JavaScript application"></p>
+
+							<h2>Implemented in the application (What does the app do)</h2>
+							<ul>
+								<li>The simplest <b>authorization in PHP</b> (login.php).</li>
+								<li><b>Reading Word file</b> (getWordText.php) and inserting formatted text into <b>Ckeditor 4</b> Html editor</li>
+								<li><b>Formation of code</b> for link buttons, Price buttons (Page elements tab).</li>
+								<li><b>For the «Read more» block</b>: getting the Html code of different web pages (getWebPageHtml.php), finding the title image and generating the finished code for this block (Page elements tab).</li>
+								<li><b>Getting YouTube video titles</b> using PHP (getYoutubeData.php), generating YouTube gallery code (Page elements tab).</li>
+								<li><b>Formation of code</b> for photo carousels (Page elements tab).</li>
+								<li><b>Cropping, renaming and saving images</b> to the /images/ directory in PHP (createImageGallery.php).</li>
+								<li>Inserting code from different fields into the resulting field, adding Meta-title and Meta-description to the end of the finished code for 2 types of pages (Service and Blog Article), Copy code button (Ready HTML code tab).</li>
+								<li><b>Formation of ready-made Html code of price tables</b> from text logically marked up with certain symbols (Price page).</li>
+								<li>The service includes updating price lists through <b>integration with Google Sheets and Google Apps Script</b>. This integration is described here in...</li>
+							</ul>
+
+							<h2>Algorithm of the administrator&#39;s work (Demo of the process)</h2>
+							<h3>The main stages of work on creating new material for the site</h3>
+							<ol>
+								<li>Reception task materials and uploading them to the site folder /adminhelper/files/.</li>
+								<li>Working in the AdminHelper application.</li>
+								<li>Inserting the finished HTML code into the Admin panel of the site.</li>
+							</ol>
+
+							<div id="splide" class="splide">
+							  <div class="splide__track">
+							    <ul class="splide__list">
+							      <li class="splide__slide">
+											<img src="./ahelper-8.jpg">
+										</li>
+							      <li class="splide__slide" style="background: url('./ahelper-12.png') center bottom 1rem no-repeat;">
+											<video controls="" width="1000" height="494" poster="./ahelper-poster-1.jpg" preload="none">
+								        <source src="./ahelper-1.mp4" type="video/mp4">
+								      </video>
+										</li>
+							      <li class="splide__slide">
+											<img src="./ahelper-9.jpg">
+										</li>
+							    </ul>
+							  </div>
+							</div>
+
+							<h3>Detailed algorithm of actions</h3>
+							<ol>
+								<li>In the mail, open a <a class="show-image" href="./ahelper-2.jpg">letter with a task</a>, download the materials (Word file and images) to the computer in the <a class="show-image" href="./ahelper-3.png">site folder</a>, copy the links for the buttons in the letter.</li>
+								<li>Upload the downloaded materials to the site in the directory <a class="show-image" href="./ahelper-7.jpg">/adminhelper/files/</a>.</li>
+								<li><a class="show-image" href="./ahelper-1.jpg">Login</a> to AdminHelper App.</li>
+								<li>Click on the button <code>Get word text</code>, edit the text of the article, if necessary (<a class="show-image" href="./ahelper-4.jpg">«Editor» tab</a>).</li>
+								<li>Paste the links copied in the task into the field in the <a class="show-image" href="./ahelper-5.jpg">«Page elements» tab</a>. Generate code.</li>
+								<li>In the «Page elements» tab, in the input field, enter a name for the images. If necessary, in the textarea Photo gallery of results, enter a list of image file names and the last line - a phrase after which you will need to insert a photo carousel.</li>
+								<li>Click the <code>Generate code</code> button.</li>
+								<li>Click the <code>Insert All Into Article</code> button.</li>
+								<li>In the <a class="show-image" href="./ahelper-6.jpg">«Ready HTML code» tab</a>, select the type of material (Service or Article) and click on the <code>Copy code</code> button.</li>
+								<li>Go to the site&#39;s <a class="show-image" href="./ahelper-10.jpg">admin panel</a>. Add a new material in the required section and paste the previously copied code into the Contents field. Complete the process of creating material on the site.</li>
+								<li><b>Ready!</b> Open the created <a class="show-image" href="./ahelper-11.jpg">page</a> on the site with text, photo carousels, buttons and a review slider.</li>
+							</ol>
+
+							<h2>The principle of generating HTML code</h2>
+							<p>When generating fragments of HTML code, a <b>markup language</b> is used.</p>
+							<ol>
+								<li>Text is inserted into the textarea field in combination with logical markup as a set of certain characters.</li>
+								<li>The <code>Generate code</code> button is pressed.</li>
+								<li>JavaScript handles the click on a specific button by returning a line of code.</li>
+								<li>Ready HTML code is inserted into the textarea field below.</li>
+							</ol>
+							<p>All fragments according to a certain order are collected into a single resulting code after clicking on the <code>Insert all into article</code> button. The user will be redirected to the Ready HTML Code tab.</p>
+
+							<h3>Example: link-buttons at the top of an article</h3>
+							<figure class="codepre">
+								<figcaption id="example1-caption">To form link-buttons, you need to insert into the textarea:</figcaption>
+				        <pre
+				          aria-describedby="example1-description"
+				          aria-labelledby="example1-caption">
+				          <code class="prettyprint">btns
+Гнатологическое лечение https://damasclinic.ru/uslugi-i-ceny/stomatologiya/gnatologiya/
+Лечение брекетами  https://damasclinic.ru/uslugi-i-ceny/stomatologiya/lechenie-breketami/
+Фото результатов стоматологического лечения https://damasclinic.ru/foto-do-i-posle/stomatologija/
+				        </code></pre>
+				      </figure>
+							<figure class="codepre">
+								<figcaption id="example2-caption">The finished code will appear in the box below:</figcaption>
+								<pre
+				          aria-describedby="example2-description"
+				          aria-labelledby="example2-caption">
+				          <code class="prettyprint">&lt;! --- Btns -- &gt;
+&lt;ul class="pod-cat"&gt;
+&nbsp; &lt;li&gt;&lt;a href=")"&gt;Гнатологическое лечение (ссылку на ноовую страницу из предыдущего задания&lt;/a&gt;&lt;/li&gt;
+&nbsp; &lt;li&gt;&lt;a href="/uslugi-i-ceny/stomatologiya/lechenie-breketami/"&gt;Лечение брекетами&lt;/a&gt;&lt;/li&gt;
+&nbsp; &lt;li&gt;&lt;a href="/foto-do-i-posle/stomatologija/"&gt;Фото результатов стоматологического лечения&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+				        </code></pre>
+				      </figure>
+
+							<h3>Example: price table for the Pricing section</h3>
+							<p>The Price page in the AdminHelper application.</p>
+							<figure class="codepre">
+								<figcaption id="example3-caption">Table copied from the assignment email (Get Raw Code tab):</figcaption>
+				        <pre
+				          aria-describedby="example3-description"
+				          aria-labelledby="example3-caption">
+				          <code class="prettyprint">Коррекция носогубных складок и морщин «марионеток»
+Действует акция!
+Препарат Juviderm 4 (1 мл)	20 000 руб  14 999 руб
+Препарат Juviderm 4 (1 мл) (процедуру проводит доктор Амжад Аль-Юсеф)	25 000 руб
+Препарат Juviderm Volift с лидокаином (анестезирующий) (1 мл)	21 000 руб  15 999 руб
+Препарат Perfecta (1 мл)	19 000 руб  13 999 руб
+Препарат Restyline (1 мл)	13 500 руб
+				        </code></pre>
+				      </figure>
+							<figure class="codepre">
+								<figcaption id="example4-caption">Intermediate text marked up with specific characters (after clicking the «Get Raw Code» button):</figcaption>
+								<pre
+				          aria-describedby="example4-description"
+				          aria-labelledby="example4-caption">
+				          <code class="prettyprint">Коррекция носогубных складок и морщин «марионеток» |
+Действует акция! &
+Препарат Juviderm 4 (1 мл)  |  20 000 руб $  14 999 руб |
+Препарат Juviderm 4 (1 мл) (процедуру проводит доктор Амжад Аль-Юсеф)  |  25 000 руб |
+Препарат Juviderm Volift с лидокаином (анестезирующий) (1 мл)  |  21 000 руб $  15 999 руб |
+Препарат Perfecta (1 мл)  |  19 000 руб $  13 999 руб |
+Препарат Restyline (1 мл)  |  13 500 руб
+				        </code></pre>
+				      </figure>
+							<figure class="codepre">
+								<figcaption id="example5-caption">Ready HTML code (after clicking on the «Generate code» button):</figcaption>
+								<pre
+				          aria-describedby="example5-description"
+				          aria-labelledby="example5-caption">
+				          <code class="prettyprint">&lt;table class="beautiful_table readmore"&gt;
+&lt;tbody&gt;
+&nbsp; &lt;tr&gt;&lt;th colspan="2"&gt;
+&nbsp;&nbsp;&nbsp; Коррекция носогубных складок и морщин &laquo;марионеток&raquo;
+&nbsp;&nbsp;&nbsp; &lt;br/&gt;&lt;span style="color: #ff9900;"&gt;Действует акция!&lt;/span&gt;
+&nbsp; &lt;/th&gt;&lt;/tr&gt;
+&nbsp; &lt;tr&gt;&lt;td&gt;Препарат Juviderm 4 (1 мл)&lt;/td&gt;&lt;td&gt;&lt;span style="text-decoration: line-through;"&gt;20 000 руб&lt;/span&gt; &lt;span style="color: #ff9900;"&gt;14 999 руб&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&nbsp; &lt;tr&gt;&lt;td&gt;Препарат Juviderm 4 (1 мл) (процедуру проводит доктор Амжад Аль-Юсеф)&lt;/td&gt;&lt;td&gt;25 000 руб&lt;/td&gt;&lt;/tr&gt;
+&nbsp; &lt;tr class="readmore_hide"&gt;&lt;td&gt;Препарат Juviderm Volift с лидокаином (анестезирующий) (1 мл)&lt;/td&gt;&lt;td&gt;&lt;span style="text-decoration: line-through;"&gt;21 000 руб&lt;/span&gt; &lt;span style="color: #ff9900;"&gt;15 999 руб&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&nbsp; &lt;tr class="readmore_hide"&gt;&lt;td&gt;Препарат Perfecta (1 мл)&lt;/td&gt;&lt;td&gt;&lt;span style="text-decoration: line-through;"&gt;19 000 руб&lt;/span&gt; &lt;span style="color: #ff9900;"&gt;13 999 руб&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&nbsp; &lt;tr class="readmore_hide"&gt;&lt;td&gt;Препарат Restyline (1 мл)&lt;/td&gt;&lt;td&gt;13 500 руб&lt;/td&gt;&lt;/tr&gt;
+&nbsp; &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="show_readmore"&gt;Развернуть&lt;/div&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+				        </code></pre>
+				      </figure>
+
+							<h2>How AdminHelper App helps</h2>
+							<p>AdminHelper performs many operations automatically, thereby significantly reducing the time required to create a new page of the site.</p>
+							<p><u>The administrator does not have to:</u></p>
+							<ul>
+								<li><strong>Text</strong>: open text in Word; format text by adding H2 headings; copy this text and paste it into the admin panel editor for further work with it.</li>
+								<li><strong>Images</strong>: crop them in some graphics editor; create smaller thumbnails; rename images; waste time uploading them to the site.</li>
+								<li><strong>Photo sliders</strong> (owl-carousel): manually generate HTML code using image titles (alt) and new filenames (src); insert each carousel in the text after a specific phrase.</li>
+								<li><strong>YouTube carousel</strong>: go to YouTube and copy the title of each video; manually generate the HTML code of the gallery.</li>
+								<li><strong>Buttons</strong>: manually generate HTML code from links.</li>
+								<li><strong>Price lists</strong>: manually generate HTML code for tables for the pages of the Prices section of the site.</li>
+							</ul>
+
+							<h2>Used tools</h2>
+							<ul>
+								<li><b>Ckeditor 4</b> &ndash; smart Visual Text Editor for HTML <a href="https://ckeditor.com/ckeditor-4/" target="_blank">https://ckeditor.com/ckeditor-4/</a></li>
+								<li><b>Beauter</b> &ndash; a simple framework for faster and beautiful responsive sites <a href="https://beauter.io/" target="_blank">https://beauter.io/</a></li>
+							</ul>
+
+
+						</div>
+          </div>
+
+          <div class="smarttabs__tabcontent" id="tabmedia">
+						<div class="stickytabs work-stickytabs">
+						  <div class="stickytabs__aside">
+						    <ul class="stickytabs__nav">
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Login</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Get Word text</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Page elements</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Ready-made HTML code</li>
+						      <li class="stickytabs__navitem"><i data-feather="film"></i> Application work</li>
+						    </ul>
+						  </div>
+
+						  <div class="stickytabs__article">
+						    <div class="stickytabs__content">
+						      <img class="lazy" src="./ahelper-1-th.jpg" alt="Login Javascript App" />
+						    </div>
+                <div class="stickytabs__content">
+						      <img class="lazy" src="./ahelper-4-th.jpg" alt="Javascript admin panel" />
+						    </div>
+                <div class="stickytabs__content">
+						      <img class="lazy" src="./ahelper-5-th.jpg" alt="Admin panel tabs" />
+						    </div>
+                <div class="stickytabs__content">
+						      <img class="lazy" src="./ahelper-6-th.jpg" alt="Admin helper" />
+						    </div>
+                <div class="stickytabs__content">
+									<video controls="" width="1000" height="494" poster="./ahelper-poster-1.jpg" preload="none">
+										<source src="./ahelper-1.mp4" type="video/mp4">
+									</video>
+						    </div>
+						  </div>
+						</div>
+          </div>
+
+          <div class="smarttabs__tabcontent" id="tabcode">
+						<div class="container">
+
+							<p>Here below is just index.pug and app.js files:</p>
+
+							<figure class="codepre">
+					      <figcaption id="example6-caption">index.pug</figcaption>
+					        <pre
+					          aria-describedby="example6-description"
+					          aria-labelledby="example6-caption">
+					          <code class="prettyprint">extends layout/damasclinic
+
+block title
+	title Admin Helper App | Damasclinic
+
+block content
+	.smarttabs
+		span.priority ❶
+		input#getWordText._small._infolight(type='button' value='Получить Word текст' onclick="showsnackbar('docx')")
+		span._inline-block(style='margin-left:20px;')
+			span.priority ❷
+			a.b-nav-tab.active(href='#' data-tab='tabeditor' title='Редактирование текста')
+				| Редактор
+		span._inline-block
+			span.priority ❸
+			a.b-nav-tab(href='#' data-tab='tabelem' title='Кнопки, Читайте ещё, YouTube галерея')
+				| Page Elements
+		span._inline-block
+			span.priority ❹
+			a#tabcodeLink.b-nav-tab(href='#' data-tab='tabcode' title='Код статьи для Админки')
+				| Готовый HTML код
+		a.b-nav-tab(href='#' data-tab='tabword' title='Текст из Word файла')
+			| Docx text
+
+		.smarttabs__content
+
+			#tabeditor.b-tab.active
+				.row
+					.col.m7
+						textarea(name="editor1")
+					.col.m5
+						h5 Отзывы
+						textarea#reviewText._width100(placeholder="Вставь скопированный текст Отзывов")
+						input#getReviewCode.button._success(type='button' value='Получить код')
+						p Слайдер отзывов (готовый код):
+						textarea#readyReviewCode._width100(placeholder="Будет после нажатия Получить код...")
+
+			#tabelem.b-tab
+				.row
+					.col.m6
+						.card
+							h5._width75 Кнопки-ссылки, кнопка Прайс, Read more, YT gallery
+							p._low
+								span._f-warning btns
+								| - Кнопки-ссылки / &nbsp;
+								span._f-warning price
+								| - кнопка Прайс / &nbsp;
+								span._f-warning read
+								|- Read more / &nbsp;
+								span._f-warning yt
+								|- YT gallery
+							input#getPageElements.button._success(type='button' value='Сформировать код')
+							.tooltip.-tooltip-right.pattern Пример кода
+								span.tooltiptext._nightblue
+									| btns
+									|	&lt;br/&gt;Vaser липосакция тела https://damasclinic.ru/service/liposakciya
+									|	&lt;br/&gt;Липосакция живота https://damasclinic.ru/service/liposakciya-zhivota
+									|	&lt;br/&gt;Липосакция лица https://damasclinic.ru/service/liposakciya-lica
+									|	&lt;br/&gt;Липофмилинг ягодиц https://damasclinic.ru/service/lipofiling-yagodic
+									br
+									|	&lt;br/&gt;price
+									|	&lt;br/&gt;https://damasclinic.ru/price/plasticheskaya-hirurgiya#lipostela
+									br
+									|	&lt;br/&gt;yt
+									|	&lt;br/&gt;https://youtube.com/shorts/Ni-QDsmrfig
+									|&lt;br/&gt;>https://youtube.com/shorts/tL6VhgpHTjI
+									|	&lt;br/&gt;https://youtube.com/shorts/Y_66MKtEFMA
+									|	&lt;br/&gt;В А Ж Н О: для YouTube - в конце, чтобы был ID ролика
+							textarea#pageElements._width100(placeholder="Вставить элементы для страницы")
+							p Готовый код - Page Elements:
+							textarea#readyPageElements._width100(placeholder="Будет после нажатия Сформировать код...")
+
+					.col.m6
+						.card
+							h5 Images for article
+							div Фотогалерея рез-тов -
+								span._low список Alt
+								span._floatRight
+									input#stubImageGallery(type='checkbox')
+									| &nbsp;Интимная пластика
+									.tooltip.-tooltip-left.pattern ?
+										span.tooltiptext._nightblue
+											| Сформируется код галереи с картинками-заглушками для проверки 18 лет
+							textarea#namelist._width100(placeholder="Каждое название с новой строки и Фразу в последней строке, после которой будет фотогалерея")
+							input#namepic._width50(type='text' placeholder='Имя файла картинки')
+							input#getImageGallery.button._success(type='button' value='Сформировать код')
+							span.disabled
+								input#insertElements._info._disabled(type='button' value='Вставить всё в статью' onclick="showsnackbar('articlecode')")
+							//- input#insertReviews._infolight(type='button' value='Вставить Отзывы в конец')
+							//- p._low Если были Отзывы, то сначала Сформировать их код (вкладка Редактор), а затем нажать "Вставить Отзывы в конец"
+							p Готовый код фото-галерей:
+							textarea#imagesCode._width100(placeholder="Будет код после нажатия на Сформировать код...")
+
+			#tabcode.b-tab
+				h5 Готовый HTML код
+				p._clear Добавить Meta-description
+					span._low (в конец статьи) &emsp;
+					input.add-meta.button(type='button' value='Услуга' data-datatype='service')
+					input.add-meta.button(type='button' value='Статья' data-datatype='article')
+					span.disabled
+						button#copyArticleCode._info._disabled Скопировать код
+				textarea#articleCode._width100._height400(placeholder="Готовый код для статьи - вставить в Админку")
+
+			#tabword.b-tab
+				h5 Docx to Html
+				p
+					small PHP class: https://github.com/xylude/Docx-to-HTML
+				textarea#wordText._width100._height400
+	#docx.snackbar DOCX текст получен!
+	#articlecode.snackbar._info Код статьи сформирован!
+	#noteNoContent.snackbar._warning Нет содержимого!
+	#noteNoFileName.snackbar._warning Введи Имя файла картинки!
+	#loginPlease.snackbar._warning Войдите в Admin Helper!
+	#articlecopy.snackbar._info Код скопирован!
+					        </code></pre>
+					      </figure>
+
+
+							<figure class="codepre">
+								<figcaption id="example7-caption">app.js</figcaption>
+									<pre
+										aria-describedby="example7-description"
+										aria-labelledby="example7-caption">
+										<code class="prettyprint">'use strict';
+
+(function() {
+
+  const connectTabs = new Tabs(),
+        editors = document.getElementsByName('editor1'),
+        urlAddress = window.location.pathname,
+        // Login
+        loginBtn = document.getElementById('login');
+
+  toggleSidebarMenu();
+  highlightActiveMenuItem('.topnav');
+  highlightActiveMenuItem('.listnav');
+  if (editors[0] !== undefined) ckeditorInit();
+
+  function highlightActiveMenuItem(menu) {
+    const menuLinks = document.querySelectorAll(menu + ' li > a');
+
+    menuLinks.forEach(function (link) {
+      const linkHref = link.getAttribute('href');
+      link.classList.remove('active');
+
+      if ( linkHref.slice(1) === urlAddress.slice(12) && linkHref !== '#' ||
+          urlAddress.indexOf('damas') !== -1 && link.classList.contains('damas') ||
+          urlAddress.indexOf('dramjad') !== -1 && link.classList.contains('dramjad') ||
+          urlAddress.indexOf('make-website') !== -1 && link.classList.contains('makewebsite') ||
+          urlAddress.indexOf('damas') === -1 && urlAddress.indexOf('dramjad') === -1 && urlAddress.indexOf('make-website') === -1 && link.classList.contains('damas')
+        ) link.classList.add('active');
+    });
+  }
+
+  function toggleSidebarMenu() {
+    const bodyEl = document.querySelector('body'),
+          hamburger = document.querySelector('.hamburger');
+    hamburger.addEventListener('click', function () {
+      bodyEl.classList.toggle('hidden-sidebar');
+    });
+  }
+
+  function ckeditorInit() {
+    const editor1 = CKEDITOR.replace( 'editor1', {
+      height: 500,
+      extraAllowedContent: 'span(*);p(*);a(*);div(*);table(*);*[align];*[style];*[class];*[data-fancybox]'
+    } );
+
+    editor1.on( 'instanceReady', function( evt ) {
+      evt.editor.addCommand( 'h2' , new CKEDITOR.styleCommand( new CKEDITOR.style({ element: 'h2' } )) );
+      evt.editor.setKeystroke( CKEDITOR.SHIFT + 50 /*2*/, 'h2');
+    });
+  }
+
+  function Tabs() {
+    let bindAll = function() {
+      let menuElements = document.querySelectorAll('[data-tab]');
+      for(let i = 0; i < menuElements.length ; i++) {
+        menuElements[i].addEventListener('click', change, false);
+      }
+    }
+
+    let clear = function() {
+      let menuElements = document.querySelectorAll('[data-tab]');
+      for(let i = 0; i < menuElements.length ; i++) {
+        menuElements[i].classList.remove('active');
+        let id = menuElements[i].getAttribute('data-tab');
+        document.getElementById(id).classList.remove('active');
+      }
+    }
+
+    let change = function(e) {
+      clear();
+      e.target.classList.add('active');
+      let id = e.currentTarget.getAttribute('data-tab');
+      document.getElementById(id).classList.add('active');
+    }
+
+    bindAll();
+  }
+
+}());
+
+									</code></pre>
+								</figure>
+
+						</div>
+          </div>
+
+        </div> <!-- END smarttabs__content -->
+      </div>
+
+    </section>
+
+	<footer class="footer"></footer>
+
+	<a class="top-link hide" id="js-scrolltotop" href="#"><i data-feather="arrow-up"></i><span class="screen-reader-text">Back to top</span></a>
+
+	<script src="https://unpkg.com/feather-icons"></script>
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+	<script src="../../js/splide.min.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+</html>

@@ -1,339 +1,92 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
+
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>Портфолио Frontend разработчика Геннадия Егупова</title>
-	<meta name="description" content="Сайты под ключ, верстка, Javascript виджеты и приложения, а также резюме фронтенд разработчика." />
-	<link rel="canonical" href="https://yegupov.github.io/" />
-  <link rel="alternate" href="https://yegupov.github.io/" hreflang="ru" />
-  <link rel="alternate" href="https://yegupov.github.io/en/" hreflang="en" />
-	<link rel="shortcut icon" href="favicon.png" sizes="16x16 32x32" type="image/png">
-	<link rel="stylesheet" href="css/style.css">
+	<title>Frontend developer Gennady Yegupov</title>
+	<meta name="description" content="Personal portfolio site of a front-end developer: about me, my Javascript works, contacts and resume." />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+	<link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-	<div class="wrapper">
-		<header>
-			<label class="language-switcher">
-				<input id="languageswitcher" type="checkbox">
-				<span class="slider round"></span>
-				<span class="select-ru">RU</span>
-				<span class="select-en">EN</span>
-			</label>
-			<div class="box about">
-				<div class="box_aside">
-				    <img src="img/for-resume.jpg" alt="">
+
+		<aside class="aside">
+			<a href="/" class="aside__logo" title="Home">YG</a>
+
+			<ul class="aside__nav flexbox">
+				<li><a href="/" title="About me" class="active">About</a></li>
+				<li><a href="/works/index.html" title="Portfolio">Works</a></li>
+				<li><a href="/contact.html" title="Contact me">Contact</a></li>
+				<li><a href="./frontend-egupov-cv.pdf" title="Resume PDF" target="_blank">CV</a></li>
+			</ul>
+			<button class="nav-toggler"><span></span></button>
+
+			<div class="icon-links">
+				<div class="icon-links__item gh">
+					<a rel="nofollow" href="https://github.com/yegupov" title="GitHub" target="_blank"><i data-feather="github"></i></a>
 				</div>
-				<div class="box_cnt">
-					<h1>Геннадий Егупов</h1>
-					<p>Frontend разработчик</p>
-					<p>E-mail: <a href="mailto:ludvig31@yandex.ru">ludvig31@yandex.ru</a></p>
-					<ul class="tags">
-						<li>HTML5</li>
-						<li>CSS3</li>
-						<li>Pug</li>
-						<li>Sass</li>
-						<li>BEM</li>
-						<li>Bootstrap</li>
-						<li>SVG</li>
-						<li>JavaScript</li>
-						<li>Vue.js</li>
-						<li>jQuery</li>
-						<li>Webpack</li>
-						<li>Git</li>
-						<li>PHP</li>
-						<li>REST API</li>
-						<li>MODx</li>
-						<li>PrestaShop</li>
-					</ul>
+				<div class="icon-links__item ig">
+					<a rel="nofollow" href="https://www.instagram.com/gennadii_makewebsite/" title="Instagram" target="_blank"><i data-feather="instagram"></i></a>
+				</div>
+				<!-- <div class="icon-links__item wa">
+					<a rel="nofollow" href="https://wa.me/79262228709?text=Здравствуйте!%20" title="WhatsApp" target="_blank"><i data-feather="whatsapp"></i> +7 926 222 87 09</a>
+				</div> -->
+				<div class="icon-links__item tg">
+					<a rel="nofollow" href="https://t.me/gennadii_makewebsite" title="Telegram" target="_blank"><i data-feather="send"></i></a>
+				</div>
+				<div class="icon-links__item mail">
+					<a rel="nofollow" href="mailto:make.website.info@gmail.com" title="make.website.info@gmail.com" target="_blank"><i data-feather="mail"></i></a>
 				</div>
 			</div>
-		</header>
 
-		<section>
-			<div class="content">
-				<aside class="sidebar">
+		</aside>
 
-				</aside>
-				<main class="page-content">
+		<section class="row about">
+			<div class="col-6 about__info">
+				<h1><span>I’m Gennady Yegupov</span><span>a frontend developer</span></h1>
+				<ul class="list-framed">
+					<li>HTML5</li>
+					<li>CSS3</li>
+					<li>JavaScript</li>
+					<li>Vue.js</li>
+					<li>Git</li>
+				</ul>
 
-					<h2 class="h1">Посмотреть мой код</h2>
+				<p>I do html layout, develop applications and Vue.js widgets, create designs and work with cms MODx and PrestaShop. I currently work as a part time Remote Web Developer for Damas Medical Center. I am looking to take on more work and to increase my skills as a Frontend Developer.</p>
+				<p>Here are a few things that I have developed. <a href="/works" class="arrow right">See works</a></p>
 
-					<h3>Лендинг Гадание на картах Таро (Pug, Scss, JavaScript, MODx)</h3>
-					<ul class="tasks-list">
-						<li><a href="https://github.com/yegupov/yegupov.github.io/tree/master/tarot/code/">Код: PUG, SCSS, JS</a></li>
-						<li><a href="./tarot/">Описание проекта и скриншоты</a></li>
-						<li><a href="https://daria-bloom.make-website.ru/" target="_blank">Daria-bloom.ru</a></li>
-					</ul>
-				</main>
+				<div class="contact-links">
+					<div>
+						<span>Telegram</span>
+						<a rel="nofollow" href="https://t.me/gennadii_makewebsite" title="Telegram" target="_blank">@gennadii_makewebsite</a>
+					</div>
+					<div>
+						<span>E-mail</span>
+						<a rel="nofollow" href="mailto:make.website.info@gmail.com" title="E-mail" target="_blank">make.website.info@gmail.com</a>
+					</div>
+				</div>
+
+				<div class="about__btns">
+          <a rel="nofollow" class="btn btn-primary" href="./contact.html">Contact me</a>
+          <a rel="nofollow" class="btn btn-secondary" href="./frontend-egupov-cv.pdf" title="PDF" target="_blank">Download CV</a>
+        </div>
+
+			</div>
+
+			<div class="col-6 about__img">
+				<img class="objectfit-cover" src="../img/about-me.jpg" alt="Frontend developer photo">
 			</div>
 		</section>
 
-		<section>
-			<div class="content">
-				<aside class="sidebar">
-					<nav class="sidebar-nav">
-						<input type="checkbox" id="portfoliomenu" class="visuallyHidden">
-		        <label for="portfoliomenu" class="portfolio-nav-link">
-	            <div class="hamburger">
-                <span class="bar bar1"></span>
-                <span class="bar bar2"></span>
-                <span class="bar bar3"></span>
-                <span class="bar bar4"></span>
-                <span class="bar bar5"></span>
-	            </div>
-		        </label>
-						<ul class="portfolio-nav">
-							<li><a href="#website">Сайт «под ключ»</a></li>
-							<li><a href="#layout">Верстка</a></li>
-							<li><a href="#vue">Vue.js</a></li>
-							<li><a href="#javascript">JavaScript</a></li>
-							<li><a href="#jquery">jQuery</a></li>
-							<li><a href="#php">PHP</a></li>
-							<li><a href="#resume">Резюме</a></li>
-						</ul>
-					</nav>
-				</aside>
-				<main class="page-content">
+		<footer class="footer">
+			<p>Designed and developed by <a href="https://github.com/yegupov" target="_blank">Gennady Yegupov</a>. ©2021 All rights reserved</p>
+		</footer>
 
-					<h2 class="h1">Портфолио</h2>
-					<h2 id="website">Сайт «под ключ»</h2>
-					<ul>
-						<li>
-							Daria-bloom.ru (дизайн, верстка, MODx) – персональный сайт таролога.
-							<ul class="tasks-list">
-								<li><a href="./tarot/">Описание проекта и скриншоты</a></li>
-								<li><a href="https://github.com/yegupov/yegupov.github.io/tree/master/tarot/code/">Код: pug, scss, js</a></li>
-								<li><a href="https://daria-bloom.make-website.ru/" target="_blank">Daria-bloom.ru</a></li>
-							</ul>
-						</li>
-						<li><a href="https://unidermix.com/" target="_blank">unidermix.com</a> (дизайн, верстка, PrestaShop, разработка модулей) – интернет-магазин натуральной косметики.</li>
-						<li><a href="https://drperfetto.make-website.ru/" target="_blank">cosmetology-drperfetto.ru</a> (лендинг, дизайн, верстка, html, css, jquery) – косметологические курсы Dr.Perfetto.</li>
-						<li><a href="https://mens-look.ru/" target="_blank">mens-look.ru</a> (дизайн, верстка, MODx) – интернет-журнал о моде и стиле.</li>
-						<li><a href="https://luma-light.ru/" target="_blank">luma-light.ru</a> (дизайн, верстка, PrestaShop) – интернет-магазин автомобильной светотехники.</li>
-						<li><a href="https://make-website.ru/" target="_blank">make-website.ru</a> (MODx, Bootstrap) – персональный сайт-портфолио веб-разработчика.</li>
-						<li><a href="https://cosmetolog-dronov.ru/" target="_blank">cosmetolog-dronov.ru</a> (дизайн, верстка, html, css, jquery) – персональный сайт врача.</li>
-						<li><a href="http://yg-garments.ru/" target="_blank">yg-garments.ru</a> (дизайн, верстка, html, css, jquery, php) – интернет-магазин одежды.</li>
-					</ul>
+	<a class="top-link hide" id="js-scrolltotop" href="#"><i data-feather="arrow-up"></i><span class="screen-reader-text">Back to top</span></a>
 
-					<h2 id="layout">Верстка сайтов</h2>
-					<h3>Персональный сайт таролога (Pug, Scss, JavaScript)</h3>
-					<ul class="tasks-list">
-						<li><a href="./tarot/">Описание проекта и скриншоты</a></li>
-						<li><a href="https://github.com/yegupov/yegupov.github.io/tree/master/tarot/code/">Код: pug, scss, js</a></li>
-						<li><a href="https://daria-bloom.make-website.ru/" target="_blank">Daria-bloom.ru</a></li>
-					</ul>
-					<h3>Редизайн главной страницы сайта клиники (Html, Css, jQuery)</h3>
-					<ul class="tasks-list">
-						<li><a href="./damasclinic/">Описание проекта, скриншоты и видео</a></li>
-						<li><a href="https://damasclinic.ru/" target="_blank">damasclinic.ru</a></li>
-					</ul>
-					<h3>Персональный сайт врача Cosmetolog-dronov.ru (Html, Css, jQuery)</h3>
-					<ul class="tasks-list">
-						<li><a href="https://cosmetolog-dronov.ru/" target="_blank">cosmetolog-dronov.ru</a></li>
-					</ul>
-					<h3>Косметологические курсы Dr.Perfetto (Html, Css, jQuery)</h3>
-					<ul class="tasks-list">
-						<li><a href="https://drperfetto.make-website.ru/" target="_blank">cosmetology-drperfetto.ru</a></li>
-					</ul>
-					<h3>Интернет-магазин Smartech.ee (Html, Css, jQuery)</h3>
-					<ul class="tasks-list">
-						<!-- <li><a href="#">Описание и скриншоты</a></li> -->
-						<li><a href="https://www.smartech.ee/" target="_blank">www.smartech.ee</a></li>
-					</ul>
-
-					<h3>Интернет-магазин суши Ginza.ee (дизайн, верстка, Html, Css, jQuery)</h3>
-					<ul class="tasks-list">
-						<!-- <li><a href="./ginza/">Описание проекта, скриншоты и видео</a></li> -->
-						<li><a href="http://www.ginza.ee/" target="_blank">www.smartech.ee</a></li>
-					</ul>
-
-					<h3>Лендинг Bino (Pug, Scss, jQuery)</h3>
-					<ul class="tasks-list">
-						<li><a href="./landing-bino/">Описание проекта и скриншоты</a></li>
-						<li><a href="./landing-bino/bino.html">Landing page Bino</a></li>
-					</ul>
-					<h3>Лендинг Secret Santa (Pug, Scss, Bootstrap, jQuery)</h3>
-					<ul class="tasks-list">
-						<li><a href="./secret-santa/">Описание проекта и скриншоты</a></li>
-						<li><a href="https://yegupov.github.io/secret-santa-landing-page/">Landing page Secret Santa</a></li>
-					</ul>
-					<h3>Сервис доставки еды Vsem EDA (Html, Css, jQuery)</h3>
-					<ul class="tasks-list">
-						<li><a href="./vsem-eda/description/">Описание проекта и скриншоты</a></li>
-						<li><a href="./vsem-eda/">Vsem EDA</a></li>
-					</ul>
-
-					<h2 id="vue">Vue.js</h2>
-					<ol>
-						<li>
-							<h3>Онлайн конструктор открыток, постеров и баннеров GRAPHER</h3>
-							<ul class="tasks-list">
-								<li><a href="./grapher-design/">Описание проекта и скриншоты</a></li>
-								<li><a href="https://grapher.make-website.ru/" target="_blank">Онлайн конструктор GRAPHER</a></li>
-							</ul>
-						</li>
-						<li>
-							<h3>Виджет «Видео-приветствие» и Конфигуратор для его настройки.</h3>
-							<ul class="tasks-list">
-								<li><a href="./video-widget/">Описание проекта, видео-обзор и скриншоты</a></li>
-								<li><a href="https://make-website.ru/portfolio/services-and-applications/vstraivaemyij-video-vidzhet-dlya-lyubogo-sajta" title="Vue.js widget" target="_blank">Конфигуратор</a> (настроить виджет и получить код)</li>
-								<li>
-									<p>Пример кода виджета для встраивания на любой сайт:</p>
-									<p>&lt;vue-widget src="https://make-website.ru/video-widget/video-widjet-4.mp4" mainvideo="18,14,0.6" shape="circle,200" position="right" colors="#696E7D,#D27804" caption="Узнай, как получить скидку! &amp;#128293;" captionpos="0,65" captionfont="Arial,18,normal,#D27804" linksname="Friday discount" linksurl="http://yg-garments.ru/models/majka-toledo.html"&gt;&lt;/vue-widget&gt;<br>&lt;script src="https://make-website.ru/video-widget/app.js"&gt;&lt;/script&gt;</p>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<h3>Админ-панель PHP интернет-магазина YG-GARMENTS.ru на Vue.js</h3>
-							<ul class="tasks-list">
-								<li><a href="./admin-yggarments/">Описание проекта, скриншоты и видео</a></li>
-								<li><a href="http://yg-garments.ru/admin738149/" target="_blank">Посмотреть страницу авторизации</a></li>
-							</ul>
-						</li>
-						<li>
-							<h3>Чат на Vue.js, Socket.IO, Nuxt.js, Vuetify.js.</h3>
-							<ul class="tasks-list">
-								<li><a href="./chat-nuxt/">Описание проекта и скриншоты</a></li>
-								<li><a href="https://github.com/yegupov/nuxt-vuetify-chat">Репозиторий</a></li>
-								<li><a href="http://nuxt-vuetify-chat.herokuapp.com/" target="_blank">Чат на Heroku</a></li>
-							</ul>
-						</li>
-						<li>
-							<h3>Админ-панель на Vue.js для сайта COSMETOLOG-DRONOV.ru</h3>
-							<ul class="tasks-list">
-								<li><a href="./admin-panel-cosmetology/">Описание проекта, скриншоты и видео</a></li>
-								<li><a href="https://cosmetolog-dronov.ru/admin84295/" target="_blank">Посмотреть страницу авторизации</a></li>
-							</ul>
-						</li>
-						<li>
-							<h3>Комплексная форма с Router, Vuex, валидацией, текстовыми редакторами, мультиселектами, табами и аккордеонами</h3>
-							<ul class="tasks-list">
-								<li><a href="./complex-vue-form/description/">Описание проекта</a></li>
-								<li><a href="https://yegupov.github.io/complex-vue-form/" target="_blank">Complex Vue form</a></li>
-							</ul>
-						</li>
-						<li>
-							<h3>Депозитный калькулятор (Vue.js)</h3>
-							<ul class="tasks-list">
-								<li><a href="./deposit-calculator/">Описание проекта и скриншоты</a></li>
-								<li><a href="https://github.com/yegupov/deposit-profit-calculator">Репозиторий</a></li>
-								<li><a href="https://yegupov.github.io/deposit-profit-calculator/">Депозитный калькулятор</a></li>
-							</ul>
-						</li>
-						<li>
-							<h3>Лендинг Mountains (SPA / Vue.js)</h3>
-							<p>Проект учебного курса в Loftschool.com</p>
-							<ul class="tasks-list">
-								<li><a href="./mountains/">Описание проекта, скриншоты и видео</a></li>
-								<li><a href="https://github.com/yegupov/ls-portfolio-Mountains">Репозиторий</a></li>
-								<li><a href="https://yegupov.github.io/ls-portfolio-Mountains/">Landing page Mountains</a></li>
-							</ul>
-						</li>
-					</ol>
-
-					<h2 id="javascript">JavaScript</h2>
-
-					<h3>JavaScript плагин адаптивных вкладок с липким меню (JavaScript, Html, Css)</h3>
-					<p>Вкладки с плавающим (sticky) меню</p>
-					<ul class="tasks-list">
-						<li><a href="./js-stickytabs/">Описание проекта, скриншоты и демо</a></li>
-						<li><a href="https://make-website.ru/portfolio/sites/internet-magazin-sushi" target="_blank">Демо на make-website.ru</a></li>
-					</ul>
-
-					<h3>Лендинг Гадание на картах Таро (Pug, Scss, JavaScript, MODx)</h3>
-					<p>Персональный сайт таролога</p>
-					<ul class="tasks-list">
-						<li><a href="./tarot/">Описание проекта и скриншоты</a></li>
-						<li><a href="https://github.com/yegupov/yegupov.github.io/tree/master/tarot/code/">Код: pug, scss, js</a></li>
-						<li><a href="https://daria-bloom.make-website.ru/" target="_blank">Daria-bloom.ru</a></li>
-					</ul>
-
-					<h3>Учебные задачи по JavaScript</h3>
-					<ul class="tasks-list">
-						<li><a href="./menu/">Context menu</a></li>
-						<li><a href="./stopwatch/">Stopwatch Widget</a></li>
-						<li><a href="./form/">Form validation</a></li>
-						<li><a href="./budget-calculation/">Budget calculator</a></li>
-					</ul>
-
-					<h2 id="jquery">jQuery</h2>
-					<h3>Система вложенных комментариев на jQuery + PHP и MySQL</h3>
-					<ul class="tasks-list">
-						<li><a href="./comment-system/">Описание проекта и скриншоты</a></li>
-						<li><a href="https://cosmetolog-dronov.ru/reviews.html" target="_blank">Посмотреть страницу комментариев</a></li>
-					</ul>
-					<h3>Персональный сайт врача Cosmetolog-dronov.ru (Html, Css, jQuery)</h3>
-					<ul class="tasks-list">
-						<li><a href="https://cosmetolog-dronov.ru/" target="_blank">cosmetolog-dronov.ru</a></li>
-					</ul>
-					<h3>Косметологические курсы Dr.Perfetto (Html, Css, jQuery)</h3>
-					<ul class="tasks-list">
-						<li><a href="https://drperfetto.make-website.ru/" target="_blank">cosmetology-drperfetto.ru</a></li>
-					</ul>
-
-					<h2 id="php">PHP</h2>
-					<h3>Создание REST API на PHP для Админки сайта</h3>
-					<ul class="tasks-list">
-						<li><a href="./rest-api-cosmetology/">Описание проекта и скриншоты</a></li>
-					</ul>
-					<h3>Система отзывов на PHP, MySQL и AJAX</h3>
-					<ul class="tasks-list">
-						<li><a href="./comment-system/">Описание проекта и скриншоты</a></li>
-						<li><a href="https://cosmetolog-dronov.ru/reviews.html" target="_blank">Посмотреть страницу отзывов</a></li>
-					</ul>
-					<h3>Интернет-магазин одежды (PHP, MySQL, jQuery)</h3>
-					<ul class="tasks-list">
-						<li><a href="http://yg-garments.ru/" target="_blank">yg-garments.ru</a></li>
-					</ul>
-
-					<div class="resume">
-						<h2 id="resume" class="h1">Резюме</h2>
-						<h3>Навыки</h3>
-						<ul>
-							<li>HTML5 (Pug), CSS3 (Sass / Scss / Pcss).</li>
-							<li>JavaScript, Vue.js, jQuery (базовые знания).</li>
-							<li>Отлично владею Photoshop и CorelDraw.</li>
-							<li>Работаю с CMS: Modx, PrestaShop.</li>
-							<li>Занимаюсь созданием дизайнов, версткой макетов.</li>
-						</ul>
-
-						<h3>Опыт работы</h3>
-						<p><strong>Freelance</strong> (Ноябрь 2013 – Настоящее время)</p>
-
-
-						<h3>Курсы</h3>
-						<ol class="list-img-text">
-							<li>
-								<img src="img/certificate-ls-small.jpg" title="Сертификат Loftschool.com" alt="Сертификат Loftschool.com" class="img-zoom">
-								<p><strong>Loftschool.com</strong> (7.10.2019 – 14.11.2019)</p>
-								<p>«Advanced Web Development Course», <a href="https://loftschool.com/course/web-development/" target="_blank">Программа курса</a>.</p>
-							</li>
-							<li>
-								<img src="img/certificate-lj-small.jpg" title="Сертификат Learn.javascript.ru" alt="Сертификат Learn.javascript.ru" class="img-zoom">
-								<p><strong>Learn.javascript.ru</strong> (6.12.2018 – 11.02.2019)</p>
-								<p>«JavaScript/DOM/Interfaces», <a href="https://learn.javascript.ru/courses/js" target="_blank">Программа курса</a>.</p>
-							</li>
-							<li>
-								<p><strong>Maxymiser Academy</strong> (Май – Октябрь 2018)</p>
-								<p>«JavaScript basics», <a href="https://vk.com/mmacademy" target="_blank">vk.com/mmacademy</a>.</p>
-							</li>
-						</ol>
-
-						<h3>Образование</h3>
-						<p>Приднепровская государственная академия строительства и архитектуры (ПГАСА), 1997 г.</p>
-						<p>Специальность: автоматизация строительного производства.</p>
-
-						<h3>Дополнительная информация</h3>
-						<ul>
-							<li>Английский язык: Beginner (A1).</li>
-						</ul>
-					</div>
-				</main>
-			</section>
-		</div>
-	</div>
-
-	<script src="/js/script.js"></script>
+	<script src="https://unpkg.com/feather-icons"></script>
+	<script src="../js/script.js"></script>
 </body>
 </html>

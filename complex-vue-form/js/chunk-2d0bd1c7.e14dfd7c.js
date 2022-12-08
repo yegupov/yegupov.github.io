@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0bd1c7"],{"2b34":function(n,t,e){"use strict";e.r(t);var c=function(){var n=this,t=n.$createElement;n._self._c;return n._m(0)},a=[function(){var n=this,t=n.$createElement,e=n._self._c||t;return e("div",{staticClass:"tab-content-item"},[e("h2",[n._v("Tracking")])])}],r={name:"TabTracking"},i=r,s=e("2877"),u=Object(s["a"])(i,c,a,!1,null,"034c755d",null);t["default"]=u.exports}}]);
-//# sourceMappingURL=chunk-2d0bd1c7.e14dfd7c.js.map

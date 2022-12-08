@@ -1,0 +1,30 @@
+section#contact.contacts-area
+  .container
+    .title-decor.modif(data-animation="showFromBottom") 7
+    h2.title(data-animation="showFromRight") Контакты
+    .subtitle Напишите мне, заполнив Форму обратной связи
+    .row
+      article      
+        form#contactForm(method="post")
+          label
+            input#contactName.form-control(type='text', placeholder='Ваше имя')
+          label
+            input#contactEmail.form-control(type='email', placeholder='Email')
+          label
+            textarea#contactMess.form-control(placeholder='Любой интересующий Вас вопрос или отзыв:')
+          .userconsent-mess
+            p.smaller-text Нажимая на кнопку ОТПРАВИТЬ, я даю <a class="popup-trigger" href="#" data-popup-trigger="one">согласие на обработку моих данных</a> в соответствии с Федеральным законом РФ от 27 июля 2006 г. №152-ФЗ «О персональных данных» и <a class="popup-trigger" href="#" data-popup-trigger="two">Политикой конфиденциальности DARIA-BLOOM.ru</a>.
+          input.btn.primary(data-animation="showFromBottom", type='submit', value='Отправить')
+          .contacts-messages
+      aside
+        .contacts-area-phone
+          .phone-number
+            .stroke 89<span>1</span>64664434
+            | (Вотсап, Телеграм)
+          .btns-block
+            a.wa(href="https://wa.me/79164664434?text=Здравствуйте!%20У%20меня%20есть%20вопрос" title="Whatsapp" target="_blank" rel="nofollow") Написать в WhatsApp
+            a.tel(href="https://telegram.im/@daria_bloom" title="Написать в Telegram" target="_blank" rel="nofollow") Написать в Telegram
+          p Вам нравится моя страница?<br/>
+            | Поделитесь ею в соцсетях!
+          script(src="https://yastatic.net/share2/share.js")
+          .ya-share2(data-curtain data-color-scheme="whiteblack" data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp")

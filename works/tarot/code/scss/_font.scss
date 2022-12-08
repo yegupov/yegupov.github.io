@@ -1,0 +1,129 @@
+h1, h2 {
+  font-family: $font_primary;
+  font-weight: 400;
+  font-size: 66px;
+  letter-spacing: -0.1rem;
+  line-height: 0.8;
+  margin: 24px 0 0 -5px;
+
+  @include respondTo(desktop, max) {
+    font-size: 60px;
+  }
+  @include respondTo(notebook, max) {
+    font-size: 52px;
+  }
+  @include respondTo(netbook, max) {
+    padding-left: 55px;
+    font-size: 66px;
+    line-height: 0.9;
+  }
+  @include respondTo(tablet, max) {
+    font-size: 56px;
+    padding-left: 55px;
+  }
+  @include respondTo(smartphone, max) {
+    padding-left: 47px;
+  }
+}
+
+h1::first-letter, h2::first-letter {
+  float: left;
+  margin: -17px -3px 0 0;
+  font-size: 1.6em;
+  font-weight: 400;
+
+  @include respondTo(netbook, max) {
+    font-size: 1.7em;
+    margin: -15px 0 0 -0.7em;
+  }
+}
+
+@-moz-document url-prefix() {
+  h1::first-letter, h2::first-letter {
+    margin-top: -10px;
+  }
+}
+
+p {
+  margin: 0 0 25px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.subtitle {
+  margin: 20px 0 20px 50px;
+  font-family: $font_primary;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.2;
+  font-style: italic;
+
+  @include respondTo(tablet, max) {
+    margin-left: 0;
+  }
+
+  &:before {
+    @include respondTo(tablet, max) {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+.title-decor {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 10px 18px;
+  font-family: $font_primary;
+  font-size: 90px;
+  color: rgba(0, 0, 0, 0.1);
+
+  @include respondTo(notebook, max) {
+    margin-left: 1vw;
+  }
+  @include respondTo(netbook, max) {
+    margin-left: 0.15vw;
+  }
+  @include respondTo(tablet, max) {
+    margin-left: 0.6vw;
+    font-size: 70px;
+  }
+  @include respondTo(smartphone, max) {
+    margin-left: 1.5vw;
+    font-size: 50px;
+  }
+
+  &:after {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    content: '';
+    width: 1px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    @include respondTo(smartphone, max) {
+      top: 80%;
+      height: 35px;
+    }
+  }
+
+  &.modif {
+    line-height: 0.5;
+    min-height: 105px;
+    margin-bottom: 32px;
+
+    @include respondTo(tablet, max) {
+      min-height: 80px;
+    }
+    @include respondTo(smartphone, max) {
+      min-height: 60px;
+      margin-bottom: 12px;
+    }
+
+    &:after {
+      top: 78%;
+    }
+  }
+}

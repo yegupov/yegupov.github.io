@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Google Spreadsheets Integration</title>
+	<meta name="description" content="Integration of Google Sheets with the site (service in JavaScript and Php): translation of data from Google sheets on pages with a price list." />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+	<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+		<aside class="aside"></aside>
+
+		<section class="sheet single-work">
+
+			<div class="row single-work__desc">
+				<div class="col-6">
+					<!-- <div class="single-work__desc"> -->
+						<h1>Displaying price lists on the website from Google Sheets&nbsp;
+							<a rel="nofollow" class="btn btn-tertiary" href="https://damasclinic.ru/czeny/plasticheskaya-hirurgiya/amzhad-al-yusef/" target="_blank" title="Visit site"><i data-feather="corner-up-right"></i><span>Visit site</span></a></h1>
+						<ul class="list-framed">
+							<li>JavaScript</li>
+							<li>Google Scripts</li>
+							<li>JSON</li>
+							<li>PHP</li>
+						</ul>
+						<p>Integration of Google Sheets with the site: translation of data from Google Sheets on pages with a price list.</p>
+					<!-- </div> -->
+				</div>
+
+				<div class="col-6 flexbox">
+					<img src="../works-gsheets-gif.gif" alt="Google Sheets integration">
+				</div>
+			</div>
+
+      <div class="smarttabs">
+				<div class="row single-work__menu">
+					<div class="col-6">
+						<div class="smarttabs__nav">
+		          <a class="smarttabs__navlink active" href="#tabdesc">Description</a>
+		          <a class="smarttabs__navlink" href="#tabmedia">Screenshots<span>&nbsp;& Video</span></a>
+		          <a class="smarttabs__navlink" href="#tabcode">Code</a>
+		        </div>
+					</div>
+					<div class="col-6">
+						<a class="icon-link" href="/works/"><i data-feather="arrow-left"></i>Back to the works list</a>
+					</div>
+				</div>
+
+        <div class="smarttabs__content">
+          <div class="smarttabs__tabcontent active" id="tabdesc">
+
+						<div class="container">
+							<p>A service that receives data from Google Sheets and displays them on the site. This mechanism allows the content manager to comfortably edit price list data in Google Spreadsheets.
+								 This functionality was implemented by me on the pages with prices for the services of surgeons at the Damas Medical Center: <a href="https://damasclinic.ru/czeny/plasticheskaya-hirurgiya/amzhad-al-yusef/" target="_blank">price list</a>.</p>
+
+							<h2>Work algorithm</h2>
+							<ol>
+								<li>The <b>Google Web-App</b> web application receives the data of all sheets from all <b>Google sheets</b> and gives the finished <b>JSON</b>.</li>
+								<li>On the site (in my case, this is the AdminHelper application), when you click the Update price button, price table data is received and the <b>pricehirurg.json</b> JSON file is written/updated using PHP (<b>priceData.php</b>).</li>
+								<li>The site&#39;s JS script reads (priceData.php) the <b>pricehirurg.json</b> file, generates the HTML code for price tables and inserts them on pages with prices (the data of each Google Sheets sheet is inserted into a container with a specific ID).</li>
+							</ol>
+
+							<h2>Finished page with prices</h2>
+							<p>Price lists of an individual doctor: <a href="https://damasclinic.ru/czeny/plasticheskaya-hirurgiya/anna-petrovna-pershukova/" target="_blank">damasclinic.ru</a></p>
+							<p align="center">
+								<img class="lazy" src="./gs-page-th.gif" style="max-width:650px" alt="Page with price lists on the website">
+							</p>
+
+						</div>
+          </div>
+
+          <div class="smarttabs__tabcontent" id="tabmedia">
+						<div class="stickytabs work-stickytabs">
+						  <div class="stickytabs__aside">
+						    <ul class="stickytabs__nav">
+						      <li class="stickytabs__navitem"><i data-feather="film"></i> Getting data</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Google Apps Script</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> script.js</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> priceData.php</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> pricehirurg.json</li>
+						    </ul>
+						  </div>
+
+						  <div class="stickytabs__article">
+						    <div class="stickytabs__content">
+									<p>Price data is stored in a JSON file, selected from there by a JS script and rendered to the Price page.
+										The process of obtaining data from Google Sheets on the site:</p>
+									<video controls width="960" height="454" poster="./gs-admin-poster.jpg" preload="none">
+										<source src="./gs-admin-video.mp4" type="video/mp4" />
+									</video>
+						    </div>
+						    <div class="stickytabs__content">
+									<p>Google Apps Script</p>
+						      <img class="lazy" src="./gs-script-1-th.jpg" alt="Google Apps Script"/>
+						    </div>
+						    <div class="stickytabs__content">
+									<p>Javascript get data from google spreadsheet json</p>
+						      <img class="lazy" src="./gs-script-2-th.jpg" alt="Javascript get data from google spreadsheet json" />
+									<p>Script to display data from json file on the site page</p>
+									<img class="lazy" src="./gs-script-3-th.jpg" alt="Script to display data from json file on the site page" />
+						    </div>
+						    <div class="stickytabs__content">
+									<p>Php script to read and update data in json file</p>
+						      <img class="lazy" src="./gs-script-4-th.jpg" alt="Php script to read and update data in json file" />
+						    </div>
+						    <div class="stickytabs__content">
+									<p>JSON file with data from Google Sheets Google Sheets</p>
+						      <img class="lazy" src="./gs-script-5-th.jpg" alt="JSON file with data from Google Sheets Google Sheets" />
+						    </div>
+						  </div>
+						</div>
+          </div>
+
+          <div class="smarttabs__tabcontent" id="tabcode">
+						<div class="container">
+
+							<h2>Getting data from Google Sheets in the AdminHelper application</h2>
+
+							<figure class="codepre">
+					      <figcaption id="example1-caption">AdminHelper app: index.html</figcaption>
+					        <pre
+					          aria-describedby="example1-description"
+					          aria-labelledby="example1-caption">
+					          <code class="prettyprint">&lt;section id="updatePrice" class="content"&gt;
+
+&lt;div class="container"&gt;
+	&lt;main class="page-content"&gt;
+
+		&lt;p&gt;&lt;Данные прайса сохраняются в JSON файл, выбираются оттуда JS скриптом и рендерятся на страницу Цены.&lt;/p&gt;
+
+		&lt;h1&gt;Обновить прайс - Амжад, Першукова, Исбир&lt;/h1&gt;
+		&lt;p&gt;&lt;input type="submit" id="getGooglePriceOne" value="Обновить прайс" class="btn teal"/&gt;&lt;/p&gt;
+
+		&lt;h1 class="m-t-60"&gt;Обновить прайс - Дергам, Чесалин, Муниф&lt;/h1&gt;
+		&lt;p&gt;&lt;input type="submit" id="getGooglePriceTwo" value="Обновить прайс" class="btn teal"/&gt;&lt;/p&gt;
+
+		&lt;h1 class="m-t-60"&gt;Обновить прайс - Трансплантация волос (Чесалин), Коригова&lt;/h1&gt;
+		&lt;p&gt;&lt;input type="submit" id="getGooglePriceThree" value="Обновить прайс" class="btn teal"/&gt;&lt;/p&gt;
+
+	&lt;/main&gt;
+
+	&lt;aside class="sidebar"&gt;
+		&lt;h2&gt;Получена json строка&lt;/h2&gt;
+		&lt;p&gt;Записана в файл:
+		&lt;br/&gt;/pricehirurg.json - Амжад, Першукова, Исбир
+		&lt;br/&gt;/pricehirurgend.json - Дергам, Чесалин
+		&lt;br/&gt;/pricetransplant.json - Трансплантация (Чесалин)&lt;/p&gt;
+		&lt;p&gt;&lt;textarea id="jsonGooglePrice" class="form-control large"&gt;&lt;/textarea&gt;&lt;/p&gt;
+	&lt;/aside&gt;
+&lt;/div&gt; &lt;!-- END container --&gt;
+&lt;/section&gt; &lt;!-- END content --&gt;
+				        </code></pre>
+				      </figure>
+
+
+							<figure class="codepre">
+								<figcaption id="example2-caption">AdminHelper app: script.js</figcaption>
+									<pre
+										aria-describedby="example1-description"
+										aria-labelledby="example1-caption">
+										<code class="prettyprint">// ----- Get Price data from Google spreadsheet ----- //
+const googlePriceBtnOne = document.getElementById('getGooglePriceOne');
+
+if (googlePriceBtnOne !== null) {
+	var googleAppLinkOne = document.getElementById('googleAppLinkOne'),
+		googlePriceTextarea = document.getElementById('jsonGooglePrice'),
+
+		googlePriceBtnTwo = document.getElementById('getGooglePriceTwo'),
+		googleAppLinkTwo = document.getElementById('googleAppLinkTwo'),
+
+		googlePriceBtnThree = document.getElementById('getGooglePriceThree'),
+		googleAppLinkThree = document.getElementById('googleAppLinkThree'),
+
+		urlGoogleSpreadsheet = '';
+
+	googlePriceBtnOne.addEventListener('click', function () { // PriceDamas Hirurgiya  -   Амжад, Першукова, Исбир
+		urlGoogleSpreadsheet = googleAppLinkOne.value ? googleAppLinkOne.value : "https://script.google.com/macros/s/AKbzqCxxxxxxxxxxxxxded1WOZnKI5A/exec";
+		getPriceList(urlGoogleSpreadsheet, 'pricehirurg');
+	});
+
+	googlePriceBtnTwo.addEventListener('click', function () { // PriceDamas Hirurgiya Ending  -  Дергам, Чесалин, Муниф
+		urlGoogleSpreadsheet = googleAppLinkTwo.value ? googleAppLinkTwo.value : "https://script.google.com/macros/s/AKfycbxinFxxxxxxxxxxxxxxxxxrt6/exec";
+		getPriceList(urlGoogleSpreadsheet, 'pricehirurgend');
+	});
+
+	googlePriceBtnThree.addEventListener('click', function () {  // Damas Transplant  -  Трансплантация волос, Коригова
+		urlGoogleSpreadsheet = googleAppLinkThree.value ? googleAppLinkThree.value : "https://script.google.com/macros/s/AKycbxxxxxxxxxxnp66KKPJxrg/exec";
+		getPriceList(urlGoogleSpreadsheet, 'pricetransplant');
+	});
+}
+
+async function getPriceList(url, fileName) {
+	let response = await fetch(url);
+
+	let priceData = await response.json();
+	console.log('priceData : ', priceData);
+
+	priceData.action = 'update';
+	priceData.file = fileName;
+	googlePriceTextarea.value = JSON.stringify(priceData);
+	putPriceListToFile(priceData);
+}
+
+async function putPriceListToFile(price) {
+	let response = await fetch('https://damasclinic.ru/secretfolder/priceData.php', {
+		method: 'post',
+		headers: {'Content-Type': 'application/json;charset=utf-8'},
+		body: JSON.stringify(price)
+	});
+
+	let fileWrite = await response.json();
+	console.log('Put PriceList To File : ', fileWrite.action);
+}
+									</code></pre>
+								</figure>
+
+						</div>
+          </div>
+
+        </div> <!-- END smarttabs__content -->
+      </div>
+
+    </section>
+
+	<footer class="footer"></footer>
+
+	<a class="top-link hide" id="js-scrolltotop" href="#"><i data-feather="arrow-up"></i><span class="screen-reader-text">Back to top</span></a>
+
+	<script src="https://unpkg.com/feather-icons"></script>
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+</html>

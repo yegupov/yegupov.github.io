@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Admin panel for an online clothing store on Vue.js</title>
+	<meta name="description" content="Development of an admin panel for an online store, as well as a REST API in PHP." />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+	<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+		<aside class="aside"></aside>
+
+		<section class="sheet single-work">
+
+			<div class="row single-work__desc">
+				<div class="col-6">
+					<h1>Admin panel for an online clothing store on Vue.js&nbsp;
+						<a rel="nofollow" class="btn btn-tertiary" href="http://yg-garments.ru/admin738149/login" target="_blank" title="Visit site"><i data-feather="corner-up-right"></i><span>Visit site</span></a></h1>
+					<ul class="list-framed">
+						<li>Vue.js</li>
+						<li>PUG</li>
+						<li>SCSS</li>
+						<li>Rest API</li>
+						<li>JWT Auth</li>
+						<li>PHP</li>
+						<li>MySQL</li>
+						<li>Highcharts</li>
+					</ul>
+					<p>Development of the SPA "Adminpanel YG-GARMENTS.ru" and the REST API in PHP for authorization and implementation of CRUD operations.</p>
+				</div>
+
+				<div class="col-6 flexbox">
+					<img src="../works-ygadmin.jpg" alt="Development of a Vue.js Admin panel for an online clothing store">
+				</div>
+			</div>
+
+      <div class="smarttabs">
+				<div class="row single-work__menu">
+					<div class="col-6">
+						<div class="smarttabs__nav">
+		          <a class="smarttabs__navlink active" href="#tabdesc">Description</a>
+		          <a class="smarttabs__navlink" href="#tabmedia">Screenshots<span>&nbsp;& Video</span></a>
+		          <a class="smarttabs__navlink" href="#tabcode">Code</a>
+		        </div>
+					</div>
+					<div class="col-6">
+						<a class="icon-link" href="/works/"><i data-feather="arrow-left"></i>Back to the works list</a>
+					</div>
+				</div>
+
+        <div class="smarttabs__content">
+          <div class="smarttabs__tabcontent active" id="tabdesc">
+
+						<div class="container">
+							<p>The application (SPA) was created for the PHP store <a href="http://yg-garments.ru/" target="_blank">YG-GARMENTS.ru</a>. It contains the following pages: Console (Home), Products, Categories, Collections, Blog and Users.</p>
+				      <p>The REST API (PHP) has been developed to perform operations of creating, reading, updating and deleting data (CRUD).</p>
+				      <p>In order to create the SVG sprite, the base Vue CLI loader has been replaced with svg-sprite-loader by customizing the vue.config.js file.</p>
+				      <p>View the app <a href="http://yg-garments.ru/admin738149/login" target="_blank">authorization page</a>.</p>
+
+							<h2>Login to the Admin panel and overview of the main page</h2>
+							<p class="center">
+				        <iframe width="700" height="394" src="https://www.youtube.com/embed/3Kr4uwyOwpY?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				      </p>
+
+	            <h2>Functionality implemented in the application:</h2>
+				      <ol>
+				      	<li><b>Authorization</b> (JWT token, localStorage) and exit from the Admin panel.</li>
+				      	<li><b>Validating form fields</b> using the Simple-Vue-Validator plugin and displaying prompts.</li>
+				      	<li><b>CRUD</b>: create, read, update and delete products, categories, collections, blog posts and users.</li>
+				      	<li><b>Highcharts</b>: reading orders made in the store and displaying them in the form of graphs and diagrams with filtering by quantity, total amount and years (Home page).</li>
+				      	<li><b>Uploading images</b> to the server and deleting the old one when changed or deleted by the administrator.</li>
+				      	<li><b>Pagination</b> in the sections Products and Blog.</li>
+				      	<li>Selecting the number of positions to be displayed on one page.</li>
+				      	<li><b>Filtering</b> products by catalog sections, categories and collections. Filter blog posts by year.</li>
+				      	<li><b>Sorting</b> products by id and price.</li>
+				      	<li><b>Search</b> by name of products and posts.</li>
+				      	<li><b>Notifications</b>: help messages for the administrator in the form of pop-ups at the bottom of modals.</li>
+				      	<li><b>Yandex Metrika</b> statistics display for the home page has been developed. The Yandex Metriks API and the Highcharts library for charting are used.</li>
+								<li>Current exchange rates and a calculator on the home page</li>
+				      </ol>
+
+							<h2>Used tools and packages:</h2>
+				      <ul>
+				      	<li><b>Vue CLI</b> is a system for rapid development in Vue.js.</li>
+				      	<li>The <b>Pug</b> template engine.</li>
+				      	<li><b>Sass</b> preprocessor.</li>
+				      	<li>For <b>Svg</b> sprite the following packages are used: svg-sprite-loader, svgo and svgo-loader.</li>
+				      	<li><b>Axios</b> — for getting and displaying data from the API.</li>
+				      	<li><b>Vuex</b> — for working with data (state management).</li>
+				      	<li><b>Highcharts</b> and <b>highcharts-vue</b> — for building charts and graphs.</li>
+				      	<li><b>Vue2-editor</b> is a text editor.</li>
+				      </ul>
+
+						</div>
+          </div>
+
+          <div class="smarttabs__tabcontent" id="tabmedia">
+						<div class="stickytabs work-stickytabs">
+						  <div class="stickytabs__aside">
+						    <ul class="stickytabs__nav">
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Dashboard</li>
+						      <li class="stickytabs__navitem"><i data-feather="film"></i> Products</li>
+						      <li class="stickytabs__navitem"><i data-feather="film"></i> Product create</li>
+									<li class="stickytabs__navitem"><i data-feather="film"></i> Product edit</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Categories</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Collections</li>
+						      <li class="stickytabs__navitem"><i data-feather="film"></i> Blog</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Users</li>
+						    </ul>
+						  </div>
+
+						  <div class="stickytabs__article">
+						    <div class="stickytabs__content">
+						      <img class="lazy" src="./ygadmin-1-th.png" alt="Vue.js admin panel" />
+						    </div>
+						    <div class="stickytabs__content">
+									<p><b>Products list page:</b> Pagination, Filtering by catalog sections, categories and collections, Sorting by id and price, Search by product name.</p>
+						      <p align="center"><iframe width="700" height="394" src="https://www.youtube.com/embed/03BoJaTu2Gw?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						      </p>
+									<p><b>Screenshot:</b><br/>
+						      	<img class="lazy" src="./ygadmin-2-th.jpg" alt="Vue.js admin: product table" />
+									</p>
+						    </div>
+								<div class="stickytabs__content">
+									<p class="center"><b>Product creation:</b><br/>
+						        Tabs, Add/remove images, Text blocks: Vue2-editor, Featured Products component, SEO fields:
+						        <iframe width="700" height="394" src="https://www.youtube.com/embed/CDzoEUeVx-M?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						      </p>
+						    </div>
+						    <div class="stickytabs__content">
+									<p><b>Product edit form tabs:</b><br/>
+						        <img src="./product-banner-900х473.gif" alt="Tabs in the product edit form">
+									</p>
+									<p><b>Product editing process:</b></p>
+						      <p class="center"><iframe width="700" height="394" src="https://www.youtube.com/embed/onouKeG3Ta8?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+									<p><b>Screenshots:</b><br/>
+							      <img class="lazy" src="./ygadmin-3-th.jpg" alt="Product edit form Vue.js" />
+										<img class="lazy" src="./ygadmin-4-th.jpg" alt="Product edit form Vue.js" />
+									</p>
+						    </div>
+						    <div class="stickytabs__content">
+						      <img class="lazy" src="./ygadmin-7-th.png" alt="Admin panel: catalog cards" />
+						    </div>
+						    <div class="stickytabs__content">
+						      <p><b>Collection list:</b><br/>
+										<img class="lazy" src="./ygadmin-5-th.jpg" alt="Admin panel: Collection list" />
+									</p>
+									<p><b>Collection edit:</b><br/>
+										<img class="lazy" src="./ygadmin-6-th.jpg" alt="Admin panel: edit form" />
+									</p>
+						    </div>
+						    <div class="stickytabs__content">
+						      <p><b>Creating and editing a blog post:</b> Tabs, Tags: input and selection from the available ones, Add / remove images: cover photo and submissions, Text blocks with images: Vue2-editor, SEO fields.</p>
+									<p class="center"><iframe width="700" height="394" src="https://www.youtube.com/embed/W8fNOzgx0JY?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+									<p><b>Post list:</b><br/>
+										<img class="lazy" src="./ygadmin-8-th.jpg" alt="Admin panel: Post list table" />
+									</p>
+						    </div>
+						    <div class="stickytabs__content">
+									<p><b>Users list:</b><br/>
+										<img class="lazy" src="./ygadmin-9-th.png" alt="Admin panel: Users list" />
+									</p>
+									<p><b>Create new user:</b><br/>
+										<img class="lazy" src="./ygadmin-10-th.png" alt="Vue.js create form" />
+									</p>
+						    </div>
+						  </div>
+						</div>
+          </div>
+
+          <div class="smarttabs__tabcontent" id="tabcode">
+						<div class="container">
+
+							<p><a target="_blank" href="https://github.com/yegupov/yegupov.github.io/tree/master/tarot/code">View all folders and files</a></p>
+							<p>Here below is just the script file:</p>
+
+							<figure class="codepre">
+								<figcaption id="example1-caption">app.js</figcaption>
+									<pre
+										aria-describedby="example1-description"
+										aria-labelledby="example1-caption">
+										<code class="prettyprint">const bodyTag = document.querySelector('body');
+const navToggler = document.querySelector('.nav-toggler');
+
+									</code></pre>
+								</figure>
+
+						</div>
+          </div>
+
+        </div> <!-- END smarttabs__content -->
+      </div>
+
+    </section>
+
+	<footer class="footer"></footer>
+
+	<a class="top-link hide" id="js-scrolltotop" href="#"><i data-feather="arrow-up"></i><span class="screen-reader-text">Back to top</span></a>
+
+	<script src="https://unpkg.com/feather-icons"></script>
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+</html>

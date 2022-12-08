@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Vue.js Landing page and Admin-panel</title>
+	<meta name="description" content="Web developer's personal portfolio site and admin panel developed with the Vue.js framework." />
+	<link rel="shortcut icon" href="/favicon.png" sizes="16x16 32x32" type="image/png">
+	<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+		<aside class="aside"></aside>
+
+		<section class="sheet single-work">
+
+			<div class="row single-work__desc">
+				<div class="col-6">
+					<h1>Vue.js Landing page & Admin-panel&nbsp;
+						<a rel="nofollow" class="btn btn-tertiary" href="https://vuelanding.make-website.ru/" target="_blank" title="Visit site"><i data-feather="corner-up-right"></i><span>Visit site</span></a></h1>
+					<ul class="list-framed">
+						<li>Vue.js</li>
+						<li>PUG</li>
+						<li>SCSS</li>
+						<li>JavaScript</li>
+						<li>SVG</li>
+						<li>Fake backend</li>
+						<li>JWT Auth</li>
+					</ul>
+					<p>Web developer's personal portfolio site and admin panel developed with the Vue.js framework. The project used a fake backend to be able to work without a server (without a backend). Go to the <a href="https://vuelanding.make-website.ru/admin" target="_blank">admin panel</a> and see how everything works.</p>
+				</div>
+
+				<div class="col-6 flexbox">
+					<img src="../works-vuelanding-gif.gif" alt="Vue.js Landing and Admin-panel">
+				</div>
+			</div>
+
+      <div class="smarttabs">
+				<div class="row single-work__menu">
+					<div class="col-6">
+						<div class="smarttabs__nav">
+		          <a class="smarttabs__navlink active" href="#tabdesc">Description</a>
+		          <a class="smarttabs__navlink" href="#tabmedia">Screenshots<span>&nbsp;& Video</span></a>
+		          <a class="smarttabs__navlink" href="#tabcode">Code</a>
+		        </div>
+					</div>
+					<div class="col-6">
+						<a class="icon-link" href="/works/"><i data-feather="arrow-left"></i>Back to the works list</a>
+					</div>
+				</div>
+
+        <div class="smarttabs__content">
+          <div class="smarttabs__tabcontent active" id="tabdesc">
+
+						<div class="container">
+							<p>Web developer&#39;s personal portfolio site and admin panel developed with the Vue.js framework. The project used a fake backend to be able to work without a server (without a backend).</p>
+							<p>All data is stored in Vuex storage. Data.js has the initial state of the data: 2 users, 5 works, 5 reviews, and 3 skills.</p>
+							<p>In the <a href="https://vuelanding.make-website.ru/admin" target="_blank">admin panel</a>, you can perform the operations of creating, editing and deleting positions, as well as resetting the states to the initial values.</p>
+
+							<h2>Home page</h2>
+							<p class="center">
+								<video controls="" width="960" height="504" poster="./vuelanding-home-poster.jpg" preload="none">
+									<source src="./home.mp4" type="video/mp4">
+								</video>
+				      </p>
+							<h3>The home page contains the following sections:</h3>
+							<ol>
+								<li>Hero - first screen</li>
+								<li>About me with skills</li>
+								<li>Works: cards with hover effects.</li>
+								<li>Reviews: section horizontal scrolling and Add Review button.</li>
+								<li>Contacts: links to the developer&#39;s pages and a feedback form in the modal window.</li>
+							</ol>
+
+							<h3>Implemented on the page:</h3>
+							<ul>
+								<li>Page loading animation.</li>
+								<li>Animation of elements when scrolling: appearance, disappearance and parallax. All animations are designed with JavaScript and CSS.</li>
+								<li>Text and SVG animations.</li>
+								<li>SVG sprite.</li>
+								<li>Horizontal scrolling of the reviews section.</li>
+								<li>Modal windows.</li>
+								<li>Adding user reviews.</li>
+								<li>Feedback form.</li>
+								<li>Adaptability.</li>
+								<li>Dark theme in smartphones.</li>
+							</ul>
+
+							<h2>Admin panel</h2>
+							<p class="center">
+								<video controls="" width="960" height="606" poster="./vuelanding-admin-poster.jpg" preload="none">
+									<source src="./admin.mp4" type="video/mp4">
+								</video>
+				      </p>
+							<p>Admin panel code on GitHub: <a href="https://github.com/yegupov/vuejs-landing-and-admin" target="_blank">vuejs-landing-and-admin</a></p>
+							<p>For the project to work without a server API (without a backend), a fake backend is implemented. This functionality modifies the fetch() function to intercept certain API requests and mimic the behavior of the real API. And any uncaught requests are passed to the real fetch() function.</p>
+
+							<h3>Implemented in the admin panel:</h3>
+							<ol>
+								<li>Login page using JWT (Json Web Token) authentication.</li>
+								<li>CRUD operations with works, skills and reviews.</li>
+								<li>Form field validation with simple-vue-validator.</li>
+								<li>Demo image upload for works and reviews.</li>
+								<li>Notifications for the user in the form of modal pop-ups at the bottom.</li>
+								<li>Adaptability.</li>
+							</ol>
+
+							<h3>Used tools and packages:</h3>
+							<ol>
+								<li>Template engine Pug.</li>
+								<li>Sass preprocessor.</li>
+								<li>Packages used for Svg sprite: svg-sprite-loader, svgo and svgo-loader.</li>
+								<li>Vuex - for working with data (state management).</li>
+							</ol>
+
+						</div>
+          </div>
+
+          <div class="smarttabs__tabcontent" id="tabmedia">
+						<div class="stickytabs work-stickytabs">
+						  <div class="stickytabs__aside">
+						    <ul class="stickytabs__nav">
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Home desktop</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Modal desktop</li>
+						      <li class="stickytabs__navitem"><i data-feather="image"></i> Home mobile</li>
+									<li class="stickytabs__navitem"><i data-feather="image"></i> Admin</li>
+						    </ul>
+						  </div>
+
+						  <div class="stickytabs__article">
+						    <div class="stickytabs__content">
+						      <img class="lazy" src="./vuelanding-1-th.jpg" alt="Landing Page Portfolio site" />
+						    </div>
+						    <div class="stickytabs__content">
+									<img class="lazy" src="./vuelanding-2-th.jpg" alt="Popup modal window Vue.js" />
+						    </div>
+						    <div class="stickytabs__content">
+									<img class="lazy" src="./vuelanding-3-th.jpg" alt="Vue mobile layout" />
+						    </div>
+						    <div class="stickytabs__content">
+									<img class="lazy" src="./vuelanding-4-th.jpg" alt="Vue.js login page" />
+									<img class="lazy" src="./vuelanding-5-th.jpg" alt="Vue.js admin panel" />
+									<img class="lazy" src="./vuelanding-6-th.jpg" alt="Vue.js admin panel: reviews" />
+						    </div>
+						  </div>
+						</div>
+          </div>
+
+          <div class="smarttabs__tabcontent" id="tabcode">
+						<div class="container">
+
+							<p>Admin panel <b>code on GitHub</b>:&nbsp;<a href="https://github.com/yegupov/vuejs-landing-and-admin" target="_blank">vue-landing-and-admin</a></p>
+							<p>Here below is just the script file:</p>
+
+							<figure class="codepre">
+								<figcaption id="example1-caption">Login.vue</figcaption>
+									<pre
+										aria-describedby="example1-description"
+										aria-labelledby="example1-caption">
+										<code class="prettyprint">&lt;template lang=&quot;pug&quot;&gt;
+  .modal
+    .modal__body
+      h3.modal__headline Login
+      p
+        b Username
+        | : admin
+        br
+        b Password
+        | : qqwwaass
+
+      form#login_form.login-form(@submit.prevent="handleSubmit")
+
+        .form-group(:class='{"focused": checkValueUsername, "error": validation.firstError("user.username")}')
+          label.form-label(for='username') Username
+          input#username.form-control(
+            type='text'
+            name='username'
+            v-model="user.username"
+            @focus="moveLabel('focus', $event)"
+            @blur="moveLabel('blur', $event)")
+          .form-group__error
+            error-tooltip( :errorText="validation.firstError('user.username')" )
+
+        .form-group(:class='{"focused": checkValuePass, "error": validation.firstError("user.password")}')
+          label.form-label(for='password') Password
+          input#password.form-control.password(
+            type='password'
+            name='password'
+            v-model="user.password"
+            @focus="moveLabel('focus', $event)"
+            @blur="moveLabel('blur', $event)")
+          .form-group__error
+            error-tooltip( :errorText="validation.firstError('user.password')" )
+
+        .form-group.form-footer
+          button.btn.primary-btn(type='submit' :disabled="disableSubmit") Sign in
+          router-link(to="/") Back to site
+
+    .modal__overlay
+&lt;/template&gt;
+
+&lt;script&gt;
+import { Validator } from 'simple-vue-validator';
+import { mapActions, mapGetters, mapMutations } from "vuex";
+
+export default {
+  mixins: [require('simple-vue-validator').mixin],
+
+  data() {
+    return {
+      disableSubmit: false,
+      user: {
+        username: "",
+        password: ""
+      },
+      checkValueUsername: false,
+      checkValuePass: false
+    }
+  },
+
+  components: {
+    ErrorTooltip: () => import('@/components/ErrorTooltip.vue')
+  },
+
+  computed: {
+    ...mapGetters("users", ["loggedUser"])
+  },
+
+  created () {
+    this.logout();
+  },
+
+  validators: {
+    'user.username': (value) => {
+      return Validator.value(value).required('Enter Username')
+    },
+
+    'user.password': (value) => {
+      return Validator.value(value).required('Enter Password')
+    }
+  },
+
+  methods: {
+    ...mapActions("users", ["login", "setLoggedUser", "logout"]),
+    ...mapMutations("tooltip", ["SHOW_TOOLTIP"]),
+
+    moveLabel: function (typeEvent, event) {
+      let target = event.target
+
+      if (typeEvent == 'focus' && !target.value.trim().length) { // zero-length string AFTER a trim
+        target.id == 'username' ? this.checkValueUsername = true : this.checkValuePass = true
+      }
+      if (typeEvent == 'blur' && !target.value.trim().length) {
+        target.id == 'username' ? this.checkValueUsername = false : this.checkValuePass = false
+      }
+    },
+
+    async handleSubmit() {
+
+      if ((await this.$validate()) === false) return;
+      this.disableSubmit = true;
+
+      try {
+        const loggedUser = await this.login(this.user);
+
+        if (loggedUser) {
+
+          this["SHOW_TOOLTIP"]({
+              type: "success",
+              text: "Welcome to Admin panel!"
+            });
+        } else {
+
+          this["SHOW_TOOLTIP"]({
+            type: "error",
+            text: "The email address or password is incorrect!"
+          });
+        }
+
+        this.validation.reset();
+
+      } catch (error) {
+        this["SHOW_TOOLTIP"]({
+          type: "error",
+          text: "Backend not work!"
+        });
+      } finally {
+        this.disableSubmit = false;
+      }
+    },
+  }
+}
+&lt;/script&gt;
+
+&lt;style lang=&quot;scss&quot;&gt;
+@import "../styles/admin.scss";
+
+.modal {
+  position: fixed;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  .modal__body {
+    position: relative;
+    z-index: 9999;
+    width: 60%;
+    max-width: 450px;
+    min-width: 280px;
+    height: auto;
+    margin: 0;
+    padding: 30px 5%;
+    border-radius: $border-radius;
+    background-color: #fff;
+
+    @media (max-width: 567px) {
+      width: 86%;
+    }
+
+    .modal__headline {
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .modal__overlay {
+    position: fixed;
+    z-index: 9998;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(40,52,65,1);
+  }
+}
+
+.form-group {
+  position: relative;
+  height: 45px;
+  margin: 0 0 20px;
+  text-align: center;
+
+  .form-label {
+    position: absolute;
+    display: inline-block;
+    left: 0; top: 0;
+    width: auto;
+    height: 15px;
+    transform: translate(0px, 1px);
+    transform-origin: 0 0;
+    white-space: nowrap;
+    will-change: transform;
+    font-size: 13px;
+    color: #666;
+    padding: 0;
+    background-color: #fff;
+    cursor: text;
+    z-index: 10;
+    transition: transform .5s;
+  }
+
+  .form-control {
+    position: absolute;
+    left: 0; top: 0; bottom: 3px; right: 0;
+    width: 100%;
+    padding: 15px 0;
+    letter-spacing: 0.05rem;
+    background-color: #fff;
+    outline: none;
+    z-index: 1;
+
+    &.password {
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  .btn {
+    margin: 0 auto;
+
+    & + a {
+      margin-left: 20px;
+    }
+  }
+
+  &.focused {
+    .form-label {
+      transform: translate(0px, -15px);
+    }
+  }
+}
+&lt;/style&gt;
+									</code></pre>
+								</figure>
+
+						</div>
+          </div>
+
+        </div> <!-- END smarttabs__content -->
+      </div>
+
+    </section>
+
+	<footer class="footer"></footer>
+
+	<a class="top-link hide" id="js-scrolltotop" href="#"><i data-feather="arrow-up"></i><span class="screen-reader-text">Back to top</span></a>
+
+	<script src="https://unpkg.com/feather-icons"></script>
+	<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+	<script src="../../js/script.js"></script>
+</body>
+</html>

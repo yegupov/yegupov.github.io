@@ -1,0 +1,117 @@
+.aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100vh;
+  padding: 50px 0 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: var(--font-color);
+  color: var(--sitebg-color);
+
+  a {
+    color: var(--sitebg-color);
+
+    &:hover {
+      opacity: 1;
+      color: var(--link-color);
+    }
+  }
+
+  .icon-links {
+    margin-top: auto;
+  }
+}
+
+.aside__logo {
+  // margin-bottom: 80px;
+  margin-bottom: 11.1vh;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.aside__nav {
+  flex-direction: column;
+  gap: 50px;
+
+  li {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    writing-mode: tb-rl;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: block;
+      padding: 0 10px;
+      font-size: 1.3em;
+      /* writing-mode: vertical-rl; */
+      letter-spacing: normal;
+
+      &.active {
+        cursor: default;
+        color: var(--link-color);
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix() {
+  .aside__nav li a { margin-right: -25px; }
+}
+
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 1px solid rgba(250, 246, 238, 0.5);
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+
+  span,
+  span:before,
+  span:after {
+    width: 28px;
+    height: 3px;
+    background-color: var(--sitebg-color);
+    display: block;
+    transition: .3s;
+  }
+
+  span:before {
+    content: '';
+    transform: translateY(-9px);
+  }
+
+  span:after {
+    content: '';
+    transform: translateY(6px);
+  }
+
+  &.toggler-open span {
+    background-color: transparent;
+
+    &:before {
+      transform: translateY(0px) rotate(45deg);
+      background-color: var(--font-color);
+    }
+
+    &:after {
+      transform: translateY(-3px) rotate(-45deg);
+      background-color: var(--font-color);
+    }
+  }
+}
