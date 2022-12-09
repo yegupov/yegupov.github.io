@@ -16,6 +16,7 @@
   let widthWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
       heightWindow = document.documentElement.clientHeight || window.innerHeight || document.body.clientHeight;
 
+  detectSamsungBrowser();
   writeAsideAndFooter();
   activateShowImageLinks();
   feather.replace(); // init Feather Icons : https://github.com/feathericons/feather#feather
@@ -95,6 +96,11 @@
         contactMess.value = '';
         contactAgreement.checked = false;
 
+        contactFields.forEach( (field, index) => {
+          field.classList.remove('error');
+        });
+        contactAgreement.parentNode.classList.remove('error');
+
       } else {
         contactNotice.innerHTML = "<span style='color:red;'>Fill in all the fields!</span>";
       }
@@ -107,38 +113,6 @@
     navToggler.classList.toggle('toggler-open');
     bodyElem.classList.toggle('noscroll');
   }
-
-  /* function navLinkClick() {
-    if (navMenu.classList.contains('open')) navToggler.click();
-  }
-
-  function slideDownUp(elem) {
-    if(!elem.classList.contains('open')) {  // Slide down effect -  https://jsfiddle.net/gebpjo1L/18/
-    	elem.classList.add('open');
-      let heightElem = 0;
-
-      if(!elem.classList.contains('aside__nav')) {
-        elem.style.height = "auto"
-        heightElem = elem.clientHeight + "px"
-      } else {
-        heightElem = widthWindow > 480 ? heightWindow - 109 + "px" : heightWindow - 119 + "px"
-      }
-
-      elem.style.height = "0px"
-      // console.log('heightElem = ', heightElem);
-
-      setTimeout(() => {
-        elem.style.height = heightElem
-      }, 0)
-
-    } else {  // Slide up.
-    	elem.style.height = "0px"
-      // Remove the `open` class when the animation ends.
-    	elem.addEventListener('transitionend', () => {
-      	elem.classList.remove('open')
-      }, {once: true})
-    }
-  }  */
 
   // Lazy load images
   lazyLoadImages();
@@ -257,21 +231,8 @@
   	return parentEl === givenEl ? true : isElementContainsTargetElement(givenEl, parentEl);
   }
 
-
-  // function findParents(childElem, parentElem) {
-  //   let parents = [];
-  //   if (childElem.closest(parentElem)) {
-  //     console.log('Parent : ', childElem.closest(parentElem));
-  //     parents.push(childElem.closest(parentElem));
-  //     childElem = childElem.closest(parentElem);
-  //     findParents(childElem, parentElem);
-  //   }
-  //   return parents;
-  // }
-
   function findParents(childElem, parentElem) {
     let parents = [];
-    // if (childElem.closest(parentElem)) {
     if (childElem.parentNode.tagName) {
       console.log('Parent : ', childElem.closest(parentElem));
       parents.push(childElem.closest(parentElem));
@@ -359,7 +320,6 @@
   });
 
   function Tabs() {
-
     let menuLinks = document.querySelectorAll('.smarttabs__navlink'),
        tabsContent = document.querySelectorAll('.smarttabs__tabcontent');
     let bindAll = function() {
@@ -609,9 +569,8 @@
   };
 
 
-  // OLD CODE ---------------------------------------------------------------------  Mobile Portfolio Menu
+  // OLD CODE -------------------------------------------  Mobile Portfolio Menu
   function togglePortfolioMenu(menuCheckbox, sidebarNav) {
-
     if (widthWindow <= 600 && menuCheckbox) {
       menuCheckbox.addEventListener('change', function () {
         if (menuCheckbox.checked == true) {
@@ -664,13 +623,12 @@
   }
 
   function writeAsideAndFooter() {
-
     const currentYear = new Date().getFullYear();
 
     asideSection.innerHTML = `
     <a href="/" class="aside__logo" title="Home">YG</a>
 
-    <ul class="aside__nav flexbox">
+    <ul class="aside__nav">
       <li><a href="/" title="About me">About</a></li>
       <li><a href="/works/index.html" title="Portfolio">Works</a></li>
       <li><a href="/contact.html" title="Contact me">Contact</a></li>
@@ -707,6 +665,15 @@
           urlPath.indexOf('/works/') !== -1 && index === 1)
           link.classList.add('active');
     });
+  }
+
+  // detect SamsungBrowser and set font-size 13px
+  function detectSamsungBrowser() {
+    if (navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[A|N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i)) {
+      const htmlElement = document.querySelector("html");
+      htmlElement.style.fontSize = '13px';
+      bodyElem.classList.add('samsung');
+    }
   }
 
 })();

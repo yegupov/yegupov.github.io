@@ -1,9 +1,6 @@
 .smarttabs__navlink {
-	// padding: 40px 9% 40px 2%;
-  padding: 40px 0;
-  padding-left: calc((100% - 420px) / 5 - 5px);
-  padding-right: calc((100% - 420px) / 5 + 5px);
-  // margin: auto;
+	padding: 40px 0;
+  text-align: center;
   border-right: 1px solid var(--lines-color);
   white-space: nowrap;
 	font-size: 1.2rem;
@@ -12,10 +9,6 @@
 	color: var(--font-color);
 	text-decoration: none;
 	text-transform: uppercase;
-
-  &:first-child {
-    padding-left: 0;
-  }
 
   &:last-child {
     border-right: none;

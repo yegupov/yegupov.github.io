@@ -10,14 +10,12 @@ section {
 .sheet {
   margin: 50px 50px 0 100px;
   width: calc(100% - 150px);
-  // overflow-x: hidden;
 }
 
 .about {
   margin: 0 0 0 100px;
   width: calc(100% - 100px);
-  // height: 100vh;
-  min-height: 45vw;
+  height: calc(100vh - 135px);
   border-bottom: none;
 
   .col-6 {
@@ -56,7 +54,7 @@ section {
   }
 
   span {
-    width: 110px;
+    width: 85px;
     font-weight: bold;
     text-transform: uppercase;
   }
@@ -102,7 +100,25 @@ section {
 .single-work {
 
   .smarttabs__nav {
-    margin: 0 0 0 10%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .smarttabs__navlink:nth-child(1) {
+      width: calc(119px + (100% - 366px) / 6 * 2);
+
+      span {
+        transform: translate(12px, 0);
+      }
+    }
+
+    .smarttabs__navlink:nth-child(2) {
+      width: calc(204px + (100% - 366px) / 6 * 2);
+    }
+
+    .smarttabs__navlink:nth-child(3) {
+      width: calc(43px + (100% - 366px) / 6 * 2);
+    }
   }
 
   p {
@@ -189,6 +205,7 @@ section {
 }
 
 .contact {
+  height: calc(100vh - 185px);
 
   .row {
     border-top: 1px solid var(--lines-color);
